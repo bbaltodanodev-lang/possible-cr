@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "BM Solutions",
   tagline: "Soluciones digitales para negocios que quieren crecer.",
   // Cambia esta URL por el dominio real cuando BM Solutions tenga uno.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bmsolutions.example.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://bmsolutions.example.com",
 
   // --- Contacto ------------------------------------------------------------
   email: "bm.solutionscr@gmail.com",
