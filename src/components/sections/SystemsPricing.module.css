@@ -1,0 +1,111 @@
+.customCard {
+  border-color: rgb(168 111 255 / 0.55);
+  background: linear-gradient(155deg, #16102b 0%, #100a1b 45%, #130b20 100%);
+  box-shadow: 0 0 48px -12px rgb(138 0 255 / 0.42), 0 16px 54px -32px rgb(22 139 255 / 0.55);
+}
+
+.customCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 1.5px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(120deg, #168bff, #a26cff, #ef0ab9, #ff167a, #168bff);
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: borderFlow 8s ease-in-out infinite;
+}
+
+.customCard::after {
+  content: "";
+  position: absolute;
+  inset: -8%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(138 0 255 / 0.26), transparent 45%),
+    radial-gradient(ellipse at 0% 45%, rgb(22 139 255 / 0.12), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgb(239 10 185 / 0.15), transparent 45%);
+  animation: auraDrift 12s ease-in-out infinite alternate;
+}
+
+.customCard:hover,
+.customCard:focus-within {
+  box-shadow: 0 0 65px -12px rgb(138 0 255 / 0.6), 0 20px 60px -28px rgb(239 10 185 / 0.38);
+}
+
+.customBadge {
+  border: 1px solid rgb(184 168 255 / 0.35);
+  background: linear-gradient(110deg, rgb(22 139 255 / 0.18), rgb(138 0 255 / 0.25), rgb(239 10 185 / 0.2));
+  color: var(--color-brand-50);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06);
+}
+
+.customPrice {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--color-brand-50);
+  background-image: linear-gradient(100deg, #a6d9ff, #d0b7ff 45%, #ffb0de 85%, #a6d9ff);
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: borderFlow 8s ease-in-out infinite;
+}
+
+.customFeatureIcon {
+  border: 1px solid rgb(168 111 255 / 0.25);
+  color: #ceb4ff;
+  background: linear-gradient(135deg, rgb(22 139 255 / 0.14), rgb(138 0 255 / 0.22));
+}
+
+.customCard li:nth-child(3n + 1) .customFeatureIcon {
+  color: #91d1ff;
+}
+
+.customCard li:nth-child(3n) .customFeatureIcon {
+  color: #ffa2d8;
+}
+
+.customCta {
+  min-height: 3rem;
+  height: auto;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 8px 30px -8px rgb(138 0 255 / 0.65);
+}
+
+.customCta svg {
+  transition: transform 200ms ease;
+}
+
+.customCta:hover svg {
+  transform: translateX(3px);
+}
+
+@keyframes borderFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes auraDrift {
+  from { transform: translate3d(-2%, -1%, 0); }
+  to { transform: translate3d(2%, 1%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .customCard::before,
+  .customCard::after,
+  .customPrice {
+    animation: none;
+  }
+
+  .customCta svg {
+    transition: none;
+    transform: none;
+  }
+}
