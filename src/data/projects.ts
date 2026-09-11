@@ -63,4 +63,13 @@ export const projects: Project[] = [
     preserveImageQuality: true,
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
+  {
+    id: "bpolabs",
+    name: "bpoLabs",
+    category: "Sitio web corporativo",
+    description:
+      "Sitio web corporativo para el área de desarrollo tecnológico de una empresa especializada en soluciones de recursos multifuncionales y consultoría para adquisición de clientes.",
+    image: "/projects/bpolabs.png",
+    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+  },
 ];

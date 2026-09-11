@@ -89,6 +89,13 @@
         description:
           "Sitio web para Gohan, restaurante japonés especializado en onigiris premium hechos a mano en Plaza Mundo Escazú. Diseño minimalista con menú bilingüe (ES/EN), galería, historia y sistema de pedidos integrado.",
       },
+      {
+        id: "bpolabs",
+        name: "bpoLabs",
+        category: "Sitio web corporativo",
+        description:
+          "Sitio web corporativo para el área de desarrollo tecnológico de una empresa especializada en soluciones de recursos multifuncionales y consultoría para adquisición de clientes.",
+      },
     ],
   },
   process: {

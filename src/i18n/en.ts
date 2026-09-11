@@ -91,6 +91,13 @@ export const en: Messages = {
         description:
           "Website for Gohan, a Japanese restaurant specializing in premium handmade onigiri at Plaza Mundo Escazú. Minimalist design with bilingual menu (ES/EN), gallery, story and integrated ordering system.",
       },
+      {
+        id: "bpolabs",
+        name: "bpoLabs",
+        category: "Corporate website",
+        description:
+          "Corporate website for the technology development area of a company specializing in multifunctional resource solutions and client acquisition consulting.",
+      },
     ],
   },
   process: {
