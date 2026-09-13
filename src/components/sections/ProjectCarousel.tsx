@@ -19,6 +19,13 @@ interface DragState {
   moved: boolean;
 }
 
+interface TouchState {
+  startX: number;
+  lastX: number;
+  startY: number;
+  moved: boolean;
+}
+
 interface NavigationState {
   from: number;
   distance: number;
@@ -34,6 +41,7 @@ export function ProjectCarousel() {
   const positionRef = useRef(0);
   const stepRef = useRef(0);
   const dragRef = useRef<DragState | null>(null);
+  const touchRef = useRef<TouchState | null>(null);
   const navigationRef = useRef<NavigationState | null>(null);
   const hoveredRef = useRef(false);
   const keyboardFocusRef = useRef(false);
@@ -178,6 +186,9 @@ export function ProjectCarousel() {
   }, [postponeAutoplay]);
 
   const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    // Touch devices use the dedicated touch handlers below. Keeping pointer
+    // dragging for mouse/stylus avoids browsers cancelling a finger swipe.
+    if (event.pointerType === "touch") return;
     if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
     navigationRef.current = null;
     suppressClickUntilRef.current = 0;
@@ -192,6 +203,59 @@ export function ProjectCarousel() {
     // when the finger leaves the viewport edge.
     event.currentTarget.setPointerCapture(event.pointerId);
     postponeAutoplay();
+  };
+
+  const onTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    navigationRef.current = null;
+    touchRef.current = {
+      startX: touch.clientX,
+      lastX: touch.clientX,
+      startY: touch.clientY,
+      moved: false,
+    };
+    postponeAutoplay();
+  };
+
+  const onTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+    const state = touchRef.current;
+    if (!state || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    const dx = touch.clientX - state.startX;
+    const dy = touch.clientY - state.startY;
+    if (!state.moved) {
+      if (Math.abs(dx) < DRAG_THRESHOLD) return;
+      if (Math.abs(dy) > Math.abs(dx)) {
+        touchRef.current = null;
+        return;
+      }
+      state.moved = true;
+      setDragging(true);
+    }
+    event.preventDefault();
+    positionRef.current -= touch.clientX - state.lastX;
+    state.lastX = touch.clientX;
+    paintRef.current();
+  };
+
+  const onTouchEnd = () => {
+    const state = touchRef.current;
+    if (!state) return;
+    touchRef.current = null;
+    if (state.moved) suppressClickUntilRef.current = performance.now() + 350;
+    setDragging(false);
+    postponeAutoplay();
+    if (state.moved && stepRef.current) {
+      const target = Math.round(positionRef.current / stepRef.current) * stepRef.current;
+      const distance = target - positionRef.current;
+      if (reducedMotionRef.current) {
+        positionRef.current = target;
+        paintRef.current();
+      } else if (Math.abs(distance) > 1) {
+        navigationRef.current = { from: positionRef.current, distance, startedAt: performance.now() };
+      }
+    }
   };
 
   const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
@@ -282,6 +346,10 @@ export function ProjectCarousel() {
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
         onLostPointerCapture={endDrag}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onTouchCancel={onTouchEnd}
         onDragStart={(event) => event.preventDefault()}
         onClickCapture={(event) => {
           if (performance.now() < suppressClickUntilRef.current) {
