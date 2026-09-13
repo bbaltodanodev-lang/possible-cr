@@ -247,7 +247,14 @@ export function ProjectCarousel() {
     setDragging(false);
     postponeAutoplay();
     if (state.moved && stepRef.current) {
-      const target = Math.round(positionRef.current / stepRef.current) * stepRef.current;
+      // A short intentional swipe should still reveal the next card. Using
+      // direction instead of a half-card threshold makes the control feel
+      // responsive on narrow screens.
+      const direction = state.lastX < state.startX ? 1 : -1;
+      const index = direction > 0
+        ? Math.ceil(positionRef.current / stepRef.current)
+        : Math.floor(positionRef.current / stepRef.current);
+      const target = index * stepRef.current;
       const distance = target - positionRef.current;
       if (reducedMotionRef.current) {
         positionRef.current = target;
@@ -293,7 +300,11 @@ export function ProjectCarousel() {
     // Always settle on a card after a manual swipe. This keeps the carousel
     // readable on small screens even when the finger is released mid-card.
     if (state.moved && stepRef.current) {
-      const target = Math.round(positionRef.current / stepRef.current) * stepRef.current;
+      const direction = state.lastX < state.startX ? 1 : -1;
+      const index = direction > 0
+        ? Math.ceil(positionRef.current / stepRef.current)
+        : Math.floor(positionRef.current / stepRef.current);
+      const target = index * stepRef.current;
       const distance = target - positionRef.current;
       if (Math.abs(distance) > 1) {
         if (reducedMotionRef.current) {
