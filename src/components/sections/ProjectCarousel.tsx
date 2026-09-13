@@ -188,6 +188,9 @@ export function ProjectCarousel() {
       lastX: event.clientX,
       moved: false,
     };
+    // Capture the pointer from the first frame so quick swipes are not lost
+    // when the finger leaves the viewport edge.
+    event.currentTarget.setPointerCapture(event.pointerId);
     postponeAutoplay();
   };
 
@@ -204,7 +207,6 @@ export function ProjectCarousel() {
         return;
       }
       state.moved = true;
-      event.currentTarget.setPointerCapture(event.pointerId);
       setDragging(true);
     }
     event.preventDefault();
@@ -223,6 +225,25 @@ export function ProjectCarousel() {
     }
     setDragging(false);
     postponeAutoplay();
+
+    // Always settle on a card after a manual swipe. This keeps the carousel
+    // readable on small screens even when the finger is released mid-card.
+    if (state.moved && stepRef.current) {
+      const target = Math.round(positionRef.current / stepRef.current) * stepRef.current;
+      const distance = target - positionRef.current;
+      if (Math.abs(distance) > 1) {
+        if (reducedMotionRef.current) {
+          positionRef.current = target;
+          paintRef.current();
+        } else {
+          navigationRef.current = {
+            from: positionRef.current,
+            distance,
+            startedAt: performance.now(),
+          };
+        }
+      }
+    }
   };
 
   return (
@@ -254,8 +275,8 @@ export function ProjectCarousel() {
         ref={viewportRef}
         tabIndex={0}
         aria-label={t.projects.hintDesktop}
-        className="-mx-5 overflow-hidden px-5 select-none sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10"
-        style={{ touchAction: "pan-y pinch-zoom", cursor: dragging ? "grabbing" : "grab" }}
+        className="-mx-5 overflow-hidden px-5 select-none overscroll-x-contain sm:-mx-8 sm:px-8 lg:-mx-10 lg:px-10"
+        style={{ touchAction: "pan-y", cursor: dragging ? "grabbing" : "grab", WebkitUserSelect: "none" }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={endDrag}
@@ -282,7 +303,7 @@ export function ProjectCarousel() {
               key={copy + "-" + project.id}
               aria-hidden={copy !== 1}
               inert={copy !== 1}
-              className="w-[85%] shrink-0 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]"
+              className="w-[88%] min-w-0 shrink-0 sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]"
             >
               <ProjectCard projectId={project.id} />
             </div>
