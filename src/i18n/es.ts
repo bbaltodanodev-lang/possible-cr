@@ -397,6 +397,9 @@
     ],
     note: "Los precios son estimados en dólares estadounidenses (USD) y pueden variar según el proyecto.",
     noteLink: "Escríbenos para una cotización personalizada y sin compromiso.",
+    supportNotice: "¿No sabes cómo dar soporte o mantenimiento a tu web? Elige un plan mensual o solicita una atención puntual según lo que necesites.",
+    supportTitle: "Plan de soporte para tu página web",
+    supportLink: "Ver planes",
   },
   systems: {
     heroEyebrow: "Sistemas empresariales",

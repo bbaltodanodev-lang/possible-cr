@@ -395,6 +395,9 @@ export const en: Messages = {
     ],
     note: "Prices are estimates in US dollars (USD) and may vary per project.",
     noteLink: "Write to us for a personalized, no-obligation quote.",
+    supportNotice: "Not sure how to support or maintain your website? Choose a monthly plan or request one-time help based on what you need.",
+    supportTitle: "Support plan for your website",
+    supportLink: "View plans",
   },
   systems: {
     heroEyebrow: "Business systems",

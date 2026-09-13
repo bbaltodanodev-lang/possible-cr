@@ -158,7 +158,9 @@ export function Navbar() {
                     onClick={() => setServicesOpen(false)}
                     className={cn(
                       "flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium transition-colors",
-                      isActive
+                      item.key === "soporte"
+                        ? "text-brand-gradient"
+                        : isActive
                         ? "bg-brand-tint font-semibold text-brand-300"
                         : "text-body hover:bg-white/5 hover:text-strong",
                     )}
@@ -264,7 +266,9 @@ export function Navbar() {
                       aria-current={isActive ? "page" : undefined}
                       className={cn(
                         "block rounded-xl px-4 py-2.5 text-[15px] font-medium transition-colors",
-                        isActive
+                        item.key === "soporte"
+                          ? "text-brand-gradient"
+                          : isActive
                           ? "bg-brand-tint font-semibold text-brand-300"
                           : "text-strong hover:bg-white/5",
                       )}

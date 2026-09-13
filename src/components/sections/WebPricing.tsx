@@ -109,6 +109,21 @@ export function WebPricing() {
           })}
         </div>
 
+        <div className="mt-10 mb-10 flex w-full flex-col gap-5 rounded-2xl border border-brand-400/50 bg-brand-tint p-5 shadow-[0_0_60px_rgba(138,0,255,0.15)] sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:p-6">
+          <div className="min-w-0 text-center sm:text-left">
+            <h3 className="mt-2 text-base font-bold text-white">{t.webPricing.supportTitle}</h3>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-body">
+            {t.webPricing.supportNotice}
+            </p>
+          </div>
+          <a
+            href="/soporte"
+            className="inline-flex shrink-0 self-center rounded-full bg-brand-gradient px-6 py-2.5 text-xs font-bold text-white shadow-[0_0_24px_rgba(239,10,185,0.2)] transition-transform hover:scale-[1.03] sm:self-auto"
+          >
+            {t.webPricing.supportLink}
+          </a>
+        </div>
+
         <div className="mt-16 rounded-3xl border border-white/10 bg-card p-8 sm:p-10">
             <p className="text-center text-sm font-semibold uppercase tracking-wider text-brand-300">
             {t.webPricing.includedEyebrow}

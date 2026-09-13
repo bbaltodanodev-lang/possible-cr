@@ -44,6 +44,12 @@ export function SupportService() {
         ))}
       </ul>
 
+      <div className="mt-8 rounded-2xl border border-amber-300/30 bg-amber-300/10 p-5">
+        <p className="text-sm font-semibold leading-relaxed text-amber-200">
+          {content.hostingNotice}
+        </p>
+      </div>
+
       <div className="mt-10 border-t border-white/10 pt-8">
         <h4 className="text-xl font-bold tracking-tight text-white">{content.plansTitle}</h4>
         <p className="mt-2 text-sm leading-relaxed text-body">{content.plansDescription}</p>

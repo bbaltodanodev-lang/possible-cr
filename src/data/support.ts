@@ -17,6 +17,7 @@ interface SupportContent {
   tagline: string;
   description: string;
   includes: ServiceItem[];
+  hostingNotice: string;
   plansTitle: string;
   plansDescription: string;
   plans: SupportPlan[];
@@ -32,11 +33,11 @@ export const supportContent: Record<Locale, SupportContent> = {
     heroEyebrow: "Servicios",
     heroTitle: "Soporte y mantenimiento web",
     heroDescription:
-      "Tu página no termina cuando la publicamos. Elige un plan mensual o solicita una atención puntual según lo que necesites.",
+      "¿No sabes cómo dar soporte o mantenimiento a tu web? Elige un plan mensual o solicita una atención puntual según lo que necesites.",
     title: "Soporte y mantenimiento",
     tagline: "Tu página no termina cuando la publicamos.",
     description:
-      "Con planes mensuales continúo cuidando, actualizando y mejorando tu web para mantenerla estable. Tú te concentras en tu negocio mientras yo me encargo de la parte técnica.",
+      "Con planes mensuales cuidamos, actualizamos y mejoramos tu web para mantenerla estable. Tú te mantienes concentrado en tu negocio mientras nos encargamos de la parte técnica.",
     includes: [
       {
         id: "mantenimiento",
@@ -93,16 +94,23 @@ export const supportContent: Record<Locale, SupportContent> = {
         description:
           "Revisión de hosting, dominio, DNS, SSL y publicación cuando corresponda a tu proyecto.",
       },
+      {
+        id: "hosting-dominio",
+        icon: "globe",
+        title: "Hosting y dominio",
+        description: "Gestión del hosting y del dominio durante un año por $20, para que tu web permanezca publicada y accesible.",
+      },
     ],
     plansTitle: "Planes mensuales",
-    plansDescription: "Elige el nivel de acompañamiento que necesitas. Si tu solicitud no encaja en un plan, cotizamos según el alcance y la gravedad, con un monto mínimo acordado antes de comenzar.",
+    hostingNotice: "El primer año de hosting y dominio está incluido sin costo al publicar tu web. Desde el segundo año, su mantenimiento cuesta $20 al año y se gestiona junto con un plan de Soporte Esencial o Soporte Profesional.",
+    plansDescription: "Elige el plan de soporte que mejor se adapte a las necesidades de tu web.",
     plans: [
       {
         id: "esencial",
         name: "Soporte Esencial",
         price: "$50",
         cadence: "al mes",
-        description: "Cambios constantes de contenido, imágenes, textos, precios, horarios, enlaces y ajustes pequeños para mantener tu web al día.",
+        description: "Cambios de contenido, imágenes, textos, precios, horarios, enlaces y ajustes pequeños para mantener tu web al día.",
       },
       {
         id: "profesional",
@@ -130,11 +138,11 @@ export const supportContent: Record<Locale, SupportContent> = {
     heroEyebrow: "Services",
     heroTitle: "Web support and maintenance",
     heroDescription:
-      "Your website doesn't end when we launch it. Choose a monthly plan or request one-time help based on what you need.",
+      "Not sure how to support or maintain your website? Choose a monthly plan or request one-time help based on what you need.",
     title: "Support and maintenance",
     tagline: "Your website doesn't end when we launch it.",
     description:
-      "With monthly plans, I keep looking after, updating and improving your website to keep it stable. You focus on your business while I take care of the technical side.",
+      "With our monthly plans, we look after, update and improve your website to keep it stable. You focus on your business while we take care of the technical side.",
     includes: [
       {
         id: "mantenimiento",
@@ -188,9 +196,16 @@ export const supportContent: Record<Locale, SupportContent> = {
         title: "Technical stability",
         description: "Review of hosting, domain, DNS, SSL and deployment when relevant to your project.",
       },
+      {
+        id: "hosting-dominio",
+        icon: "globe",
+        title: "Hosting and domain",
+        description: "Hosting and domain management for one year at $20, keeping your website published and accessible.",
+      },
     ],
     plansTitle: "Monthly plans",
-    plansDescription: "Choose the level of support you need. If your request does not fit a plan, I will quote it according to its scope and severity, with a minimum agreed before starting.",
+    hostingNotice: "The first year of hosting and domain is included at no extra cost when your website launches. From the second year, maintenance costs $20 per year and is managed together with an Essential or Professional Support plan.",
+    plansDescription: "Choose the support plan that best fits your website's needs.",
     plans: [
       {
         id: "esencial",
