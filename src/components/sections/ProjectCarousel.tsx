@@ -131,7 +131,7 @@ export function ProjectCarousel() {
         paint();
       } else if (
         inView && !document.hidden && !reducedMotionRef.current &&
-        !hoveredRef.current && !keyboardFocusRef.current && !dragRef.current &&
+        !hoveredRef.current && !keyboardFocusRef.current && !dragRef.current && !touchRef.current &&
         time >= resumeAtRef.current
       ) {
         positionRef.current += AUTOPLAY_SPEED * elapsed / 1000;
