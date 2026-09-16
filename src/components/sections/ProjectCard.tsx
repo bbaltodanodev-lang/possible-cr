@@ -13,9 +13,11 @@ export function ProjectCard({ projectId }: { projectId: string }) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   useEffect(() => {
     if (!isLightboxOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const close = (event: KeyboardEvent) => { if (event.key === "Escape") setIsLightboxOpen(false); };
     window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
+    return () => { window.removeEventListener("keydown", close); document.body.style.overflow = previousOverflow; };
   }, [isLightboxOpen]);
 
   const project = projects.find((p) => p.id === projectId);
@@ -113,7 +115,7 @@ export function ProjectCard({ projectId }: { projectId: string }) {
           </div>
         ) : null}
       </div>
-      {isLightboxOpen && project?.image && typeof document !== "undefined" && createPortal(<div role="dialog" aria-modal="true" aria-label={item?.name} className="fixed inset-0 z-[9999] grid place-items-center bg-black/90 p-4 backdrop-blur-sm" onClick={() => setIsLightboxOpen(false)}><button type="button" aria-label="Cerrar imagen" onPointerDown={(event) => { event.preventDefault(); event.stopPropagation(); setIsLightboxOpen(false); }} onClick={(event) => { event.preventDefault(); event.stopPropagation(); }} className="absolute right-5 top-5 z-20 grid size-11 place-items-center rounded-full bg-white/10 text-white hover:bg-brand-gradient"><IconClose className="size-5" /></button><img src={project.image} alt={item?.name ?? project.name} className="max-h-[90vh] max-w-[95vw] object-contain" onClick={(event) => event.stopPropagation()} /></div>, document.body)}
+      {isLightboxOpen && project?.image && typeof document !== "undefined" && createPortal(<div role="dialog" aria-modal="true" aria-label={item?.name} className="fixed inset-0 z-[9999] grid touch-none place-items-center bg-black/90 p-4 backdrop-blur-sm" onPointerDown={(event) => event.stopPropagation()} onTouchMove={(event) => event.preventDefault()} onClick={() => setIsLightboxOpen(false)}><button type="button" aria-label="Cerrar imagen" onPointerDown={(event) => { event.preventDefault(); event.stopPropagation(); setIsLightboxOpen(false); }} onClick={(event) => { event.preventDefault(); event.stopPropagation(); }} className="absolute right-5 top-5 z-20 grid size-11 place-items-center rounded-full bg-white/10 text-white hover:bg-brand-gradient"><IconClose className="size-5" /></button><img src={project.image} alt={item?.name ?? project.name} className="max-h-[90vh] max-w-[95vw] object-contain" onClick={(event) => event.stopPropagation()} /></div>, document.body)}
     </article>
   );
 }

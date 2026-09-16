@@ -25,7 +25,7 @@ export const siteConfig = {
 
   // --- Redes sociales ---------------------------------------------------------
   social: {
-    instagram: "",
+    instagram: "https://www.instagram.com/bm.solutionscr/",
     facebook: "",
     linkedin: "",
     x: "",
