@@ -50,7 +50,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es" className={`${inter.variable} h-full antialiased`}>
+    <html lang="es" data-scroll-behavior="smooth" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <a
           href="#contenido"

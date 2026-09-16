@@ -83,14 +83,16 @@ export function Navbar() {
   if (pathname === "/sistemas") activeKey = "sistemas";
   else if (pathname === "/paginas-web") activeKey = "web";
   else if (pathname === "/soporte") activeKey = "soporte";
+  else if (pathname === "/pos") activeKey = "pos";
   else if (pathname === "/") activeKey = spy;
   else activeKey = "home";
 
-  const servicesActive = activeKey === "sistemas" || activeKey === "web" || activeKey === "soporte";
+  const servicesActive = activeKey === "sistemas" || activeKey === "web" || activeKey === "soporte" || activeKey === "pos";
 
   const servicesMenu = [
     { key: "sistemas", label: t.nav.systems, href: "/sistemas" },
     { key: "web", label: t.nav.web, href: "/paginas-web" },
+    { key: "pos", label: t.nav.pos, href: "/pos" },
     { key: "soporte", label: t.nav.support, href: "/soporte" },
   ];
 

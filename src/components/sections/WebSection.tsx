@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { useLanguage } from "@/i18n/provider";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { DynamicIcon } from "@/components/ui/Icons";
 
 export function WebSection() {
   const { t } = useLanguage();
+  const serviceIcons = ["zap", "palette", "layout", "shield"];
+  const serviceLinks = ["/pos", "/paginas-web", "/sistemas", "/soporte"];
+  const serviceColors = "border-brand-300/70 bg-gradient-to-br from-[#17122f] via-[#110d26] to-[#090812] shadow-[0_0_28px_rgba(138,0,255,0.16)] hover:border-neon-pink/90 hover:shadow-[0_0_42px_rgba(239,10,185,0.32)]";
 
   return (
     <section id="paginas-web" className="relative overflow-hidden bg-surface py-20 sm:py-24">
@@ -23,35 +25,23 @@ export function WebSection() {
             <p className="mt-4 text-pretty text-base leading-relaxed text-body sm:text-lg">
               {t.web.description}
             </p>
-            <div className="mt-7">
-              <Button href="/paginas-web" size="lg">
-                {t.web.cta}
-              </Button>
-              <p className="mt-3 text-sm text-faint">{t.web.ctaHelper}</p>
-            </div>
+            <p className="mt-7 text-sm text-faint">{t.web.ctaHelper}</p>
           </div>
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {t.web.chips.map((feature) => (
-              <div
+            {t.web.chips.map((feature, index) => (
+              <Link
                 key={feature.label}
-                className="flex items-center gap-3 rounded-card border border-line bg-card p-5 shadow-soft"
+                href={serviceLinks[index]}
+                className={`group relative isolate flex items-center gap-3 overflow-hidden rounded-card border p-5 shadow-soft transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] active:scale-[0.98] ${serviceColors}`}
               >
-                <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand-tint text-brand-300">
-                  <DynamicIcon name={feature.icon} className="size-5" />
+                <span aria-hidden="true" className="pointer-events-none absolute -bottom-8 left-1/2 h-16 w-3/4 -translate-x-1/2 rounded-full bg-brand-gradient opacity-25 blur-2xl transition-opacity duration-300 motion-safe:animate-pulse group-hover:opacity-70" />
+                <span className="relative z-[1] grid size-10 shrink-0 place-items-center rounded-xl bg-brand-tint text-brand-300 transition-all duration-300 group-hover:bg-brand-gradient group-hover:text-white group-hover:scale-110 group-hover:rotate-6">
+                  <DynamicIcon name={serviceIcons[index]} className="size-5 transition-transform duration-300 group-hover:scale-110" />
                 </span>
-                <span className="min-w-0 text-sm font-semibold text-strong">{feature.label}</span>
-              </div>
+                <span className="relative z-[1] min-w-0 text-sm font-semibold text-strong">{feature.label}</span>
+              </Link>
             ))}
-            <Link
-              href="/paginas-web"
-              className="col-span-1 flex items-center gap-3 rounded-card border border-brand-tint-strong/60 bg-brand-tint/60 p-5 transition-colors hover:bg-brand-tint-strong/60 sm:col-span-2"
-            >
-              <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand-gradient text-white">
-                <DynamicIcon name="arrowRight" className="size-5" />
-              </span>
-              <span className="text-sm font-semibold text-brand-200">{t.web.linkCta}</span>
-            </Link>
           </div>
         </div>
       </Container>

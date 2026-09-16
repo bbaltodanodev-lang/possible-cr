@@ -4,6 +4,7 @@ export const en: Messages = {
   nav: {
     home: "Home",
     services: "Services",
+    pos: "POS systems",
     systems: "Business systems",
     web: "Websites",
     support: "Support and maintenance",
@@ -98,6 +99,13 @@ export const en: Messages = {
         description:
           "Corporate website for the technology development area of a company specializing in multifunctional resource solutions and client acquisition consulting.",
       },
+      {
+        id: "bernal-portfolio",
+        name: "Bernal Baltodano Portfolio",
+        category: "Professional portfolio",
+        description: "Personal portfolio of Bernal Baltodano, systems engineer and Full Stack developer.",
+      },
+      { id: "chicken-frito", name: "Chicken Frito", category: "Restaurant website", description: "Restaurant website with menu, ordering and delivery." },
     ],
   },
   process: {
@@ -539,6 +547,14 @@ export const en: Messages = {
         description:
           "A professional image, found on Google, customers reaching you with one click, and your location always accessible with Google Maps.",
         cta: "See websites",
+      },
+      {
+        id: "pos",
+        icon: "zap",
+        title: "POS systems",
+        description:
+          "Manage sales, inventory and cash from a POS system built for shops, retailers and businesses that need to move quickly.",
+        cta: "See POS systems",
       },
     ],
   },

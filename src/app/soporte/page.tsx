@@ -4,6 +4,8 @@ import { Container } from "@/components/ui/Container";
 import { SupportService } from "@/components/sections/SupportService";
 import { supportContent } from "@/data/support";
 import { useLanguage } from "@/i18n/provider";
+import { FinalCta } from "@/components/sections/FinalCta";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function SupportPage() {
   const { lang } = useLanguage();
@@ -26,6 +28,8 @@ export default function SupportPage() {
           </p>
         </div>
         <SupportService />
+        <FinalCta />
+        <ContactSection />
       </Container>
     </section>
   );

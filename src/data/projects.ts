@@ -21,8 +21,6 @@ export const projects: Project[] = [
     description:
       "Sistema web administrativo desarrollado para centralizar y digitalizar los procesos internos del Comité Cantonal de Deportes y Recreación de Santa Cruz, Guanacaste. Gestión de membresías, tiquetes, ingresos y agenda institucional.",
     image: "/projects/ccdr-admin.png",
-    imageFit: "contain",
-    preserveImageQuality: true,
     technologies: ["React", "Vite", "Tailwind CSS", "TypeScript"],
   },
   {
@@ -59,8 +57,6 @@ export const projects: Project[] = [
     description:
       "Sitio web para Gohan, restaurante japonés especializado en onigiris premium hechos a mano en Plaza Mundo Escazú. Diseño minimalista con menú bilingüe (ES/EN), galería, historia y sistema de pedidos integrado.",
     image: "/projects/gohan-onigiri.png",
-    imageFit: "contain",
-    preserveImageQuality: true,
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
@@ -70,6 +66,23 @@ export const projects: Project[] = [
     description:
       "Sitio web corporativo para el área de desarrollo tecnológico de una empresa especializada en soluciones de recursos multifuncionales y consultoría para adquisición de clientes.",
     image: "/projects/bpolabs.png",
+    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+  },
+  {
+    id: "bernal-portfolio",
+    name: "Portafolio de Bernal Baltodano",
+    category: "Fundador y propietario de BM Solutions",
+    description:
+      "Portafolio personal de Bernal Baltodano, fundador y propietario de BM Solutions, ingeniero de sistemas y desarrollador Full Stack. Presenta su experiencia, habilidades, proyectos destacados y las tecnologías que utiliza para crear sistemas empresariales, plataformas POS y sitios web profesionales.",
+    image: "/projects/bernal-portfolio.png",
+    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+  },
+  {
+    id: "chicken-frito",
+    name: "Chicken Frito",
+    category: "Sitio web para restaurante",
+    description: "Sitio web para Chicken Frito con identidad visual vibrante, menú digital organizado, pedidos en línea, delivery, secciones informativas, navegación adaptable a móviles y llamados a la acción para convertir visitas en clientes.",
+    image: "/projects/chicken-frito.png",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
   },
 ];

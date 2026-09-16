@@ -1,14 +1,22 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useLanguage } from "@/i18n/provider";
 import { projects } from "@/data/projects";
 import { ProjectVisual } from "./ProjectVisual";
-import { IconExternalLink } from "@/components/ui/Icons";
+import { IconExternalLink, IconSearch, IconClose } from "@/components/ui/Icons";
 
 export function ProjectCard({ projectId }: { projectId: string }) {
   const { t } = useLanguage();
   const ref = useRef<HTMLElement>(null);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    const close = (event: KeyboardEvent) => { if (event.key === "Escape") setIsLightboxOpen(false); };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, [isLightboxOpen]);
 
   const project = projects.find((p) => p.id === projectId);
   const item = t.projects.items.find((i) => i.id === projectId);
@@ -25,18 +33,18 @@ export function ProjectCard({ projectId }: { projectId: string }) {
     <article
       ref={ref}
       onMouseMove={handleMouseMove}
-      className="group project-card relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-white/10 bg-card shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(138,0,255,0.25)]"
+      className="group project-card relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-white/10 bg-card shadow-soft transition-shadow duration-500 ease-out hover:shadow-[0_0_28px_rgba(138,0,255,0.32),0_0_55px_rgba(239,10,185,0.16)]"
     >
       {/* Glow border — solo visible en hover */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[5] rounded-[1.5rem] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 z-[5] rounded-[1.5rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
           padding: "1.5px",
           background:
             "linear-gradient(135deg, #168bff, #4a00d9, #b000a8, #ef0ab9, #ff167a, #168bff)",
           backgroundSize: "300% 300%",
-          animation: "bm-border-spin 2s linear infinite",
+          animation: "bm-border-spin 4s ease-in-out infinite",
           WebkitMask:
             "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
           WebkitMaskComposite: "xor",
@@ -58,15 +66,16 @@ export function ProjectCard({ projectId }: { projectId: string }) {
       />
 
       {project ? (
-        <div className="relative z-[2] aspect-[16/10] overflow-hidden border-b border-white/[0.06]">
+        <div onPointerDown={(event) => event.stopPropagation()} onPointerUp={(event) => event.stopPropagation()} onClick={(event) => { event.stopPropagation(); if (project.image) setIsLightboxOpen(true); }} className="relative z-[2] aspect-[16/10] cursor-zoom-in overflow-hidden border-b border-white/[0.06]">
           <div
             className={`relative h-full transition-transform duration-500 ease-out ${
               project.imageFit === "contain"
                 ? "scale-[0.96] group-hover:scale-100"
-                : "group-hover:scale-[1.04]"
+                : "scale-100 group-hover:scale-[1.025]"
             }`}
           >
             <ProjectVisual project={project} altText={item?.name} />
+            {project.image && <button type="button" aria-label="Ampliar imagen" onPointerDown={(event) => event.stopPropagation()} onPointerUp={(event) => event.stopPropagation()} onClick={(event) => { event.preventDefault(); event.stopPropagation(); setIsLightboxOpen(true); }} className="absolute right-3 top-3 z-20 grid size-10 place-items-center rounded-full bg-black/75 text-white shadow-lg backdrop-blur-sm transition-all hover:scale-110 hover:bg-brand-gradient"><IconSearch className="size-5" /></button>}
           </div>
         </div>
       ) : null}
@@ -104,6 +113,7 @@ export function ProjectCard({ projectId }: { projectId: string }) {
           </div>
         ) : null}
       </div>
+      {isLightboxOpen && project?.image && typeof document !== "undefined" && createPortal(<div role="dialog" aria-modal="true" aria-label={item?.name} className="fixed inset-0 z-[9999] grid place-items-center bg-black/90 p-4 backdrop-blur-sm" onClick={() => setIsLightboxOpen(false)}><button type="button" aria-label="Cerrar imagen" onPointerDown={(event) => { event.preventDefault(); event.stopPropagation(); setIsLightboxOpen(false); }} onClick={(event) => { event.preventDefault(); event.stopPropagation(); }} className="absolute right-5 top-5 z-20 grid size-11 place-items-center rounded-full bg-white/10 text-white hover:bg-brand-gradient"><IconClose className="size-5" /></button><img src={project.image} alt={item?.name ?? project.name} className="max-h-[90vh] max-w-[95vw] object-contain" onClick={(event) => event.stopPropagation()} /></div>, document.body)}
     </article>
   );
 }

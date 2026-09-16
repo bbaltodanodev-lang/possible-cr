@@ -2,6 +2,7 @@
   nav: {
     home: "Hogar",
     services: "Servicios",
+    pos: "Sistemas POS",
     systems: "Sistemas empresariales",
     web: "Páginas web",
     support: "Soporte y mantenimiento",
@@ -22,18 +23,18 @@
     ],
   },
   web: {
-    eyebrow: "Páginas web profesionales",
-    title: "¿Buscas una imagen profesional en Internet?",
+    eyebrow: "Servicios digitales para tu negocio",
+    title: "Elige la solución que mejor se adapta a tu negocio.",
     description:
-      "Tu página web es el primer contacto entre un cliente y tu negocio. Creamos sitios web con diseño profesional a la medida que ayudan a que tus clientes te encuentren fácilmente.",
-    cta: "Me interesa",
-    ctaHelper: "Conoce todo lo que incluye tu página web y los precios.",
-    linkCta: "Ver todo lo que incluye tu página web y los precios",
+      "Creamos soluciones digitales a la medida para organizar tu negocio, mejorar tus procesos y ayudarte a crecer con tecnología clara y profesional.",
+    cta: "Ver servicios",
+    ctaHelper: "Conoce nuestros servicios, beneficios y opciones de inversión.",
+    linkCta: "Ver todos los servicios y planes",
     chips: [
-      { icon: "palette", label: "Diseño profesional" },
-      { icon: "devices", label: "Se ve bien en teléfono y PC" },
-      { icon: "search", label: "Te encuentran en Google" },
-      { icon: "messageSquare", label: "WhatsApp y formularios" },
+      { icon: "zap", label: "Sistemas POS" },
+      { icon: "palette", label: "Páginas web" },
+      { icon: "layout", label: "Sistemas empresariales" },
+      { icon: "shield", label: "Soporte y mantenimiento" },
     ],
   },
   projects: {
@@ -96,6 +97,14 @@
         description:
           "Sitio web corporativo para el área de desarrollo tecnológico de una empresa especializada en soluciones de recursos multifuncionales y consultoría para adquisición de clientes.",
       },
+      {
+        id: "bernal-portfolio",
+        name: "Portafolio de Bernal Baltodano",
+        category: "Fundador y propietario de BM Solutions",
+        description:
+          "Portafolio personal de Bernal Baltodano, fundador y propietario de BM Solutions, ingeniero de sistemas y desarrollador Full Stack. Presenta su experiencia, habilidades, proyectos destacados y tecnologías para crear sistemas empresariales, POS y sitios web profesionales.",
+      },
+      { id: "chicken-frito", name: "Chicken Frito", category: "Sitio web para restaurante", description: "Sitio web para Chicken Frito con identidad visual vibrante, menú digital organizado, pedidos en línea, delivery, secciones informativas, diseño adaptable a móviles y llamados a la acción para convertir visitas en clientes." },
     ],
   },
   process: {
@@ -542,6 +551,14 @@ eyebrow: "Elige dónde empezar",
         description:
           "Una imagen profesional, te encuentran en Google, tus clientes te contactan con un clic y tu ubicación siempre accesible con Google Maps.",
         cta: "Ver páginas web",
+      },
+      {
+        id: "pos",
+        icon: "zap",
+        title: "Sistemas POS",
+        description:
+          "Controla ventas, inventario y caja desde un sistema POS hecho para tiendas, comercios y negocios que necesitan operar con rapidez.",
+        cta: "Ver sistemas POS",
       },
     ],
   },

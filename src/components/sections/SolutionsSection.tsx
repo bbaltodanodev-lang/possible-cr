@@ -8,6 +8,7 @@ import { DynamicIcon } from "@/components/ui/Icons";
 const links: Record<string, string> = {
   sistemas: "/sistemas",
   web: "/paginas-web",
+  pos: "/pos",
 };
 
 export function SolutionsSection() {
