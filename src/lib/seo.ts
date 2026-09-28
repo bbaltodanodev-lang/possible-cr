@@ -29,6 +29,11 @@ export function websiteSchema() {
     alternateName: "Possible.cr",
     url: siteConfig.url,
     description: siteConfig.tagline,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteConfig.url}/?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
