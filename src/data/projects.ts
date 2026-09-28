@@ -13,6 +13,7 @@ export const projects: Project[] = [
       "Dashboard empresarial integral para la gestión de recursos humanos y operaciones corporativas. Incluye control de asistencia, gestión de vacaciones, asignación de roles, administración multi-empresa y módulos de IA para análisis y calificación de llamadas de operadores.",
     image: "/projects/proyecto-02.jpg",
     technologies: ["Next.js", "Go", "TypeScript", "PostgreSQL"],
+    url: "https://connectup.cloud/",
   },
   {
     id: "ccdr-admin",
@@ -40,6 +41,7 @@ export const projects: Project[] = [
       "Plataforma web para el alquiler de maquinaria pesada. Como startup en producción, se enfrentó el desafío de desarrollar una solución escalable que se adaptara a los constantes cambios del negocio. +850 equipos disponibles con cotización en menos de 1 hora.",
     image: "/projects/proyecto-03.jpg",
     technologies: ["React", "Vite", "Tailwind CSS"],
+    url: "https://www.retri.app/",
   },
   {
     id: "dmona",
@@ -49,6 +51,7 @@ export const projects: Project[] = [
       "Landing page para Cafetería D'Mona, ubicada en Cartago, Costa Rica, con vista directa hacia la Basílica de los Ángeles. Diseño cálido y elegante que refleja la identidad del local, con menú, galería y contacto por WhatsApp.",
     image: "/projects/proyecto-07.jpg",
     technologies: ["HTML", "CSS", "JavaScript"],
+    url: "https://cafeteria-dmona.vercel.app/",
   },
   {
     id: "gohan-onigiri",
@@ -58,6 +61,7 @@ export const projects: Project[] = [
       "Sitio web para Gohan, restaurante japonés especializado en onigiris premium hechos a mano en Plaza Mundo Escazú. Diseño minimalista con menú bilingüe (ES/EN), galería, historia y sistema de pedidos integrado.",
     image: "/projects/gohan-onigiri.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    url: "https://gohan-cr.vercel.app/",
   },
   {
     id: "bpolabs",
@@ -67,6 +71,7 @@ export const projects: Project[] = [
       "Sitio web corporativo para el área de desarrollo tecnológico de una empresa especializada en soluciones de recursos multifuncionales y consultoría para adquisición de clientes.",
     image: "/projects/bpolabs.png",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    url: "https://bpolabsolutions.com/",
   },
   {
     id: "bernal-portfolio",
@@ -76,6 +81,7 @@ export const projects: Project[] = [
       "Portafolio personal de Bernal Baltodano, fundador y propietario de BM Solutions, ingeniero de sistemas y desarrollador Full Stack. Presenta su experiencia, habilidades, proyectos destacados y las tecnologías que utiliza para crear sistemas empresariales, plataformas POS y sitios web profesionales.",
     image: "/projects/bernal-portfolio.png",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    url: "https://bbaltodano-portafolio.vercel.app/",
   },
   {
     id: "chicken-frito",
@@ -84,5 +90,6 @@ export const projects: Project[] = [
     description: "Sitio web para Chicken Frito con identidad visual vibrante, menú digital organizado, pedidos en línea, delivery, secciones informativas, navegación adaptable a móviles y llamados a la acción para convertir visitas en clientes.",
     image: "/projects/chicken-frito.png",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+    url: "https://www.chickenfritocr.com/",
   },
 ];

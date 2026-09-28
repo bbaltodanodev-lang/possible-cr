@@ -190,6 +190,10 @@ export function ProjectCarousel() {
     // dragging for mouse/stylus avoids browsers cancelling a finger swipe.
     if (event.pointerType === "touch") return;
     if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+    // Controls inside a card (project link, lightbox button) must keep their own
+    // click. Starting a drag here would capture the pointer and retarget the
+    // click to the viewport, so the control would never activate.
+    if ((event.target as HTMLElement).closest("a, button, [role='button']")) return;
     navigationRef.current = null;
     suppressClickUntilRef.current = 0;
     dragRef.current = {
