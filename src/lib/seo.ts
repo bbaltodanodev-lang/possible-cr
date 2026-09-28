@@ -38,6 +38,20 @@ export function websiteSchema() {
   };
 }
 
+export function professionalServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    image: `${siteConfig.url}/opengraph-image.png`,
+    description: siteConfig.tagline,
+    email: siteConfig.email,
+    areaServed: siteConfig.areaServed.map((area) => ({ "@type": "Country", name: area })),
+    knowsAbout: ["Diseño de páginas web", "Desarrollo web", "Sistemas web empresariales", "Presencia digital para negocios"],
+  };
+}
+
 export function servicesSchema() {
   const base = {
     "@context": "https://schema.org",

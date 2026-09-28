@@ -8,7 +8,7 @@ import { BackToTopButton } from "@/components/layout/BackToTopButton";
 import { ScrollManager } from "@/components/ui/ScrollManager";
 import { LanguageProvider } from "@/i18n/provider";
 import { siteConfig, defaultMetadata } from "@/data/site";
-import { organizationSchema, websiteSchema, jsonLdScript } from "@/lib/seo";
+import { organizationSchema, professionalServiceSchema, websiteSchema, jsonLdScript } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: defaultMetadata.description,
+  keywords: [...defaultMetadata.keywords],
+  category: "technology",
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   alternates: {
     canonical: "/",
   },
@@ -94,6 +98,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdScript(websiteSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdScript(professionalServiceSchema()) }}
         />
       </body>
     </html>
