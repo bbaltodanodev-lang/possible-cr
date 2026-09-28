@@ -14,7 +14,7 @@ export const es = {
   },
   hero: {
     tagline:
-      "Tener tu propia web no debería ser difícil ni caro. En Possible lo hacemos posible: una presencia digital profesional para que tu negocio crezca.",
+      "Tener tu propia web no debería ser difícil ni caro. En Possible, hacer crecer tu negocio sí es posible: creamos una presencia digital profesional para impulsarlo.",
     ctaSystems: "Ver sistemas",
     ctaContact: "Páginas web",
     badges: [
@@ -173,7 +173,7 @@ export const es = {
     brandAria: "Possible — Ir al inicio",
     rights: "Todos los derechos reservados.",
     tagline:
-      "Tu propia web no debería ser difícil ni cara. Soluciones digitales profesionales para hacer crecer tu negocio.",
+      "Tu propia web no debería ser difícil ni cara. En Possible, hacer crecer tu negocio sí es posible.",
     privacy: "Privacidad",
     terms: "Términos",
     backToTop: "Volver arriba",
