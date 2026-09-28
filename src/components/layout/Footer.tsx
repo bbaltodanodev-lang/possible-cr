@@ -57,9 +57,6 @@ export function Footer() {
               className="inline-flex items-center gap-3 rounded-xl"
             >
               <Logo priority={false} />
-              <span className="text-lg font-black tracking-tight text-white">
-                {t.footer.brandName}
-              </span>
             </Link>
             <p className="mt-5 max-w-sm text-pretty text-sm leading-relaxed text-slate-300">
               {t.footer.tagline}
