@@ -125,7 +125,7 @@ export function DashboardPreview({ className }: { className?: string }) {
             {t.dashboard.rangeBadge}
           </span>
           <span className="grid size-7 place-items-center rounded-full bg-brand-gradient text-[11px] font-bold text-white">
-            BM
+            P
           </span>
         </div>
       </div>
@@ -136,7 +136,7 @@ export function DashboardPreview({ className }: { className?: string }) {
           className="hidden w-44 shrink-0 flex-col gap-1 border-r border-line bg-card p-3 md:flex"
         >
           <span className="mb-2 grid size-8 place-items-center rounded-lg bg-brand-gradient text-[11px] font-bold text-white">
-            BM
+            P
           </span>
           {t.dashboard.sidebar.map((item, i) => (
             <span
