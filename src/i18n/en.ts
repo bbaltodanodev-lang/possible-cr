@@ -173,7 +173,8 @@ export const en: Messages = {
     brandName: "Possible",
     brandAria: "Possible — Go to homepage",
     rights: "All rights reserved.",
-    tagline: "Digital solutions for businesses that want to grow.",
+    tagline:
+      "Your own website should not be difficult or expensive. Professional digital solutions to help your business grow.",
     privacy: "Privacy",
     terms: "Terms",
     backToTop: "Back to top",

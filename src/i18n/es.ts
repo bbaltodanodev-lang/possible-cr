@@ -172,7 +172,8 @@ export const es = {
     brandName: "Possible",
     brandAria: "Possible — Ir al inicio",
     rights: "Todos los derechos reservados.",
-    tagline: "Soluciones digitales para negocios que quieren crecer.",
+    tagline:
+      "Tu propia web no debería ser difícil ni cara. Soluciones digitales profesionales para hacer crecer tu negocio.",
     privacy: "Privacidad",
     terms: "Términos",
     backToTop: "Volver arriba",
