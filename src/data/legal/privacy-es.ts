@@ -116,7 +116,7 @@ export const privacyEs: LegalDocumentContent = {
       id: "solicitar-cambios",
       heading: "Cómo solicitar la modificación o eliminación de tu información",
       paragraphs: [
-        "Para ejercer cualquiera de estos derechos, escríbenos a possible.cr@gmail.com indicando qué solicitas, a qué información te refieres y la dirección de correo que usaste para comunicarte con nosotros. También puedes escribirnos por WhatsApp al +506 6203 7705.",
+        "Para ejercer cualquiera de estos derechos, escríbenos a contact.possible.cr@gmail.com indicando qué solicitas, a qué información te refieres y la dirección de correo que usaste para comunicarte con nosotros. También puedes escribirnos por WhatsApp al +506 6203 7705.",
         "Verificaremos la identidad de quien solicita el cambio para proteger tu información. Responderemos dentro de un plazo razonable y, si corresponde, eliminaremos la información o confirmaremos por escrito qué cambios se realizaron.",
         "Ten en cuenta que es posible que debamos conservar cierta información cuando exista una obligación legal o contractual de hacerlo, por ejemplo, mientras un proyecto se encuentre en ejecución.",
       ],
@@ -125,7 +125,7 @@ export const privacyEs: LegalDocumentContent = {
       id: "contacto-privacidad",
       heading: "Información de contacto",
       paragraphs: [
-        "Possible, Costa Rica. Correo electrónico: possible.cr@gmail.com. Teléfono y WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
+        "Possible, Costa Rica. Correo electrónico: contact.possible.cr@gmail.com. Teléfono y WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
         "Para cualquier consulta relacionada con esta política de privacidad o con el tratamiento de tus datos personales puedes utilizar cualquiera de estos canales de contacto.",
       ],
     },

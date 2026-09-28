@@ -90,7 +90,7 @@ export const termsEn2: LegalSection[] = [
     id: "contacto-terminos",
     heading: "Contact",
     paragraphs: [
-      "Possible, Costa Rica. Email: possible.cr@gmail.com. Phone and WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
+      "Possible, Costa Rica. Email: contact.possible.cr@gmail.com. Phone and WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
       "For any question about these terms or about a project in progress, use the same channel we use during the business relationship: email, WhatsApp or the project ticket system, as applicable.",
     ],
   },

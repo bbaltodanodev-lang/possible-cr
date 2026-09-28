@@ -18,7 +18,7 @@ export function AboutSection() {
             <h3 className="mt-2 text-2xl font-bold text-white">Bernal Baltodano</h3>
             <p className="mt-3 text-sm leading-relaxed text-body">Diseño y desarrollo sistemas web, páginas profesionales y soluciones POS adaptadas a cada negocio.</p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
-              <a href="mailto:possible.cr@gmail.com" className="text-brand-300 hover:text-brand-200">Email</a>
+              <a href="mailto:contact.possible.cr@gmail.com" className="text-brand-300 hover:text-brand-200">Email</a>
               <a href="https://github.com/bbaltodanodev-lang" target="_blank" rel="noreferrer" className="text-brand-300 hover:text-brand-200">GitHub</a>
               <a href="https://wa.me/50662037705" target="_blank" rel="noreferrer" className="text-brand-300 hover:text-brand-200">WhatsApp</a>
             </div>

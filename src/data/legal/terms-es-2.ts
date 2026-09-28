@@ -90,7 +90,7 @@ export const termsEs2: LegalSection[] = [
     id: "contacto-terminos",
     heading: "Contacto",
     paragraphs: [
-      "Possible, Costa Rica. Correo electrónico: possible.cr@gmail.com. Teléfono y WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
+      "Possible, Costa Rica. Correo electrónico: contact.possible.cr@gmail.com. Teléfono y WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
       "Para cualquier consulta sobre estos términos o sobre un proyecto en curso, utiliza el mismo canal que usamos durante la relación comercial: correo electrónico, WhatsApp o el sistema de tickets del proyecto, según corresponda.",
     ],
   },

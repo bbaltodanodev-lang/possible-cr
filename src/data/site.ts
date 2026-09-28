@@ -5,7 +5,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://possible.cr",
 
   // --- Contacto ------------------------------------------------------------
-  email: "possible.cr@gmail.com",
+  email: "contact.possible.cr@gmail.com",
   whatsappNumber: "50662037705", // Solo dígitos, con código de país.
   phone: "+50662037705",
   phoneDisplay: "+506 6203 7705",
