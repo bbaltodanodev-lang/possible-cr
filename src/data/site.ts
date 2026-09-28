@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Possible",
   legalName: "Possible",
-  tagline: "Soluciones digitales para negocios que quieren crecer.",
+  tagline: "Tu propia web no debería ser difícil ni cara. En Possible lo hacemos posible.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://possible.cr",
 
   // --- Contacto ------------------------------------------------------------

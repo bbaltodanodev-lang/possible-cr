@@ -13,7 +13,8 @@ export const es = {
     ariaClose: "Cerrar menú",
   },
   hero: {
-    tagline: "Sistemas web y páginas web profesionales para tu negocio.",
+    tagline:
+      "Tener tu propia web no debería ser difícil ni caro. En Possible lo hacemos posible: una presencia digital profesional para que tu negocio crezca.",
     ctaSystems: "Ver sistemas",
     ctaContact: "Páginas web",
     badges: [

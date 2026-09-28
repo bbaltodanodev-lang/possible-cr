@@ -15,7 +15,8 @@ export const en: Messages = {
     ariaClose: "Close menu",
   },
   hero: {
-    tagline: "Custom web systems and professional websites for your business.",
+    tagline:
+      "Having your own website should not be difficult or expensive. At Possible, we make it possible with a professional digital presence built for your growth.",
     ctaSystems: "View systems",
     ctaContact: "Websites",
     badges: [
