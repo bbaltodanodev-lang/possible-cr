@@ -1,18 +1,17 @@
 export const siteConfig = {
-  name: "BM Solutions",
-  legalName: "BM Solutions",
+  name: "Possible",
+  legalName: "Possible",
   tagline: "Soluciones digitales para negocios que quieren crecer.",
-  // Cambia esta URL por el dominio real cuando BM Solutions tenga uno.
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://bmsolutions.example.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://possible.cr",
 
   // --- Contacto ------------------------------------------------------------
-  email: "bm.solutionscr@gmail.com",
+  email: "possible.cr@gmail.com",
   whatsappNumber: "50662037705", // Solo dígitos, con código de país.
   phone: "+50662037705",
   phoneDisplay: "+506 6203 7705",
 
   // --- Ubicación / SEO local ------------------------------------------------
-  // Completa cuando BM Solutions defina estos datos.
+  // Completa cuando Possible defina estos datos.
   country: "Costa Rica",
   region: "", // Provincia, ej: "Guanacaste"
   city: "", // Ciudad, ej: "Santa Cruz"
@@ -25,7 +24,7 @@ export const siteConfig = {
 
   // --- Redes sociales ---------------------------------------------------------
   social: {
-    instagram: "https://www.instagram.com/bm.solutionscr/",
+    instagram: "https://www.instagram.com/possible.cr/",
     facebook: "",
     linkedin: "",
     x: "",
@@ -33,7 +32,7 @@ export const siteConfig = {
 } as const;
 
 export const defaultMetadata = {
-  title: "BM Solutions — Sistemas web y páginas web profesionales",
+  title: "Possible | Sistemas web y páginas web profesionales",
   description:
-    "BM Solutions desarrolla sistemas web y páginas web profesionales para pequeños y medianos negocios. Organiza tu negocio en un solo lugar y mejora tu presencia digital.",
+    "Possible desarrolla sistemas web y páginas web profesionales para pequeños y medianos negocios. Organiza tu negocio en un solo lugar y mejora tu presencia digital.",
 } as const;

@@ -4,7 +4,7 @@ export const privacyEs: LegalDocumentContent = {
   eyebrow: "Aviso legal",
   title: "Política de Privacidad",
   intro:
-    "En BM Solutions nos importa la privacidad de las personas que confían en nosotros. Esta política explica qué información recopilamos en este sitio web, cómo la utilizamos y cómo puedes ejercer tus derechos sobre ella.",
+    "En Possible nos importa la privacidad de las personas que confían en nosotros. Esta política explica qué información recopilamos en este sitio web, cómo la utilizamos y cómo puedes ejercer tus derechos sobre ella.",
   updatedLabel: "Última actualización:",
   updated: "27 de septiembre de 2026",
   updatedIso: "2026-09-27",
@@ -14,15 +14,15 @@ export const privacyEs: LegalDocumentContent = {
       id: "quienes-somos",
       heading: "Quiénes somos",
       paragraphs: [
-        "BM Solutions desarrolla sistemas web empresariales, páginas web, sistemas de punto de venta (POS) y servicios de soporte y mantenimiento web para negocios de Costa Rica y de otros países.",
-        "Este sitio web es el canal público de BM Solutions. Cuando utilizas nuestros formularios de contacto o nos escribes por correo electrónico o WhatsApp, BM Solutions es responsable del tratamiento de la información que nos facilitas, de acuerdo con lo descrito en esta política.",
+        "Possible desarrolla sistemas web empresariales, páginas web, sistemas de punto de venta (POS) y servicios de soporte y mantenimiento web para negocios de Costa Rica y de otros países.",
+        "Este sitio web es el canal público de Possible. Cuando utilizas nuestros formularios de contacto o nos escribes por correo electrónico o WhatsApp, Possible es responsable del tratamiento de la información que nos facilitas, de acuerdo con lo descrito en esta política.",
       ],
     },
     {
       id: "informacion-recopilada",
       heading: "Qué información recopilamos",
       paragraphs: [
-        "BM Solutions solo recopila información que tú decides proporcionarnos de forma voluntaria. En este sitio web podemos solicitarla en los siguientes casos:",
+        "Possible solo recopila información que tú decides proporcionarnos de forma voluntaria. En este sitio web podemos solicitarla en los siguientes casos:",
       ],
       points: [
         "Tu nombre y el nombre de tu empresa, cuando los incluyes en el formulario de contacto o en tus mensajes.",
@@ -73,19 +73,19 @@ export const privacyEs: LegalDocumentContent = {
       heading: "Cookies y tecnologías similares",
       paragraphs: [
         "Este sitio web no utiliza cookies de seguimiento, perfiles de publicidad, píxeles de seguimiento ni herramientas de analítica web.",
-        "La única información que se guarda en tu navegador es tu preferencia de idioma (español o inglés). Esa preferencia se almacena únicamente en el almacenamiento local de tu propio dispositivo, no se envía a BM Solutions, no se comparte con terceros y puedes eliminarla en cualquier momento borrando los datos del sitio desde tu navegador.",
+        "La única información que se guarda en tu navegador es tu preferencia de idioma (español o inglés). Esa preferencia se almacena únicamente en el almacenamiento local de tu propio dispositivo, no se envía a Possible, no se comparte con terceros y puedes eliminarla en cualquier momento borrando los datos del sitio desde tu navegador.",
       ],
     },
     {
       id: "seguridad",
       heading: "Seguridad de la información",
       paragraphs: [
-        "BM Solutions toma medidas razonables para proteger la información que nos confías, entre ellas:",
+        "Possible toma medidas razonables para proteger la información que nos confías, entre ellas:",
       ],
       points: [
         "El sitio web se entrega sobre una conexión cifrada mediante HTTPS.",
         "Los datos del formulario se validan en el servidor y se descartan las solicitudes incompletas, incorrectas o automatizadas.",
-        "El acceso a la información recibida se limita a las personas de BM Solutions que la necesitan para responder tu solicitud.",
+        "El acceso a la información recibida se limita a las personas de Possible que la necesitan para responder tu solicitud.",
         "No vendemos, alquilamos ni cedemos tu información con fines comerciales.",
       ],
     },
@@ -104,7 +104,7 @@ export const privacyEs: LegalDocumentContent = {
         "De acuerdo con la legislación costarricense de protección de la persona frente al tratamiento de sus datos personales, tienes derecho a:",
       ],
       points: [
-        "Saber qué datos tuyos tiene BM Solutions y obtener una copia de ellos.",
+        "Saber qué datos tuyos tiene Possible y obtener una copia de ellos.",
         "Solicitar la corrección de datos inexactos o incompletos.",
         "Solicitar la eliminación de tus datos cuando ya no sean necesarios, cuando revoques tu consentimiento o cuando el tratamiento no sea legítimo.",
         "Revocar el consentimiento que otorgaste, en cualquier momento y sin que ello afecte la licitud del tratamiento anterior.",
@@ -116,7 +116,7 @@ export const privacyEs: LegalDocumentContent = {
       id: "solicitar-cambios",
       heading: "Cómo solicitar la modificación o eliminación de tu información",
       paragraphs: [
-        "Para ejercer cualquiera de estos derechos, escríbenos a bm.solutionscr@gmail.com indicando qué solicitas, a qué información te refieres y la dirección de correo que usaste para comunicarte con nosotros. También puedes escribirnos por WhatsApp al +506 6203 7705.",
+        "Para ejercer cualquiera de estos derechos, escríbenos a possible.cr@gmail.com indicando qué solicitas, a qué información te refieres y la dirección de correo que usaste para comunicarte con nosotros. También puedes escribirnos por WhatsApp al +506 6203 7705.",
         "Verificaremos la identidad de quien solicita el cambio para proteger tu información. Responderemos dentro de un plazo razonable y, si corresponde, eliminaremos la información o confirmaremos por escrito qué cambios se realizaron.",
         "Ten en cuenta que es posible que debamos conservar cierta información cuando exista una obligación legal o contractual de hacerlo, por ejemplo, mientras un proyecto se encuentre en ejecución.",
       ],
@@ -125,7 +125,7 @@ export const privacyEs: LegalDocumentContent = {
       id: "contacto-privacidad",
       heading: "Información de contacto",
       paragraphs: [
-        "BM Solutions, Costa Rica. Correo electrónico: bm.solutionscr@gmail.com. Teléfono y WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/bm.solutionscr/.",
+        "Possible, Costa Rica. Correo electrónico: possible.cr@gmail.com. Teléfono y WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
         "Para cualquier consulta relacionada con esta política de privacidad o con el tratamiento de tus datos personales puedes utilizar cualquiera de estos canales de contacto.",
       ],
     },
@@ -133,7 +133,7 @@ export const privacyEs: LegalDocumentContent = {
       id: "cambios-politica",
       heading: "Cambios en esta política",
       paragraphs: [
-        "BM Solutions puede actualizar esta política de privacidad para reflejar cambios legales, técnicos o en nuestros servicios. Cuando eso ocurra publicaremos la versión vigente en esta misma página e indicaremos la fecha de la última actualización.",
+        "Possible puede actualizar esta política de privacidad para reflejar cambios legales, técnicos o en nuestros servicios. Cuando eso ocurra publicaremos la versión vigente en esta misma página e indicaremos la fecha de la última actualización.",
         "Si el cambio afecta de forma relevante la manera en que tratamos tu información, procuraremos avisarte por correo electrónico o por WhatsApp cuando tengamos tus datos de contacto.",
       ],
     },

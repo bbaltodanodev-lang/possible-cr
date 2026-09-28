@@ -20,12 +20,12 @@ export function Hero() {
         <div className="mx-auto max-w-5xl">
           <div className="mx-auto flex w-full justify-center">
             <div className="animate-[glow-pulse_4s_ease-in-out_infinite] rounded-[2rem] border border-white/10 bg-black/60 p-4 backdrop-blur-sm sm:p-6">
-              <Logo className="h-[210px] w-auto sm:h-[270px]" />
+              <Logo hero className="w-[min(80vw,560px)]" />
             </div>
           </div>
 
           <h1 className="mt-8 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-[4.4rem] lg:leading-[1]">
-            BM Solutions
+            Possible
           </h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-pretty text-base leading-relaxed text-body sm:text-xl">

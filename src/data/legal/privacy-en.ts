@@ -4,7 +4,7 @@ export const privacyEn: LegalDocumentContent = {
   eyebrow: "Legal notice",
   title: "Privacy Policy",
   intro:
-    "At BM Solutions we care about the privacy of the people who trust us. This policy explains what information we collect on this website, how we use it and how you can exercise your rights over it.",
+    "At Possible we care about the privacy of the people who trust us. This policy explains what information we collect on this website, how we use it and how you can exercise your rights over it.",
   updatedLabel: "Last updated:",
   updated: "September 27, 2026",
   updatedIso: "2026-09-27",
@@ -14,15 +14,15 @@ export const privacyEn: LegalDocumentContent = {
       id: "quienes-somos",
       heading: "Who we are",
       paragraphs: [
-        "BM Solutions builds business management systems, websites, point of sale (POS) systems and web support and maintenance services for businesses in Costa Rica and abroad.",
-        "This website is the public channel of BM Solutions. When you use our contact forms or write to us by email or WhatsApp, BM Solutions is the party responsible for handling the information you provide, as described in this policy.",
+        "Possible builds business management systems, websites, point of sale (POS) systems and web support and maintenance services for businesses in Costa Rica and abroad.",
+        "This website is the public channel of Possible. When you use our contact forms or write to us by email or WhatsApp, Possible is the party responsible for handling the information you provide, as described in this policy.",
       ],
     },
     {
       id: "informacion-recopilada",
       heading: "What information we collect",
       paragraphs: [
-        "BM Solutions only collects information that you voluntarily choose to give us. On this website we may ask for it in the following situations:",
+        "Possible only collects information that you voluntarily choose to give us. On this website we may ask for it in the following situations:",
       ],
       points: [
         "Your name and your company name, when you include them in the contact form or in your messages.",
@@ -73,19 +73,19 @@ export const privacyEn: LegalDocumentContent = {
       heading: "Cookies and similar technologies",
       paragraphs: [
         "This website does not use tracking cookies, advertising profiles, tracking pixels or web analytics tools.",
-        "The only information stored in your browser is your language preference (Spanish or English). That preference is stored only in the local storage of your own device, it is never sent to BM Solutions, it is never shared with third parties, and you can remove it at any time by clearing this site's data from your browser.",
+        "The only information stored in your browser is your language preference (Spanish or English). That preference is stored only in the local storage of your own device, it is never sent to Possible, it is never shared with third parties, and you can remove it at any time by clearing this site's data from your browser.",
       ],
     },
     {
       id: "seguridad",
       heading: "Information security",
       paragraphs: [
-        "BM Solutions takes reasonable measures to protect the information you entrust to us, including:",
+        "Possible takes reasonable measures to protect the information you entrust to us, including:",
       ],
       points: [
         "The website is delivered over an encrypted connection using HTTPS.",
         "Form data is validated on the server, and incomplete, incorrect or automated requests are discarded.",
-        "Access to the information received is limited to the BM Solutions people who need it in order to reply to your request.",
+        "Access to the information received is limited to the Possible people who need it in order to reply to your request.",
         "We do not sell, rent or transfer your information for commercial purposes.",
       ],
     },
@@ -104,7 +104,7 @@ export const privacyEn: LegalDocumentContent = {
         "Under Costa Rican law on the protection of personal data, you have the right to:",
       ],
       points: [
-        "Know what data BM Solutions holds about you and get a copy of it.",
+        "Know what data Possible holds about you and get a copy of it.",
         "Ask us to correct inaccurate or incomplete data.",
         "Ask us to delete your data when it is no longer needed, when you withdraw your consent, or when the processing is not lawful.",
         "Withdraw the consent you gave at any time, without affecting the lawfulness of the previous processing.",
@@ -116,7 +116,7 @@ export const privacyEn: LegalDocumentContent = {
       id: "solicitar-cambios",
       heading: "How to request a change or the deletion of your information",
       paragraphs: [
-        "To exercise any of these rights, write to us at bm.solutionscr@gmail.com stating what you are requesting, which information it refers to and the email address you used to contact us. You can also message us on WhatsApp at +506 6203 7705.",
+        "To exercise any of these rights, write to us at possible.cr@gmail.com stating what you are requesting, which information it refers to and the email address you used to contact us. You can also message us on WhatsApp at +506 6203 7705.",
         "We will verify the identity of whoever requests the change in order to protect your information. We will reply within a reasonable period and, where appropriate, we will delete the information or confirm in writing which changes were made.",
         "Please note that we may need to keep certain information when there is a legal or contractual obligation to do so, for instance while a project is in progress.",
       ],
@@ -125,7 +125,7 @@ export const privacyEn: LegalDocumentContent = {
       id: "contacto-privacidad",
       heading: "Contact information",
       paragraphs: [
-        "BM Solutions, Costa Rica. Email: bm.solutionscr@gmail.com. Phone and WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/bm.solutionscr/.",
+        "Possible, Costa Rica. Email: possible.cr@gmail.com. Phone and WhatsApp: +506 6203 7705. Instagram: https://www.instagram.com/possible.cr/.",
         "For any question about this privacy policy or about the handling of your personal data, you can use any of these contact channels.",
       ],
     },
@@ -133,7 +133,7 @@ export const privacyEn: LegalDocumentContent = {
       id: "cambios-politica",
       heading: "Changes to this policy",
       paragraphs: [
-        "BM Solutions may update this privacy policy to reflect legal, technical or service changes. When that happens we will publish the current version on this page and show the date of the last update.",
+        "Possible may update this privacy policy to reflect legal, technical or service changes. When that happens we will publish the current version on this page and show the date of the last update.",
         "If a change significantly affects the way we handle your information, we will try to notify you by email or WhatsApp when we have your contact details.",
       ],
     },

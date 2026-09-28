@@ -44,9 +44,9 @@ export function ProjectCard({ projectId }: { projectId: string }) {
         style={{
           padding: "1.5px",
           background:
-            "linear-gradient(135deg, #168bff, #4a00d9, #b000a8, #ef0ab9, #ff167a, #168bff)",
+            "linear-gradient(135deg, #F5C64F, #4937CE, #C44577, #C44577, #E46D33, #F5C64F)",
           backgroundSize: "300% 300%",
-          animation: "bm-border-spin 4s ease-in-out infinite",
+          animation: "possible-border-spin 4s ease-in-out infinite",
           WebkitMask:
             "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
           WebkitMaskComposite: "xor",

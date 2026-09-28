@@ -5,7 +5,7 @@ export const termsEn1: LegalSection[] = [
     id: "objeto",
     heading: "Scope and acceptance",
     paragraphs: [
-      "These Terms and Conditions govern access to and use of the BM Solutions website, as well as the contracting and execution of the web development, business systems, POS systems and technical support services we offer.",
+      "These Terms and Conditions govern access to and use of the Possible website, as well as the contracting and execution of the web development, business systems, POS systems and technical support services we offer.",
       "By using this website or by requesting a quote, you declare that you have read and accept these terms. If you disagree with any of them, we ask you not to use the website.",
       "These terms apply together with the quote or written agreement for each project. If there is a contradiction between a document signed with the client and these terms, the conditions agreed in that document prevail.",
     ],
@@ -19,7 +19,7 @@ export const termsEn1: LegalSection[] = [
     ],
     points: [
       "Attempting to access restricted areas or otherwise interfering with the operation of the website.",
-      "Using the content, designs or BM Solutions brands without prior written authorisation.",
+      "Using the content, designs or Possible brands without prior written authorisation.",
       "Presenting as your own content that does not belong to you.",
       "Sending false, repeated or unsolicited information through the contact forms.",
     ],
@@ -28,7 +28,7 @@ export const termsEn1: LegalSection[] = [
     id: "servicios",
     heading: "Services offered",
     paragraphs: [
-      "BM Solutions offers the following services. Their scope and price vary according to the needs of each business:",
+      "Possible offers the following services. Their scope and price vary according to the needs of each business:",
     ],
     points: [
       "Business systems: custom web systems to organise revenue, expenses, profits, customers, inventory, reports and users.",
@@ -52,7 +52,7 @@ export const termsEn1: LegalSection[] = [
     heading: "Contracting projects",
     paragraphs: [
       "Every project is formalised through a written document that defines, as applicable, the scope of work, the deliverables, the price, the payment method, the delivery deadlines, the responsibilities of both parties and the duration of support.",
-      "A contract is in force once a document has been accepted by both the client and BM Solutions. Sending a quote request, using the contact form or holding a conversation by email or WhatsApp does not in itself mean that a project has been accepted.",
+      "A contract is in force once a document has been accepted by both the client and Possible. Sending a quote request, using the contact form or holding a conversation by email or WhatsApp does not in itself mean that a project has been accepted.",
       "The commercial conditions of each project, such as the amount, the payment method, the payment moments, the delivery deadlines and the support period, are detailed in that document and are the only ones that apply to that business relationship.",
     ],
   },
@@ -61,7 +61,7 @@ export const termsEn1: LegalSection[] = [
     heading: "Scope of each project",
     paragraphs: [
       "The scope of the project is defined in the quote or in the written agreement and includes the features, screens, modules, content, integrations and deliverables described in that document.",
-      "Any feature, content, integration or requirement that is not expressly described in the scope is considered additional work. To include it you can request a scope extension and BM Solutions will submit a specific quote for that extension.",
+      "Any feature, content, integration or requirement that is not expressly described in the scope is considered additional work. To include it you can request a scope extension and Possible will submit a specific quote for that extension.",
       "The number of included revisions, the documentation that is delivered and the materials the client must provide are detailed in the project document.",
     ],
   },
@@ -78,7 +78,7 @@ export const termsEn1: LegalSection[] = [
     id: "cambios-del-cliente",
     heading: "Changes requested by the client",
     paragraphs: [
-      "If during the execution of the project the client requests changes to the agreed scope, design, features, content or delivery times, BM Solutions will assess the impact of those changes on cost and deadlines.",
+      "If during the execution of the project the client requests changes to the agreed scope, design, features, content or delivery times, Possible will assess the impact of those changes on cost and deadlines.",
       "Changes are documented and quoted separately. The work for those changes starts once the client approves them in writing and the price is agreed.",
       "Changes that modify the original scope may modify the total price, the delivery order and the expected dates. The client can decide to continue with the original scope or to accept the modified scope.",
     ],
@@ -103,7 +103,7 @@ export const termsEn1: LegalSection[] = [
       "Provide the access credentials and permissions needed to work in the project environments.",
       "Review and approve the deliverables within the deadlines defined in the project document.",
       "Use the delivered systems and websites in accordance with Costa Rican law and not repurpose them for illegal activities.",
-      "Safeguard their own access credentials and report immediately any unauthorised use of accounts for which BM Solutions is responsible.",
+      "Safeguard their own access credentials and report immediately any unauthorised use of accounts for which Possible is responsible.",
     ],
   },
 ];

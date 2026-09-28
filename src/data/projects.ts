@@ -1,7 +1,7 @@
 import type { Project } from "@/types";
 
 /**
- * Proyectos de BM Solutions.
+ * Proyectos de Possible.
  * Datos reales de cada proyecto.
  */
 export const projects: Project[] = [
@@ -76,9 +76,9 @@ export const projects: Project[] = [
   {
     id: "bernal-portfolio",
     name: "Portafolio de Bernal Baltodano",
-    category: "Fundador y propietario de BM Solutions",
+    category: "Fundador y propietario de Possible",
     description:
-      "Portafolio personal de Bernal Baltodano, fundador y propietario de BM Solutions, ingeniero de sistemas y desarrollador Full Stack. Presenta su experiencia, habilidades, proyectos destacados y las tecnologías que utiliza para crear sistemas empresariales, plataformas POS y sitios web profesionales.",
+      "Portafolio personal de Bernal Baltodano, fundador y propietario de Possible, ingeniero de sistemas y desarrollador Full Stack. Presenta su experiencia, habilidades, proyectos destacados y las tecnologías que utiliza para crear sistemas empresariales, plataformas POS y sitios web profesionales.",
     image: "/projects/bernal-portfolio.png",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
     url: "https://bbaltodano-portafolio.vercel.app/",

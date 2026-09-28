@@ -47,7 +47,7 @@ export function WebPricing() {
                   <span
                     className="absolute right-6 top-6 rounded-full px-3 py-1 text-xs font-bold text-white"
                     style={{
-                      background: "linear-gradient(135deg, #b000a8, #ef0ab9, #ff167a)",
+                      background: "linear-gradient(135deg, #C44577, #C44577, #E46D33)",
                     }}
                   >
                     {t.webPricing.mostPopular}

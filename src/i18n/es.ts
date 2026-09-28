@@ -1,4 +1,4 @@
-﻿export const es = {
+export const es = {
   nav: {
     home: "Hogar",
     services: "Servicios",
@@ -100,9 +100,9 @@
       {
         id: "bernal-portfolio",
         name: "Portafolio de Bernal Baltodano",
-        category: "Fundador y propietario de BM Solutions",
+        category: "Fundador y propietario de Possible",
         description:
-          "Portafolio personal de Bernal Baltodano, fundador y propietario de BM Solutions, ingeniero de sistemas y desarrollador Full Stack. Presenta su experiencia, habilidades, proyectos destacados y tecnologías para crear sistemas empresariales, POS y sitios web profesionales.",
+          "Portafolio personal de Bernal Baltodano, fundador y propietario de Possible, ingeniero de sistemas y desarrollador Full Stack. Presenta su experiencia, habilidades, proyectos destacados y tecnologías para crear sistemas empresariales, POS y sitios web profesionales.",
       },
       { id: "chicken-frito", name: "Chicken Frito", category: "Sitio web para restaurante", description: "Sitio web para Chicken Frito con identidad visual vibrante, menú digital organizado, pedidos en línea, delivery, secciones informativas, diseño adaptable a móviles y llamados a la acción para convertir visitas en clientes." },
     ],
@@ -168,8 +168,8 @@
     contactHeading: "Contacto",
     legalHeading: "Enlaces legales",
     socialHeading: "Redes sociales",
-    brandName: "BM Solutions",
-    brandAria: "BM Solutions — Ir al inicio",
+    brandName: "Possible",
+    brandAria: "Possible — Ir al inicio",
     rights: "Todos los derechos reservados.",
     tagline: "Soluciones digitales para negocios que quieren crecer.",
     privacy: "Privacidad",
@@ -177,14 +177,14 @@
     backToTop: "Volver arriba",
   },
   whatsapp: {
-    aria: "Contactar por WhatsApp con BM Solutions",
-    message: "Hola, estoy interesado en los servicios de BM Solutions.",
+    aria: "Contactar por WhatsApp con Possible",
+    message: "Hola, estoy interesado en los servicios de Possible.",
   },
   finalCta: {
     title: "¿Listo para llevar tu negocio al siguiente nivel?",
     description:
       "Cuéntanos qué necesitas y encontremos la solución adecuada para tu negocio.",
-    ctaPrimary: "Contactar con BM Solutions",
+    ctaPrimary: "Contactar con Possible",
     ctaSecondary: "Solicitar una cotización",
   },
   personalization: {

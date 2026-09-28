@@ -41,9 +41,9 @@ function LineChart({ ariaLabel }: { ariaLabel: string }) {
       aria-label={ariaLabel}
     >
       <defs>
-        <linearGradient id="bm-line-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#168BFF" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#168BFF" stopOpacity="0" />
+        <linearGradient id="possible-line-fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#F5C64F" stopOpacity="0.3" />
+          <stop offset="100%" stopColor="#F5C64F" stopOpacity="0" />
         </linearGradient>
       </defs>
       {[28, 56, 84, 112].map((y) => (
@@ -52,19 +52,19 @@ function LineChart({ ariaLabel }: { ariaLabel: string }) {
       <polyline
         points="0,104 32,88 64,96 96,70 128,78 160,52 192,64 224,44 256,52 288,32 320,40"
         fill="none"
-        stroke="#168BFF"
+        stroke="#F5C64F"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <polygon
         points="0,104 32,88 64,96 96,70 128,78 160,52 192,64 224,44 256,52 288,32 320,40 320,140 0,140"
-        fill="url(#bm-line-fill)"
+        fill="url(#possible-line-fill)"
       />
       <polyline
         points="0,120 32,112 64,116 96,104 128,110 160,96 192,102 224,88 256,94 288,80 320,86"
         fill="none"
-        stroke="#FF167A"
+        stroke="#E46D33"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -94,7 +94,7 @@ function BarChart({ ariaLabel }: { ariaLabel: string }) {
           width="18"
           height={h * 15}
           rx="3"
-          fill={i % 2 === 0 ? "#168BFF" : "#8A00FF"}
+          fill={i % 2 === 0 ? "#F5C64F" : "#8924B2"}
         />
       ))}
     </svg>

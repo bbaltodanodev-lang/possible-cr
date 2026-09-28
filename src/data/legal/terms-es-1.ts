@@ -5,7 +5,7 @@ export const termsEs1: LegalSection[] = [
     id: "objeto",
     heading: "Objeto y aceptación",
     paragraphs: [
-      "Estos Términos y Condiciones regulan el acceso y el uso del sitio web de BM Solutions, así como la contratación y la ejecución de los servicios de desarrollo web, sistemas empresariales, sistemas POS y soporte técnico que ofrecemos.",
+      "Estos Términos y Condiciones regulan el acceso y el uso del sitio web de Possible, así como la contratación y la ejecución de los servicios de desarrollo web, sistemas empresariales, sistemas POS y soporte técnico que ofrecemos.",
       "Al utilizar este sitio web o al solicitar una cotización, declaras que has leído y aceptas estos términos. Si no estás de acuerdo con alguno de ellos, te pedimos que no utilices el sitio web.",
       "Estos términos se aplican junto con la cotización o el acuerdo escrito de cada proyecto. Si hubiera una contradicción entre un documento firmado con el cliente y estos términos, prevalecen las condiciones pactadas en ese documento.",
     ],
@@ -19,7 +19,7 @@ export const termsEs1: LegalSection[] = [
     ],
     points: [
       "Intentar acceder a áreas restringidas o intervenir de cualquier otra forma el funcionamiento del sitio web.",
-      "Utilizar el contenido, los diseños o las marcas de BM Solutions sin autorización previa y por escrito.",
+      "Utilizar el contenido, los diseños o las marcas de Possible sin autorización previa y por escrito.",
       "Presentar como propios contenidos que no te pertenecen.",
       "Enviar información falsa, reiterada o no solicitada a través de los formularios de contacto.",
     ],
@@ -28,7 +28,7 @@ export const termsEs1: LegalSection[] = [
     id: "servicios",
     heading: "Servicios ofrecidos",
     paragraphs: [
-      "BM Solutions ofrece los siguientes servicios. Su alcance y su precio varían según las necesidades de cada negocio:",
+      "Possible ofrece los siguientes servicios. Su alcance y su precio varían según las necesidades de cada negocio:",
     ],
     points: [
       "Sistemas empresariales: sistemas web personalizados para organizar ingresos, gastos, ganancias, clientes, inventario, reportes y usuarios.",
@@ -52,7 +52,7 @@ export const termsEs1: LegalSection[] = [
     heading: "Contratación de proyectos",
     paragraphs: [
       "Todo proyecto se formaliza mediante un documento escrito que define, según el caso, el alcance del trabajo, los entregables, el precio, la forma de pago, los plazos de entrega, las responsabilidades de ambas partes y la duración del soporte.",
-      "La contratación se entiende vigente cuando existe un documento aceptado por el cliente y por BM Solutions. Enviar una solicitud de cotización, usar el formulario de contacto o mantener una conversación por correo electrónico o WhatsApp no constituyen por sí mismos la aceptación de un proyecto.",
+      "La contratación se entiende vigente cuando existe un documento aceptado por el cliente y por Possible. Enviar una solicitud de cotización, usar el formulario de contacto o mantener una conversación por correo electrónico o WhatsApp no constituyen por sí mismos la aceptación de un proyecto.",
       "Las condiciones comerciales de cada proyecto, como el importe, la forma de pago, los momentos de pago, los plazos de entrega y el período de soporte, se detallan en ese documento y son las únicas que aplican a esa relación comercial.",
     ],
   },
@@ -61,7 +61,7 @@ export const termsEs1: LegalSection[] = [
     heading: "Alcance de cada proyecto",
     paragraphs: [
       "El alcance del proyecto se define en la cotización o en el acuerdo escrito e incluye las funcionalidades, las pantallas, los módulos, los contenidos, las integraciones y los entregables descritos en ese documento.",
-      "Cualquier funcionalidad, contenido, integración o requisito que no esté descrito expresamente en el alcance se considera un trabajo adicional. Para incluirlo puedes solicitar una ampliación del alcance y BM Solutions presentará una cotización específica para esa ampliación.",
+      "Cualquier funcionalidad, contenido, integración o requisito que no esté descrito expresamente en el alcance se considera un trabajo adicional. Para incluirlo puedes solicitar una ampliación del alcance y Possible presentará una cotización específica para esa ampliación.",
       "El número de revisiones incluidas, la documentación que se entrega y los materiales que debe proporcionar el cliente se detallan en el documento del proyecto.",
     ],
   },
@@ -78,7 +78,7 @@ export const termsEs1: LegalSection[] = [
     id: "cambios-del-cliente",
     heading: "Cambios solicitados por el cliente",
     paragraphs: [
-      "Si durante la ejecución del proyecto el cliente solicita cambios en el alcance, el diseño, las funcionalidades, los contenidos o los tiempos de entrega acordados, BM Solutions evaluará el impacto de esos cambios en el costo y en los plazos.",
+      "Si durante la ejecución del proyecto el cliente solicita cambios en el alcance, el diseño, las funcionalidades, los contenidos o los tiempos de entrega acordados, Possible evaluará el impacto de esos cambios en el costo y en los plazos.",
       "Los cambios se documentan y se cotizan por separado. Los trabajos correspondientes a esos cambios se inician una vez que el cliente los aprueba por escrito y se define su precio.",
       "Los cambios que modifican el alcance original pueden modificar el precio total, el orden de entrega y las fechas previstas. El cliente puede decidir continuar con el alcance original o aceptar el alcance modificado.",
     ],
@@ -105,7 +105,7 @@ export const termsEs1: LegalSection[] = [
       "Entregar los accesos, las credenciales y los permisos necesarios para trabajar en los entornos del proyecto.",
       "Revisar y aprobar los entregables en los plazos definidos en el documento del proyecto.",
       "Utilizar los sistemas y los sitios web entregados de acuerdo con la legislación vigente de Costa Rica y no destinarlos a actividades ilegales.",
-      "Resguardar sus propias credenciales de acceso y avisar de inmediato sobre cualquier uso no autorizado de las cuentas de las que BM Solutions sea responsable.",
+      "Resguardar sus propias credenciales de acceso y avisar de inmediato sobre cualquier uso no autorizado de las cuentas de las que Possible sea responsable.",
     ],
   },
 ];

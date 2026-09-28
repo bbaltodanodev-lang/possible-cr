@@ -1,4 +1,4 @@
-# BM Solutions — Guía rápida para agentes y desarrolladores
+# Possible.cr — Guía rápida para agentes y desarrolladores
 
 <!-- BEGIN:nextjs-agent-rules -->
 

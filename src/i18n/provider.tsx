@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { dictionaries } from "./dictionaries";
 import type { Locale, Messages } from "./dictionaries";
 
-const STORAGE_KEY = "bm-lang";
+const STORAGE_KEY = "possible-lang";
 
 interface LanguageContextValue {
   lang: Locale;

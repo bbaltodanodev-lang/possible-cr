@@ -102,7 +102,7 @@ export function Navbar() {
         aria-label="Principal"
         className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10"
       >
-        <Link href="/" className="rounded-lg" aria-label="BM Solutions – Home">
+        <Link href="/" className="rounded-lg" aria-label="Possible – Home">
           <Logo />
         </Link>
 

@@ -18,7 +18,7 @@ export function AboutSection() {
             <h3 className="mt-2 text-2xl font-bold text-white">Bernal Baltodano</h3>
             <p className="mt-3 text-sm leading-relaxed text-body">Diseño y desarrollo sistemas web, páginas profesionales y soluciones POS adaptadas a cada negocio.</p>
             <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
-              <a href="mailto:bm.solutionscr@gmail.com" className="text-brand-300 hover:text-brand-200">Email</a>
+              <a href="mailto:possible.cr@gmail.com" className="text-brand-300 hover:text-brand-200">Email</a>
               <a href="https://github.com/bbaltodanodev-lang" target="_blank" rel="noreferrer" className="text-brand-300 hover:text-brand-200">GitHub</a>
               <a href="https://wa.me/50662037705" target="_blank" rel="noreferrer" className="text-brand-300 hover:text-brand-200">WhatsApp</a>
             </div>
@@ -26,7 +26,7 @@ export function AboutSection() {
           <article className="rounded-3xl border border-white/10 bg-card p-7 shadow-soft">
             <div className="grid size-14 place-items-center rounded-2xl bg-brand-tint text-brand-300"><DynamicIcon name="layout" className="size-7" /></div>
             <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-brand-300">Equipo</p>
-            <h3 className="mt-2 text-2xl font-bold text-white">BM Solutions</h3>
+            <h3 className="mt-2 text-2xl font-bold text-white">Possible</h3>
             <p className="mt-3 text-sm leading-relaxed text-body">Acompañamos a pequeños y medianos negocios con tecnología que organiza su operación y fortalece su presencia digital.</p>
             <Link href="/#contacto" className="mt-6 inline-flex text-sm font-semibold text-brand-300 hover:text-brand-200">Hablemos de tu proyecto →</Link>
           </article>

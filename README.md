@@ -1,6 +1,6 @@
-# BM Solutions
+# Possible
 
-Sitio web empresarial de **BM Solutions**: una empresa de tecnología que desarrolla **sistemas web empresariales** y **páginas web profesionales** para pequeños y medianos negocios.
+Sitio web empresarial de **Possible**: una empresa de tecnología que desarrolla **sistemas web empresariales** y **páginas web profesionales** para pequeños y medianos negocios.
 
 Diseñado como landing page de alta conversión: rápido, minimalista, profesional, accesible y optimizado para SEO técnico (Core Web Vitals, schema.org, metadata, sitemap, robots).
 
@@ -61,7 +61,7 @@ Comandos:
 Copia `.env.example` → `.env.local` y ajusta:
 
 - `NEXT_PUBLIC_SITE_URL` — dominio público del sitio.
-- `NEXT_PUBLIC_CONTACT_ENDPOINT` — endpoint opcional del formulario de contacto. Si queda vacío, se usa `/api/contact`, que reenvía las solicitudes al correo de BM Solutions.
+- `NEXT_PUBLIC_CONTACT_ENDPOINT` — endpoint opcional del formulario de contacto. Si queda vacío, se usa `/api/contact`, que reenvía las solicitudes al correo de Possible.
 
 > Nunca subas `.env.local` ni secretos al repositorio.
 
@@ -138,4 +138,4 @@ La arquitectura permite agregar sin reestructurar:
 
 ---
 
-© 2026 BM Solutions. Todos los derechos reservados.
+© 2026 Possible. Todos los derechos reservados.

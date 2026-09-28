@@ -1,4 +1,4 @@
-﻿import type { Messages } from "./dictionaries";
+import type { Messages } from "./dictionaries";
 
 export const en: Messages = {
   nav: {
@@ -169,8 +169,8 @@ export const en: Messages = {
     contactHeading: "Contact",
     legalHeading: "Legal links",
     socialHeading: "Social media",
-    brandName: "BM Solutions",
-    brandAria: "BM Solutions — Go to homepage",
+    brandName: "Possible",
+    brandAria: "Possible — Go to homepage",
     rights: "All rights reserved.",
     tagline: "Digital solutions for businesses that want to grow.",
     privacy: "Privacy",
@@ -178,13 +178,13 @@ export const en: Messages = {
     backToTop: "Back to top",
   },
   whatsapp: {
-    aria: "Contact BM Solutions via WhatsApp",
-    message: "Hi, I'm interested in BM Solutions services.",
+    aria: "Contact Possible via WhatsApp",
+    message: "Hi, I'm interested in Possible services.",
   },
   finalCta: {
     title: "Ready to take your business to the next level?",
     description: "Tell us what you need and we'll find the right solution for your business.",
-    ctaPrimary: "Contact BM Solutions",
+    ctaPrimary: "Contact Possible",
     ctaSecondary: "Request a quote",
   },
   personalization: {

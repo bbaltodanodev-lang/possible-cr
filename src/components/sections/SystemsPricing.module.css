@@ -12,7 +12,7 @@
   padding: 1.5px;
   border-radius: inherit;
   pointer-events: none;
-  background: linear-gradient(120deg, #168bff, #a26cff, #ef0ab9, #ff167a, #168bff);
+  background: linear-gradient(120deg, #F5C64F, #F7DF83, #C44577, #E46D33, #F5C64F);
   background-size: 300% 300%;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
