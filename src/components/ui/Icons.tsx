@@ -171,6 +171,24 @@ export function IconArrowLeft(p: IconProps) {
   );
 }
 
+export function IconArrowUp(p: IconProps) {
+  return (
+    <StrokeIcon {...p}>
+      <line x1="12" y1="20" x2="12" y2="4" />
+      <polyline points="5 11 12 4 19 11" />
+    </StrokeIcon>
+  );
+}
+
+export function IconLock(p: IconProps) {
+  return (
+    <StrokeIcon {...p}>
+      <rect x="3" y="11" width="18" height="11" rx="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    </StrokeIcon>
+  );
+}
+
 export function IconChevronDown(p: IconProps) {
   return (
     <StrokeIcon {...p}>
@@ -376,6 +394,26 @@ export function IconLinkedin(p: IconProps) {
   );
 }
 
+export function IconSparkles(p: IconProps) {
+  return (
+    <StrokeIcon {...p}>
+      <path d="M12 3l1.7 4.6L18 9.3l-4.3 1.7L12 15.6l-1.7-4.6L6 9.3l4.3-1.7L12 3z" />
+      <path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8z" />
+      <path d="M5.5 15l.5 1.4 1.4.5-1.4.5-.5 1.4-.5-1.4-1.4-.5 1.4-.5.5-1.4z" />
+    </StrokeIcon>
+  );
+}
+
+export function IconBox(p: IconProps) {
+  return (
+    <StrokeIcon {...p}>
+      <path d="M21 8.4v7.2a1.6 1.6 0 0 1-.83 1.4l-6.4 3.5a1.7 1.7 0 0 1-1.54 0l-6.4-3.5A1.6 1.6 0 0 1 5 15.6V8.4a1.6 1.6 0 0 1 .83-1.4l6.4-3.5a1.7 1.7 0 0 1 1.54 0l6.4 3.5A1.6 1.6 0 0 1 21 8.4z" />
+      <polyline points="3.4 7.6 12 12.3 20.6 7.6" />
+      <polyline points="12 21.7 12 12.3" />
+    </StrokeIcon>
+  );
+}
+
 const iconMap = {
   layout: IconLayout,
   trendingUp: IconTrendingUp,
@@ -393,6 +431,8 @@ const iconMap = {
   check: IconCheck,
   arrowRight: IconArrowRight,
   arrowLeft: IconArrowLeft,
+  arrowUp: IconArrowUp,
+  lock: IconLock,
   menu: IconMenu,
   close: IconClose,
   palette: IconPalette,
@@ -413,6 +453,8 @@ const iconMap = {
   instagram: IconInstagram,
   facebook: IconFacebook,
   linkedin: IconLinkedin,
+  sparkles: IconSparkles,
+  box: IconBox,
 } satisfies Record<string, (p: IconProps) => JSX.Element>;
 
 export type DynamicIconName = keyof typeof iconMap;

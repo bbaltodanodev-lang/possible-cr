@@ -15,6 +15,8 @@ export type IconName =
   | "check"
   | "arrowRight"
   | "arrowLeft"
+  | "arrowUp"
+  | "lock"
   | "menu"
   | "close"
   | "palette"
@@ -34,7 +36,9 @@ export type IconName =
   | "whatsapp"
   | "instagram"
   | "facebook"
-  | "linkedin";
+  | "linkedin"
+  | "sparkles"
+  | "box";
 
 export interface ServiceItem {
   id: string;

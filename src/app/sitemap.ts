@@ -1,13 +1,25 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/data/site";
 
+const mainRoutes = ["/", "/paginas-web", "/pos", "/sistemas", "/soporte"];
+const legalRoutes = ["/privacidad", "/terminos"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = siteConfig.url.replace(/\/$/, "");
+  const now = new Date();
+
   return [
-    {
-      url: siteConfig.url,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
+    ...mainRoutes.map((route, index) => ({
+      url: `${base}${route}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: index === 0 ? 1 : 0.8,
+    })),
+    ...legalRoutes.map((route) => ({
+      url: `${base}${route}`,
+      lastModified: now,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    })),
   ];
 }

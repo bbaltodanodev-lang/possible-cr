@@ -5,9 +5,11 @@ interface LogoProps {
   className?: string;
   /** Si compact=true muestra solo el ícono cuadrado (navbar móvil, favicon-like) */
   compact?: boolean;
+  /** Reserva el logo para el LCP (navbar). En el footer se desactiva: no está above the fold. */
+  priority?: boolean;
 }
 
-export function Logo({ className, compact = false }: LogoProps) {
+export function Logo({ className, compact = false, priority = true }: LogoProps) {
   return (
     <span className={cn("inline-flex items-center", className)}>
       <Image
@@ -15,7 +17,7 @@ export function Logo({ className, compact = false }: LogoProps) {
         alt="BM Solutions"
         width={720}
         height={424}
-        priority
+        priority={priority}
         className={cn(
           "h-auto w-auto object-contain",
           compact ? "max-h-6 max-w-[32px]" : "max-h-7 max-w-[90px]",

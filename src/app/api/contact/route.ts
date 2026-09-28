@@ -9,7 +9,8 @@ export async function POST(request: Request) {
     const email = typeof body.email === "string" ? body.email.trim() : "";
     const message = typeof body.message === "string" ? body.message.trim() : "";
 
-    if (body.website || !name || !email || !message) {
+    const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (body.website || !name || !emailIsValid || !message || name.length > 120 || email.length > 254 || message.length > 5000) {
       return NextResponse.json({ ok: false, error: "Datos incompletos" }, { status: 400 });
     }
 

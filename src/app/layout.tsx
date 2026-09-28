@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { BackToTopButton } from "@/components/layout/BackToTopButton";
 import { ScrollManager } from "@/components/ui/ScrollManager";
 import { LanguageProvider } from "@/i18n/provider";
 import { siteConfig, defaultMetadata } from "@/data/site";
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </main>
           <Footer />
           <WhatsAppButton />
+          <BackToTopButton />
         </LanguageProvider>
 
         <script
