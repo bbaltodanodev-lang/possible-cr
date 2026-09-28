@@ -33,11 +33,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: defaultMetadata.title,
     description: defaultMetadata.description,
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Possible | Soluciones digitales",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: defaultMetadata.title,
     description: defaultMetadata.description,
+    images: ["/opengraph-image.png"],
   },
   robots: {
     index: true,

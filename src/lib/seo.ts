@@ -5,7 +5,10 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: siteConfig.name,
+    alternateName: "Possible.cr",
     url: siteConfig.url,
+    logo: `${siteConfig.url}/brand/possible-icon-512.png`,
+    image: `${siteConfig.url}/opengraph-image.png`,
     description: siteConfig.tagline,
     email: siteConfig.email,
   };
@@ -23,9 +26,15 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: siteConfig.name,
+    alternateName: "Possible.cr",
     url: siteConfig.url,
     description: siteConfig.tagline,
-    publisher: { "@type": "Organization", name: siteConfig.name },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/brand/possible-icon-512.png`,
+    },
   };
 }
 

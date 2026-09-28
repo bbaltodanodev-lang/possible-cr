@@ -55,7 +55,7 @@ export const termsEs2: LegalSection[] = [
     id: "propiedad-intelectual",
     heading: "Propiedad intelectual del contenido de Possible",
     paragraphs: [
-      "La marca Possible, el isotipo BM, los logotipos, los colores corporativos, los textos, el diseño, las fotografías, las ilustraciones, los iconos, la estructura visual y el código fuente de este sitio web son propiedad de Possible y están protegidos por la legislación vigente.",
+      "La marca Possible, el isotipo de Possible, los logotipos, los colores corporativos, los textos, el diseño, las fotografías, las ilustraciones, los iconos, la estructura visual y el código fuente de este sitio web son propiedad de Possible y están protegidos por la legislación vigente.",
       "Queda prohibida la reproducción total o parcial, la modificación, la distribución, la comunicación pública o la explotación comercial del material de Possible sin autorización previa y por escrito.",
       "Salvo autorización expresa, Possible puede mencionar y mostrar públicamente los proyectos que ha desarrollado para sus clientes como parte de su portafolio y de sus referencias comerciales.",
     ],
