@@ -1,3 +1,5 @@
+export const googleSiteVerification = "VIEnI8F9IotSMTC7BcvrAIEIQUskGs4GVJ5K6ZRN9cg";
+
 export const servicePageSeo = {
   "paginas-web": {
     "title": "Páginas web profesionales en Costa Rica",

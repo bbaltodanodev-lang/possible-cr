@@ -12,6 +12,7 @@ import { organizationSchema, professionalServiceSchema, websiteSchema, jsonLdScr
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { googleSiteVerification } from "@/data/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,6 +22,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  verification: { google: googleSiteVerification },
   title: {
     default: defaultMetadata.title,
     template: `%s | ${siteConfig.name}`,
