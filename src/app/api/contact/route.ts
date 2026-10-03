@@ -1,41 +1,26 @@
 import { NextResponse } from "next/server";
-
-const recipient = "contact.possible.cr@gmail.com";
+import { siteConfig } from "@/data/site";
+import { readContactRequest, ContactRequestError } from "@/lib/contact-request";
 
 export async function POST(request: Request) {
+  const headers = { "Cache-Control": "no-store", "X-Robots-Tag": "noindex" };
   try {
-    const body = (await request.json()) as Record<string, unknown>;
-    const name = typeof body.name === "string" ? body.name.trim() : "";
-    const email = typeof body.email === "string" ? body.email.trim() : "";
-    const message = typeof body.message === "string" ? body.message.trim() : "";
-
-    const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (body.website || !name || !emailIsValid || !message || name.length > 120 || email.length > 254 || message.length > 5000) {
-      return NextResponse.json({ ok: false, error: "Datos incompletos" }, { status: 400 });
-    }
-
-    const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
+    const payload = await readContactRequest(request);
+    const response = await fetch(`https://formsubmit.co/ajax/${siteConfig.email}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        name,
-        company: typeof body.company === "string" ? body.company.trim() : "",
-        email,
-        phone: typeof body.phone === "string" ? body.phone.trim() : "",
-        service: typeof body.service === "string" ? body.service : "",
-        message,
-        _subject: `Nueva solicitud de ${name}`,
-        _template: "table",
-        _captcha: "false",
-      }),
+      signal: AbortSignal.timeout(10_000),
+      body: JSON.stringify({ ...payload, _subject: `Nueva solicitud de ${payload.name}`, _template: "table", _captcha: "false" }),
     });
-
-    if (!response.ok) {
-      return NextResponse.json({ ok: false, error: "No se pudo enviar" }, { status: 502 });
+    const result = await response.json().catch(() => null);
+    if (!response.ok || !result || (result.success !== true && result.success !== "true")) {
+      return NextResponse.json({ ok: false, error: "No se pudo enviar" }, { status: 502, headers });
     }
-
-    return NextResponse.json({ ok: true });
-  } catch {
-    return NextResponse.json({ ok: false, error: "Error interno" }, { status: 500 });
+    return NextResponse.json({ ok: true }, { headers });
+  } catch (error) {
+    if (error instanceof ContactRequestError) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: error.status, headers });
+    }
+    return NextResponse.json({ ok: false, error: "No se pudo enviar" }, { status: 502, headers });
   }
 }

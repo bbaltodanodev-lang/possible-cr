@@ -11,6 +11,7 @@ import { Benefits } from "@/components/sections/Benefits";
 import { SystemsPricing } from "@/components/sections/SystemsPricing";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { jsonLdScript } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
 
 export default function SistemasPage() {
@@ -122,7 +123,7 @@ export default function SistemasPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: jsonLdScript({
             "@context": "https://schema.org",
             "@type": "Service",
             name: "Sistemas empresariales",

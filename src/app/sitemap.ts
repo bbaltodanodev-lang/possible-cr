@@ -6,18 +6,15 @@ const legalRoutes = ["/privacidad", "/terminos"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url.replace(/\/$/, "");
-  const now = new Date();
 
   return [
     ...mainRoutes.map((route, index) => ({
       url: `${base}${route}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: index === 0 ? 1 : 0.8,
     })),
     ...legalRoutes.map((route) => ({
       url: `${base}${route}`,
-      lastModified: now,
       changeFrequency: "yearly" as const,
       priority: 0.3,
     })),

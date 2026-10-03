@@ -1,5 +1,13 @@
 # Possible
 
+## SEO y seguridad
+
+Cada página de servicios tiene título, descripción, URL canónica y metadatos para compartir propios. Los textos se editan en `src/data/seo.ts`. El sitemap no publica fechas de modificación inventadas y el schema solo declara funciones existentes.
+
+El contacto local limita el cuerpo a 24 KB, valida todos los campos, comprueba el origen del navegador y limita la espera del proveedor a 10 segundos. Pruebas: `node --test scripts/contact-request.test.mjs` (Node 22.18 o superior). La comprobación de origen y el honeypot no sustituyen un límite de solicitudes distribuido; para frenar spam automatizado hay que configurar protección en el hosting.
+
+La CSP permite scripts inline necesarios para el renderizado estático de Next.js, pero bloquea manejadores inline y eval en producción. Un endpoint externo configurado se permite solo por su origen HTTPS. Los controles de `/api/contact` solo se aplican al endpoint local.
+
 Sitio web empresarial de **Possible**: una empresa de tecnología que desarrolla **sistemas web empresariales** y **páginas web profesionales** para pequeños y medianos negocios.
 
 Diseñado como landing page de alta conversión: rápido, minimalista, profesional, accesible y optimizado para SEO técnico (Core Web Vitals, schema.org, metadata, sitemap, robots).

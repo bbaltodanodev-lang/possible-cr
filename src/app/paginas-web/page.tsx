@@ -8,6 +8,7 @@ import { DynamicIcon } from "@/components/ui/Icons";
 import { WebPricing } from "@/components/sections/WebPricing";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { jsonLdScript } from "@/lib/seo";
 import { siteConfig } from "@/data/site";
 
 export default function PaginasWebPage() {
@@ -117,7 +118,7 @@ export default function PaginasWebPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: jsonLdScript({
             "@context": "https://schema.org",
             "@type": "Service",
             name: "Páginas web profesionales",
