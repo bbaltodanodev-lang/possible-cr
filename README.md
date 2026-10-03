@@ -2,7 +2,7 @@
 
 ## SEO y seguridad
 
-Google Analytics 4 se habilita con `NEXT_PUBLIC_GA_MEASUREMENT_ID=G-...` al compilar. Sin un ID válido no carga la etiqueta. En el flujo web de GA4, mantener activa la medición mejorada de vistas por cambios del historial para contar la navegación entre servicios. La integración no activa Google Signals ni personalización publicitaria. La CSP admite los dominios necesarios de Analytics.
+Google Analytics 4 usa el ID `G-YFG35HREES` de Possible en producción, definido en `src/data/analytics.ts`. Se puede reemplazar con `NEXT_PUBLIC_GA_MEASUREMENT_ID` al compilar; un valor vacío explícito lo desactiva. En desarrollo no carga por defecto. En el flujo web de GA4, mantener activa la medición mejorada de vistas por cambios del historial para contar la navegación entre servicios. La integración no activa Google Signals ni personalización publicitaria. La CSP admite los dominios necesarios de Analytics.
 
 Cada página de servicios tiene título, descripción, URL canónica y metadatos para compartir propios. Los textos se editan en `src/data/seo.ts`. El sitemap no publica fechas de modificación inventadas y el schema solo declara funciones existentes.
 

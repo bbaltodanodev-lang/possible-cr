@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { googleAnalyticsId } from "@/data/analytics";
 
 declare global {
   interface Window {
@@ -9,7 +10,7 @@ declare global {
   }
 }
 
-const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? (process.env.NODE_ENV === "production" ? googleAnalyticsId : "");
 
 export function GoogleAnalytics() {
   useEffect(() => {
