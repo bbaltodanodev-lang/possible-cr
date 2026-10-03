@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Possible",
   legalName: "Possible",
   tagline: "Tu propia web no debería ser difícil ni cara. En Possible, hacer crecer tu negocio sí es posible.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://possible.cr",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://possible-cr.vercel.app",
 
   // --- Contacto ------------------------------------------------------------
   email: "contact.possible.cr@gmail.com",

@@ -1,4 +1,7 @@
-export const googleSiteVerification = "VIEnI8F9IotSMTC7BcvrAIEIQUskGs4GVJ5K6ZRN9cg";
+export const googleSiteVerification = [
+  "MNZZk3ehjQaq7t6UjNCt4FvMlTRUcXLvl_TLM1U6jiU", // Current Vercel site.
+  "VIEnI8F9IotSMTC7BcvrAIEIQUskGs4GVJ5K6ZRN9cg", // Future possible.cr domain.
+];
 
 export const servicePageSeo = {
   "paginas-web": {
