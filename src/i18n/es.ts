@@ -546,9 +546,9 @@ export const es = {
   },
   solutions: {
 eyebrow: "Elige dónde empezar",
-    titleTop: "¿Cansado de controlar todo a mano?",
-    titleBottom: "¿O no tener bien ubicado tu negocio en internet?",
-    description: "Elige la mejor opción para tu negocio y tus necesidades.",
+    titleTop: "Diseño web y sistemas para negocios en Costa Rica",
+    titleBottom: "Tu negocio en internet. Tus procesos bajo control.",
+    description: "En Possible creamos páginas web profesionales y sistemas a medida para presentar tus servicios, facilitar el contacto con tus clientes y organizar tu negocio.",
     items: [
       {
         id: "sistemas",

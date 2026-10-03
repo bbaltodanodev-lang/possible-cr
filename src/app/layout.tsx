@@ -8,7 +8,7 @@ import { BackToTopButton } from "@/components/layout/BackToTopButton";
 import { ScrollManager } from "@/components/ui/ScrollManager";
 import { LanguageProvider } from "@/i18n/provider";
 import { siteConfig, defaultMetadata } from "@/data/site";
-import { organizationSchema, professionalServiceSchema, websiteSchema, jsonLdScript } from "@/lib/seo";
+import { organizationSchema, websiteSchema, jsonLdScript } from "@/lib/seo";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -113,10 +113,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLdScript(websiteSchema()) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: jsonLdScript(professionalServiceSchema()) }}
         />
       </body>
     </html>

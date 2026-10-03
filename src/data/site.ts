@@ -32,7 +32,7 @@ export const siteConfig = {
 } as const;
 
 export const defaultMetadata = {
-  title: "Possible | Crea tu propia página web profesional",
+  title: "Diseño web y sistemas en Costa Rica | Possible",
   description:
     "Crea tu propia página web profesional sin complicaciones ni costos excesivos. En Possible diseñamos sitios web, tiendas y sistemas digitales para hacer crecer tu negocio en Costa Rica.",
   keywords: ["crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
