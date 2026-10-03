@@ -72,8 +72,8 @@ export const privacyEs: LegalDocumentContent = {
       id: "cookies-y-tecnologias",
       heading: "Cookies y tecnologías similares",
       paragraphs: [
-        "Este sitio web no utiliza cookies de seguimiento, perfiles de publicidad, píxeles de seguimiento ni herramientas de analítica web.",
-        "La única información que se guarda en tu navegador es tu preferencia de idioma (español o inglés). Esa preferencia se almacena únicamente en el almacenamiento local de tu propio dispositivo, no se envía a Possible, no se comparte con terceros y puedes eliminarla en cualquier momento borrando los datos del sitio desde tu navegador.",
+        "Utilizamos herramientas de analítica para conocer las visitas y el rendimiento del sitio. Cuando Google Analytics está habilitado, Google puede utilizar cookies e identificadores para medir páginas visitadas, interacciones y datos técnicos del navegador. Hemos desactivado Google Signals y las señales de personalización publicitaria en nuestra integración.",
+        "También guardamos tu preferencia de idioma (español o inglés) en el almacenamiento local de tu dispositivo. Puedes eliminarla borrando los datos del sitio. Más información sobre cómo Google utiliza los datos: https://policies.google.com/technologies/partner-sites.",
       ],
     },
     {

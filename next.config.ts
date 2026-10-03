@@ -4,14 +4,14 @@ const isDev = process.env.NODE_ENV !== "production";
 
 // React's development build uses eval() to reconstruct callstacks, and the dev
 // overlay needs a WebSocket for HMR. Both stay disabled in production.
-const scriptSrc = isDev ? "'self' 'unsafe-inline' 'unsafe-eval'" : "'self' 'unsafe-inline'";
+const scriptSrc = isDev ? "'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com" : "'self' 'unsafe-inline' https://*.googletagmanager.com";
 const contactEndpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT?.trim();
 const contactOrigin = contactEndpoint?.startsWith("https://")
   ? new URL(contactEndpoint).origin
   : "";
 const connectSrc = isDev
-  ? `'self' ${contactOrigin} ws: wss:`
-  : `'self' ${contactOrigin}`;
+  ? `'self' ${contactOrigin} https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com ws: wss:`
+  : `'self' ${contactOrigin} https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com`;
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -22,7 +22,7 @@ const contentSecurityPolicy = [
   `script-src ${scriptSrc}`,
   "script-src-attr 'none'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://images.unsplash.com",
+  "img-src 'self' data: blob: https://images.unsplash.com https://*.google-analytics.com https://*.googletagmanager.com",
   "font-src 'self' data:",
   `connect-src ${connectSrc}`,
   "frame-src 'none'",

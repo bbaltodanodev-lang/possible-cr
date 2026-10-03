@@ -72,8 +72,8 @@ export const privacyEn: LegalDocumentContent = {
       id: "cookies-y-tecnologias",
       heading: "Cookies and similar technologies",
       paragraphs: [
-        "This website does not use tracking cookies, advertising profiles, tracking pixels or web analytics tools.",
-        "The only information stored in your browser is your language preference (Spanish or English). That preference is stored only in the local storage of your own device, it is never sent to Possible, it is never shared with third parties, and you can remove it at any time by clearing this site's data from your browser.",
+        "We use analytics tools to understand site visits and performance. When Google Analytics is enabled, Google may use cookies and identifiers to measure page views, interactions and technical browser information. Our integration disables Google Signals and advertising personalization signals.",
+        "We also store your language preference (Spanish or English) in local storage on your device. You can remove it by clearing site data. Learn how Google uses data: https://policies.google.com/technologies/partner-sites.",
       ],
     },
     {
