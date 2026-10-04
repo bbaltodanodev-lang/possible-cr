@@ -49,6 +49,7 @@ export async function readContactRequest(request: Request) {
     throw new ContactRequestError(400, "Datos incompletos");
   }
   const fields = body as Record<string, unknown>;
+  if (fields.privacyConsent !== true || fields.privacyVersion !== "2026-10-03") throw new ContactRequestError(400, "Consentimiento de privacidad requerido");
   if (fields.website) throw new ContactRequestError(400, "Datos inválidos");
   function field(key: string, max: number, required = false) {
     const value = fields[key];
@@ -67,5 +68,5 @@ export async function readContactRequest(request: Request) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /[\r\n]/.test(name + company + phone + service)) {
     throw new ContactRequestError(400, "Datos inválidos");
   }
-  return { name, email, company, phone, service, message };
+  return { name, email, company, phone, service, message, privacyConsent: true, privacyVersion: "2026-10-03", privacyConsentedAt: new Date().toISOString() };
 }

@@ -6,8 +6,8 @@ export const privacyEn: LegalDocumentContent = {
   intro:
     "At Possible we care about the privacy of the people who trust us. This policy explains what information we collect on this website, how we use it and how you can exercise your rights over it.",
   updatedLabel: "Last updated:",
-  updated: "September 27, 2026",
-  updatedIso: "2026-09-27",
+  updated: "October 3, 2026",
+  updatedIso: "2026-10-03",
   indexLabel: "On this page",
   sections: [
     {
@@ -22,7 +22,7 @@ export const privacyEn: LegalDocumentContent = {
       id: "informacion-recopilada",
       heading: "What information we collect",
       paragraphs: [
-        "Possible only collects information that you voluntarily choose to give us. On this website we may ask for it in the following situations:",
+        "We collect data you share, technical data needed to operate this site and optional metrics when you authorize them. On this website we may ask for it in the following situations:",
       ],
       points: [
         "Your name and your company name, when you include them in the contact form or in your messages.",
@@ -37,7 +37,7 @@ export const privacyEn: LegalDocumentContent = {
       id: "uso-de-la-informacion",
       heading: "How we use your information",
       paragraphs: [
-        "The information you share with us is used only to reply to you and to provide our services. Specifically, we use it to:",
+        "Data is used to respond, deliver services, protect this site and measure usage when you authorize analytics. Specifically, we use it to:",
       ],
       points: [
         "Reply to the questions and requests sent through the contact form.",
@@ -51,29 +51,25 @@ export const privacyEn: LegalDocumentContent = {
       id: "formularios-y-cotizaciones",
       heading: "Contact forms and quote requests",
       paragraphs: [
-        "The contact form on this website asks for your name, company (optional), email address, phone or WhatsApp number (optional), service of interest and a message. The required fields are your name, your email address and the message.",
-        "When you submit the form, the information travels over the internet to our servers and from there it is delivered to our email address so that we can reply. If the request goes through you will see an on-screen confirmation.",
-        "Requests sent through the form are not binding. The acceptance of a project is always defined in a later written quote or agreement.",
+        "The form requires name, email, message and express permission to process those data to respond and quote. Company and phone are optional. Without permission it is not sent. The delivered message includes the policy version and consent receipt time.",
+        "An inquiry does not accept a contract or subscribe to advertising. Confirmation indicates receipt by the delivery provider; contracting requires a subsequent proposal and acceptance.",
       ],
     },
     {
       id: "servicios-de-terceros",
       heading: "Third-party services",
       paragraphs: [
-        "To operate this website and to provide the services we offer, we rely on the following third-party services:",
-      ],
-      points: [
-        "A form delivery service that sends the contact form messages straight to our email address. The data you submit passes through that service as part of the delivery, so it is also subject to that provider's terms and privacy policy.",
-        "WhatsApp, because we use links that open a conversation with our number. The use of WhatsApp is governed by the terms and privacy policy of its operator, and it may involve transmitting data to that service.",
-        "Web infrastructure and hosting providers, which host this website and the files of the projects we deliver. These providers handle the information according to their own policies and to what we have agreed with them.",
+        "Vercel hosts this website and processes requests and technical information needed to operate and protect it. FormSubmit delivers forms to our Gmail inbox. Google Analytics and Vercel metrics process usage information only with your permission. WhatsApp (Meta) processes messages when you choose to use it.",
+        "These providers may process information outside Costa Rica under their terms and policies. Necessary data is shared to respond and deliver services. Do not include passwords, card data or sensitive data in this form.",
       ],
     },
     {
       id: "cookies-y-tecnologias",
       heading: "Cookies and similar technologies",
       paragraphs: [
-        "We use analytics tools to understand site visits and performance. When Google Analytics is enabled, Google may use cookies and identifiers to measure page views, interactions and technical browser information. Our integration disables Google Signals and advertising personalization signals.",
-        "We also store your language preference (Spanish or English) in local storage on your device. You can remove it by clearing site data. Learn how Google uses data: https://policies.google.com/technologies/partner-sites.",
+        "Language (possible-lang) and privacy choice (possible-privacy-v1) are stored on your device. Analytics remains disabled until accepted. Refusal does not prevent browsing or requesting a quote.",
+        "With your permission Google Analytics, Vercel Analytics and Vercel Speed Insights load to measure visits and performance. Google may use _ga and _ga_* cookies and identifiers. Google Signals and advertising personalization are disabled.",
+        "Change your choice using Privacy preferences in the footer. Rejecting stops analytics loading and removes Google cookies accessible to this site. This does not delete data already received by providers. You may also clear site data in your browser. More information: https://policies.google.com/technologies/partner-sites.",
       ],
     },
     {
@@ -93,8 +89,8 @@ export const privacyEn: LegalDocumentContent = {
       id: "conservacion",
       heading: "Data retention",
       paragraphs: [
-        "We keep the information for as long as necessary to fulfil the purpose it was collected for: answering your request, preparing your quote or managing the business relationship that comes from a contracted service.",
-        "When the information is no longer needed, it is deleted or anonymised. If a project ends and there is no later business relationship, the information associated with that project is permanently deleted or anonymised.",
+        "Data is retained as necessary to answer inquiries and manage the project. Contract documents, receipts and communications needed for legal duties or claims may be retained for applicable periods; closing a project does not imply immediate deletion.",
+        "When the purpose and retention duties end, data should be deleted or anonymized. Ask about retention or request deletion through our contact channels.",
       ],
     },
     {

@@ -1,5 +1,6 @@
 "use client";
 
+import { privacyUi } from "@/data/privacy-controls";
 import Link from "next/link";
 import { useLanguage } from "@/i18n/provider";
 import { siteConfig } from "@/data/site";
@@ -19,7 +20,7 @@ const columnTitleClass = "text-xs font-semibold uppercase tracking-[0.14em] text
 const footerLinkClass = "inline-flex text-sm text-slate-300 transition-colors hover:text-brand-200";
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const navItems = [
     { label: t.nav.home, href: "/" },
@@ -186,6 +187,7 @@ export function Footer() {
           </p>
           <nav aria-label={t.footer.legalHeading}>
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+              <li><button type="button" className="text-xs text-slate-300 hover:underline" onClick={() => window.dispatchEvent(new Event("possible:privacy-settings"))}>{privacyUi[lang].settings}</button></li>
               {legalItems.map((item) => (
                 <li key={item.href}>
                   <Link

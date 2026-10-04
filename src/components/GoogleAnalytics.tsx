@@ -29,6 +29,11 @@ export function GoogleAnalytics() {
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
     script.dataset.ga4 = measurementId;
     document.head.appendChild(script);
+    return () => {
+      script.remove();
+      window.gtag = undefined;
+      window.dataLayer = [];
+    };
   }, []);
 
   return null;

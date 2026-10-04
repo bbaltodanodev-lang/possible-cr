@@ -1,5 +1,6 @@
 "use client";
 
+import { privacyUi, privacyVersion } from "@/data/privacy-controls";
 import { useState } from "react";
 import { useLanguage } from "@/i18n/provider";
 import { siteConfig } from "@/data/site";
@@ -29,7 +30,7 @@ const initialState: FormState = {
   website: "",
 };
 
-type FieldErrors = Partial<Record<"name" | "email" | "message", string>>;
+type FieldErrors = Partial<Record<"name" | "email" | "message" | "privacy", string>>;
 
 const inputClasses =
   "w-full rounded-xl border border-line bg-card-strong px-4 py-3 text-[15px] text-strong placeholder:text-faint transition-colors focus:border-brand-400 focus:outline-none";
@@ -43,13 +44,14 @@ function FieldError({ id, message }: { id: string; message?: string }) {
 }
 
 export function ContactForm() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const legal = privacyUi[lang];
+  const [consent, setConsent] = useState(false);
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<Status>("idle");
 
   const endpoint =
-    process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ??
     "/api/contact";
 
   const validateForm = (formData: FormState): FieldErrors => {
@@ -61,6 +63,7 @@ export function ContactForm() {
       errs.email = t.contact.form.errorEmailInvalid;
     }
     if (!formData.message.trim()) errs.message = t.contact.form.errorMessage;
+    if (!consent) errs.privacy = legal.error;
     return errs;
   };
 
@@ -96,6 +99,8 @@ export function ContactForm() {
       service: form.service,
       message: form.message,
       website: form.website,
+      privacyConsent: consent,
+      privacyVersion,
     };
 
     try {
@@ -305,6 +310,14 @@ export function ContactForm() {
         </p>
       ) : null}
 
+      <div className="space-y-3 text-sm leading-relaxed text-body">
+        <label className="flex items-start gap-3" htmlFor="contact-privacy">
+          <input id="contact-privacy" type="checkbox" required checked={consent} aria-invalid={Boolean(errors.privacy)} aria-describedby={errors.privacy ? "error-privacy" : undefined} onChange={(event) => { setConsent(event.target.checked); setErrors((prev) => ({ ...prev, privacy: undefined })); }} className="mt-1 size-4 shrink-0 accent-brand-400" />
+          <span>{legal.consent} <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="text-brand-300 underline">{legal.privacy}</a>.</span>
+        </label>
+        {errors.privacy && <FieldError id="error-privacy" message={errors.privacy} />}
+        <p>{legal.quote} <a href="/terminos" className="text-brand-300 underline">{legal.terms}</a>.</p>
+      </div>
       <button
         type="submit"
         disabled={status === "submitting"}

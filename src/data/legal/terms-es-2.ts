@@ -2,6 +2,16 @@ import type { LegalSection } from "./types";
 
 export const termsEs2: LegalSection[] = [
   {
+    "id": "garantias-y-reclamos",
+    "heading": "Garantías, soporte y reclamaciones",
+    "paragraphs": [
+      "El alcance publicado de cada plan y el acuerdo aceptado determinan qué mantenimiento, actualizaciones y soporte están incluidos. Las exclusiones generales no eliminan prestaciones expresamente incluidas ni garantías legales.",
+      "Puedes presentar consultas, reclamaciones y solicitudes de garantía gratuitamente por contact.possible.cr@gmail.com o +506 6203 7705. Incluye la referencia del proyecto, una descripción del problema y la solución solicitada; conserva una copia. El plazo de atención, el seguimiento y los horarios deben indicarse en la propuesta del proyecto antes de aceptar.",
+      "Si Possible incumple el plazo de entrega o prestación, se aplican los remedios legales, incluida la devolución íntegra sin deducciones cuando corresponda conforme al artículo 258 del Reglamento a la Ley 7472. La dependencia de proveedores externos no excluye responsabilidad por incumplimientos propios ni obligaciones legales. No garantizamos ventas, posiciones en buscadores o disponibilidad absoluta. Las limitaciones de responsabilidad se aplican solo hasta donde la ley lo permita."
+    ]
+  }
+,
+  {
     id: "propiedad-del-proyecto",
     heading: "Propiedad del proyecto y archivos entregados",
     paragraphs: [
@@ -18,9 +28,8 @@ export const termsEs2: LegalSection[] = [
     id: "hosting-y-dominio",
     heading: "Hosting y dominio",
     paragraphs: [
-      "El alojamiento web (hosting) y el dominio son servicios independientes del desarrollo y se contratan por separado, cuando el cliente así lo requiere. Se cotizan y se documentan por escrito junto con sus condiciones.",
-      "Cuando Possible administra el hosting o el dominio, lo hace en nombre del cliente mientras el servicio esté vigente. El cliente puede solicitar sus propios accesos, la cancelación o la migración del sitio web; el costo y el plazo de una eventual migración se cotizan según el trabajo requerido.",
-      "La renovación de estos servicios depende de que el cliente atienda los pagos dentro de los plazos acordados. El incumplimiento de pago puede dar lugar a la suspensión de los servicios y de la disponibilidad del sitio web. Possible no responde por interrupciones del servicio ajenas a su control directo.",
+      "El dominio y hosting se incluyen únicamente cuando el plan o propuesta lo indique expresamente, durante el período allí establecido. En otros casos se cotizan por separado. Antes de contratar se informarán proveedor, titularidad, duración, costo de renovación y condiciones de cancelación o migración.",
+      "No se presume una renovación automática ni autorización para cargos adicionales. Los accesos, la administración y la transferencia al cliente se documentan en el acuerdo. Cualquier posible suspensión por impago se comunica conforme a ese acuerdo y la legislación aplicable.",
     ],
   },
   {
@@ -57,17 +66,16 @@ export const termsEs2: LegalSection[] = [
     paragraphs: [
       "La marca Possible, el isotipo de Possible, los logotipos, los colores corporativos, los textos, el diseño, las fotografías, las ilustraciones, los iconos, la estructura visual y el código fuente de este sitio web son propiedad de Possible y están protegidos por la legislación vigente.",
       "Queda prohibida la reproducción total o parcial, la modificación, la distribución, la comunicación pública o la explotación comercial del material de Possible sin autorización previa y por escrito.",
-      "Salvo autorización expresa, Possible puede mencionar y mostrar públicamente los proyectos que ha desarrollado para sus clientes como parte de su portafolio y de sus referencias comerciales.",
+      "Possible solo publicará proyectos, marcas, testimonios o datos del cliente en su portafolio cuando cuente con su autorización y los derechos correspondientes.",
     ],
   },
   {
     id: "cancelaciones",
     heading: "Cancelaciones",
     paragraphs: [
-      "La cancelación de un proyecto se rige por las condiciones pactadas en la cotización o en el acuerdo escrito firmado con el cliente. Esas condiciones prevalecen sobre cualquier interpretación general de estos términos.",
-      "Cuando un proyecto se cancela una vez iniciada su ejecución, se factura el trabajo efectivamente realizado hasta la fecha de cancelación, incluyendo el tiempo invertido, los materiales y los gastos en los que se haya incurrido, en los términos indicados en el documento del proyecto.",
-      "Los pagos que cubren etapas ya completadas o servicios ya prestados no son reembolsables, salvo que el documento del proyecto indique lo contrario. Los trabajos pendientes de iniciar que el cliente cancela se liquidan según lo pactado.",
-      "Possible se compromete a entregar el avance alcanzado al momento de la cancelación, en los términos indicados en el documento del proyecto.",
+      "Puedes solicitar una cancelación por correo a contact.possible.cr@gmail.com o WhatsApp +506 6203 7705, identificando el proyecto y la solicitud. Las condiciones, anticipos y liquidación se explican antes de contratar; no se presume la pérdida automática de todos los pagos.",
+      "Cualquier liquidación por trabajo realizado o gastos autorizados debe estar documentada y ajustarse a la ley. Los importes de servicios no prestados y los reembolsos legalmente exigibles se tramitan según los derechos aplicables, sin cláusulas generales de no devolución.",
+      "Cuando resulte aplicable el retracto del artículo 40 de la Ley 7472, puede ejercerse dentro de ocho días desde el perfeccionamiento del contrato por los canales indicados. Estos términos no excluyen garantías legales ni remedios por incumplimiento. Sus requisitos y posibles excepciones se evalúan según la modalidad de contratación y la legislación vigente; el cliente no renuncia a ellos al solicitar una cotización.",
     ],
   },
   {
@@ -82,8 +90,7 @@ export const termsEs2: LegalSection[] = [
     id: "legislacion",
     heading: "Legislación aplicable",
     paragraphs: [
-      "La interpretación y el cumplimiento de estos Términos y Condiciones se rigen por las leyes de la República de Costa Rica. Ambas partes acuerdan someter sus Controversias a los tribunales costarricenses, renunciando a cualquier otro foro que pudiera corresponderles por razón de sus domicilios presentes o futuros.",
-      "La relación comercial entre Possible y el cliente se rige además por las normas de protección de datos personales de Costa Rica y por la legislación aplicable en materia de propiedad intelectual y comercio electrónico.",
+      "Se aplica la legislación de Costa Rica, incluidas las normas de protección al consumidor, comercio electrónico y datos personales. Se mantienen las vías administrativas y judiciales y los derechos que correspondan al cliente; no se exige renunciar a ellas.",
     ],
   },
   {

@@ -5,9 +5,8 @@ export const termsEn1: LegalSection[] = [
     id: "objeto",
     heading: "Scope and acceptance",
     paragraphs: [
-      "These Terms and Conditions govern access to and use of the Possible website, as well as the contracting and execution of the web development, business systems, POS systems and technical support services we offer.",
-      "By using this website or by requesting a quote, you declare that you have read and accept these terms. If you disagree with any of them, we ask you not to use the website.",
-      "These terms apply together with the quote or written agreement for each project. If there is a contradiction between a document signed with the client and these terms, the conditions agreed in that document prevail.",
+      "These terms describe website use and contracting Possible services. Browsing, requesting information or asking for a quote does not create a purchase or payment obligation.",
+      "A contract requires express acceptance of a written proposal. Project-specific conditions apply alongside these terms and never exclude mandatory consumer rights.",
     ],
   },
   {
@@ -42,9 +41,8 @@ export const termsEn1: LegalSection[] = [
     id: "cotizaciones",
     heading: "Quotes",
     paragraphs: [
-      "Quotes are prepared from the information you share about your business, your processes and your requirements, and are delivered in writing with the project scope, the deliverables and the price.",
-      "The prices shown on this website are reference prices expressed in United States dollars (USD), and they may vary according to the complexity, scope and requirements of each project. For that reason they do not constitute a firm offer or a final price.",
-      "Quotes are not binding. The validity period of a quote is stated in the document delivered and, if it is not accepted, it expires and has to be requested again.",
+      "Published USD prices refer to the stated scope. Before acceptance you receive a written proposal with the total price, applicable tax breakdown, third-party costs, currency and payment method. Scope-dependent prices include an explanation of their calculation.",
+      "The proposal states its validity, deliverables, exclusions, revisions, client requirements and timelines. You may review it, request corrections or decline before accepting. An expressly accepted proposal forms the project agreement; you receive a copy to retain.",
     ],
   },
   {

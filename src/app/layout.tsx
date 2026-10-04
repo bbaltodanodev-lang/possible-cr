@@ -9,9 +9,7 @@ import { ScrollManager } from "@/components/ui/ScrollManager";
 import { LanguageProvider } from "@/i18n/provider";
 import { siteConfig, defaultMetadata } from "@/data/site";
 import { organizationSchema, websiteSchema, jsonLdScript } from "@/lib/seo";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { PrivacyControls } from "@/components/PrivacyControls";
 import { googleSiteVerification } from "@/data/seo";
 
 const inter = Inter({
@@ -86,9 +84,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es" data-scroll-behavior="smooth" className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
-        <Analytics />
-        <SpeedInsights />
-        <GoogleAnalytics />
         <a
           href="#contenido"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand-600 focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
@@ -102,6 +97,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children}
           </main>
           <Footer />
+          <PrivacyControls />
           <WhatsAppButton />
           <BackToTopButton />
         </LanguageProvider>

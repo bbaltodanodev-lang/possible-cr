@@ -6,8 +6,8 @@ export const privacyEs: LegalDocumentContent = {
   intro:
     "En Possible nos importa la privacidad de las personas que confían en nosotros. Esta política explica qué información recopilamos en este sitio web, cómo la utilizamos y cómo puedes ejercer tus derechos sobre ella.",
   updatedLabel: "Última actualización:",
-  updated: "27 de septiembre de 2026",
-  updatedIso: "2026-09-27",
+  updated: "3 de octubre de 2026",
+  updatedIso: "2026-10-03",
   indexLabel: "Contenido de esta política",
   sections: [
     {
@@ -22,7 +22,7 @@ export const privacyEs: LegalDocumentContent = {
       id: "informacion-recopilada",
       heading: "Qué información recopilamos",
       paragraphs: [
-        "Possible solo recopila información que tú decides proporcionarnos de forma voluntaria. En este sitio web podemos solicitarla en los siguientes casos:",
+        "Recopilamos datos que compartes, datos técnicos necesarios para operar el sitio y métricas opcionales cuando las autorizas. En este sitio web podemos solicitarla en los siguientes casos:",
       ],
       points: [
         "Tu nombre y el nombre de tu empresa, cuando los incluyes en el formulario de contacto o en tus mensajes.",
@@ -37,7 +37,7 @@ export const privacyEs: LegalDocumentContent = {
       id: "uso-de-la-informacion",
       heading: "Para qué utilizamos tu información",
       paragraphs: [
-        "La información que nos compartes se utiliza exclusivamente para responderte y para prestarte nuestros servicios. En concreto, la utilizamos para:",
+        "Usamos los datos para responder, prestar servicios, proteger el sitio y medir su uso cuando autorizas la analítica. En concreto, la utilizamos para:",
       ],
       points: [
         "Responder las consultas y solicitudes enviadas desde el formulario de contacto.",
@@ -51,29 +51,25 @@ export const privacyEs: LegalDocumentContent = {
       id: "formularios-y-cotizaciones",
       heading: "Formularios de contacto y solicitudes de cotización",
       paragraphs: [
-        "El formulario de contacto de este sitio web solicita nombre, empresa (opcional), correo electrónico, teléfono o WhatsApp (opcional), servicio de interés y un mensaje. Los campos obligatorios son el nombre, el correo electrónico y el mensaje.",
-        "Cuando envías el formulario, la información viaja por internet hasta nuestros servidores y desde ahí se entrega a nuestra dirección de correo electrónico para que podamos responderla. Si la solicitud se procesa correctamente verás una confirmación en pantalla.",
-        "Las solicitudes enviadas desde el formulario no tienen efectos vinculantes. La aceptación de un proyecto siempre se define en una cotización o en un acuerdo escrito posterior.",
+        "El formulario requiere nombre, correo, mensaje y autorización expresa para tratar esos datos para responder y cotizar. Empresa y teléfono son opcionales. Sin autorización no se envía. El mensaje entregado incluye la versión de la política y la fecha de recepción del consentimiento.",
+        "La consulta no acepta un contrato ni suscribe publicidad. La confirmación indica recepción por el proveedor de entrega; la contratación requiere una propuesta y aceptación posterior.",
       ],
     },
     {
       id: "servicios-de-terceros",
       heading: "Servicios de terceros",
       paragraphs: [
-        "Para operar este sitio web y prestar los servicios que ofrecemos utilizamos los siguientes servicios de terceros:",
-      ],
-      points: [
-        "Un servicio de entrega de formularios que lleva los mensajes del formulario de contacto directamente a nuestro correo electrónico. Los datos que envías atraviesan ese servicio como parte del envío, por lo que también quedan sujetos a las condiciones y a la política de privacidad de ese proveedor.",
-        "WhatsApp, al utilizar enlaces que abren una conversación con nuestro número. El uso de WhatsApp se rige por las condiciones y la política de privacidad de su operador, y puede implicar que los datos se transmitan a ese servicio.",
-        "Proveedores de infraestructura y de alojamiento web, que alojan este sitio web y los archivos de los proyectos que entregamos. Estos proveedores tratan la información conforme a sus propias políticas y a lo acordado con nosotros.",
+        "Vercel aloja el sitio y procesa solicitudes y datos técnicos necesarios para operarlo y protegerlo. FormSubmit entrega los formularios a nuestro correo de Gmail. Google Analytics y las métricas de Vercel procesan información de uso únicamente con tu permiso. WhatsApp (Meta) procesa mensajes cuando eliges utilizarlo.",
+        "Estos proveedores pueden procesar información fuera de Costa Rica según sus condiciones y políticas. Compartimos los datos necesarios para responder y prestar servicios. No incluyas contraseñas, datos de tarjetas ni datos sensibles en el formulario.",
       ],
     },
     {
       id: "cookies-y-tecnologias",
       heading: "Cookies y tecnologías similares",
       paragraphs: [
-        "Utilizamos herramientas de analítica para conocer las visitas y el rendimiento del sitio. Cuando Google Analytics está habilitado, Google puede utilizar cookies e identificadores para medir páginas visitadas, interacciones y datos técnicos del navegador. Hemos desactivado Google Signals y las señales de personalización publicitaria en nuestra integración.",
-        "También guardamos tu preferencia de idioma (español o inglés) en el almacenamiento local de tu dispositivo. Puedes eliminarla borrando los datos del sitio. Más información sobre cómo Google utiliza los datos: https://policies.google.com/technologies/partner-sites.",
+        "Guardamos el idioma (possible-lang) y tu elección de privacidad (possible-privacy-v1) en tu dispositivo. La analítica permanece desactivada hasta que la aceptes. Rechazarla no impide navegar ni solicitar una cotización.",
+        "Con tu permiso se cargan Google Analytics, Vercel Analytics y Vercel Speed Insights para medir visitas y rendimiento. Google puede usar cookies _ga y _ga_* e identificadores. Google Signals y la personalización publicitaria están desactivados.",
+        "Puedes cambiar tu elección en Preferencias de privacidad, en el pie de página. Al rechazar se detiene la carga de analítica y se eliminan las cookies de Google accesibles para este sitio. Esto no elimina los datos ya recibidos por los proveedores. También puedes borrar los datos del sitio en tu navegador. Más información: https://policies.google.com/technologies/partner-sites.",
       ],
     },
     {
@@ -93,8 +89,8 @@ export const privacyEs: LegalDocumentContent = {
       id: "conservacion",
       heading: "Conservación de los datos",
       paragraphs: [
-        "Conservamos la información durante el tiempo necesario para cumplir la finalidad por la que fue recabada: responder tu solicitud, elaborar tu cotización o gestionar la relación comercial que surge de un servicio contratado.",
-        "Cuando la información deja de ser necesaria, se elimina o se anonimiza. Si un proyecto termina y no existe una relación comercial posterior, la información asociada a ese proyecto se elimina o se anonimiza de forma permanente.",
+        "Conservamos los datos durante el tiempo necesario para atender consultas y gestionar el proyecto. Documentos contractuales, comprobantes y comunicaciones necesarios para obligaciones legales o reclamaciones pueden conservarse durante los plazos aplicables; el cierre del proyecto no implica su eliminación inmediata.",
+        "Cuando terminan la finalidad y las obligaciones de conservación, corresponde eliminar o anonimizar los datos. Puedes consultar la conservación de tus datos o solicitar su eliminación por nuestros canales de contacto.",
       ],
     },
     {

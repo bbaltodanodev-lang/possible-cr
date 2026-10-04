@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readContactRequest } from "../src/lib/contact-request.ts";
 
-const valid = { name: "Ana", email: "ana@example.com", message: "Consulta sobre una página web.", company: "", phone: "", service: "web", website: "" };
+const valid = { name: "Ana", email: "ana@example.com", message: "Consulta sobre una página web.", company: "", phone: "", service: "web", website: "", privacyConsent: true, privacyVersion: "2026-10-03" };
 function request(body, headers = {}) {
   return new Request("https://possible.cr/api/contact", {
     method: "POST",
@@ -19,6 +19,9 @@ test("accepts a valid same-origin submission and trims fields", async () => {
 });
 
 for (const [label, body, headers, status] of [
+  ["missing consent", { ...valid, privacyConsent: undefined }, {}, 400],
+  ["refused consent", { ...valid, privacyConsent: false }, {}, 400],
+  ["old privacy version", { ...valid, privacyVersion: "2026-09-27" }, {}, 400],
   ["cross-origin", valid, { origin: "https://attacker.example" }, 403],
   ["cross-site fetch", valid, { "sec-fetch-site": "cross-site" }, 403],
   ["wrong media type", valid, { "content-type": "text/plain" }, 415],

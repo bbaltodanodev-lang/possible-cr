@@ -5,9 +5,8 @@ export const termsEs1: LegalSection[] = [
     id: "objeto",
     heading: "Objeto y aceptación",
     paragraphs: [
-      "Estos Términos y Condiciones regulan el acceso y el uso del sitio web de Possible, así como la contratación y la ejecución de los servicios de desarrollo web, sistemas empresariales, sistemas POS y soporte técnico que ofrecemos.",
-      "Al utilizar este sitio web o al solicitar una cotización, declaras que has leído y aceptas estos términos. Si no estás de acuerdo con alguno de ellos, te pedimos que no utilices el sitio web.",
-      "Estos términos se aplican junto con la cotización o el acuerdo escrito de cada proyecto. Si hubiera una contradicción entre un documento firmado con el cliente y estos términos, prevalecen las condiciones pactadas en ese documento.",
+      "Estos términos describen el uso del sitio y la contratación de los servicios de Possible. Navegar, pedir información o solicitar una cotización no genera una compra ni obligación de pago.",
+      "La contratación requiere aceptación expresa de una propuesta escrita. Las condiciones particulares se aplican junto con estos términos y nunca excluyen derechos obligatorios del consumidor.",
     ],
   },
   {
@@ -42,9 +41,8 @@ export const termsEs1: LegalSection[] = [
     id: "cotizaciones",
     heading: "Cotizaciones",
     paragraphs: [
-      "Las cotizaciones se preparan a partir de la información que compartes sobre tu negocio, tus procesos y tus requerimientos, y se entregan por escrito con el alcance, los entregables y el precio del proyecto.",
-      "Los precios que se muestran en este sitio web son precios de referencia, expresados en dólares estadounidenses (USD), y pueden variar según la complejidad, el alcance y los requerimientos de cada proyecto. Por esa razón no constituyen una oferta en firme ni un precio final.",
-      "Las cotizaciones no son vinculantes. La vigencia de una cotización se indica en el documento entregado y, si no se acepta, deja de estar vigente y debe solicitarse de nuevo.",
+      "Los precios publicados son referencias en USD para el alcance indicado. Antes de aceptar recibirás una propuesta escrita con el precio total, desglose de impuestos aplicables, costos de terceros, moneda y método de pago. Si el importe depende del alcance, se explicará cómo se calcula.",
+      "La propuesta indicará vigencia, entregables, exclusiones, revisiones, requisitos del cliente y plazos. Podrás revisarla, pedir correcciones o rechazarla antes de aceptar. Una propuesta aceptada expresamente constituye el acuerdo del proyecto; recibirás una copia que puedas conservar.",
     ],
   },
   {

@@ -2,6 +2,16 @@ import type { LegalSection } from "./types";
 
 export const termsEn2: LegalSection[] = [
   {
+    "id": "garantias-y-reclamos",
+    "heading": "Warranties, support and complaints",
+    "paragraphs": [
+      "The published plan scope and accepted agreement determine included maintenance, updates and support. General exclusions do not remove expressly included services or statutory warranties.",
+      "Submit questions, complaints or warranty requests free of charge at contact.possible.cr@gmail.com or +506 6203 7705. Include the project reference, issue description and requested remedy; retain a copy. Response times, follow-up and working hours must be stated in the proposal before acceptance.",
+      "If Possible breaches the delivery or service deadline, statutory remedies apply, including a full refund without deductions where required under article 258 of the Regulation of Law 7472. Reliance on external providers does not exclude liability for our own breaches or statutory duties. Sales, search rankings or absolute availability are not guaranteed. Liability limitations apply only to the extent permitted by law."
+    ]
+  }
+,
+  {
     id: "propiedad-del-proyecto",
     heading: "Ownership of the project and delivered files",
     paragraphs: [
@@ -18,9 +28,8 @@ export const termsEn2: LegalSection[] = [
     id: "hosting-y-dominio",
     heading: "Hosting and domain",
     paragraphs: [
-      "Web hosting and the domain are services that are independent of development and are contracted separately whenever the client requires them. They are quoted and documented in writing together with their conditions.",
-      "When Possible manages the hosting or the domain, it does so on behalf of the client for as long as the service is in force. The client may request its own credentials, the cancellation or the migration of the website; the cost and the deadline of a migration are quoted according to the work required.",
-      "Renewal of these services depends on the client paying within the agreed deadlines. Non-payment may lead to the suspension of the services and of the website availability. Possible is not responsible for service interruptions outside its direct control.",
+      "Domain and hosting are included only where expressly stated in the plan or proposal, for the stated period. Otherwise they are quoted separately. The provider, ownership, duration, renewal cost and cancellation or migration conditions are disclosed before contracting.",
+      "Automatic renewal or permission for additional charges is not presumed. Credentials, administration and transfer to the client are documented in the agreement. Any potential non-payment suspension is communicated under that agreement and applicable law.",
     ],
   },
   {
@@ -57,17 +66,16 @@ export const termsEn2: LegalSection[] = [
     paragraphs: [
       "The Possible brand, the Possible monogram, the logos, the corporate colours, the texts, the design, the photographs, the illustrations, the icons, the visual structure and the source code of this website are the property of Possible and are protected by applicable law.",
       "Any total or partial reproduction, modification, distribution, public communication or commercial exploitation of Possible material is prohibited without prior written authorisation.",
-      "Unless expressly authorised, Possible may publicly mention and showcase the projects it has developed for its clients as part of its portfolio and commercial references.",
+      "Possible will publish client projects, brands, testimonials or data in its portfolio only with permission and the necessary rights.",
     ],
   },
   {
     id: "cancelaciones",
     heading: "Cancellations",
     paragraphs: [
-      "The cancellation of a project is governed by the conditions agreed in the quote or in the written agreement signed with the client. Those conditions prevail over any general interpretation of these terms.",
-      "When a project is cancelled after execution has started, the work actually performed up to the cancellation date is invoiced, including the time invested, the materials and the expenses incurred, on the terms stated in the project document.",
-      "Payments that cover completed stages or services already provided are non-refundable, unless the project document states otherwise. Work that has not started and that the client cancels is settled as agreed.",
-      "Possible undertakes to hand over the progress reached at the time of cancellation, on the terms stated in the project document.",
+      "Request cancellation by emailing contact.possible.cr@gmail.com or WhatsApp +506 6203 7705, identifying the project and request. Conditions, deposits and settlement are explained before contracting; payments are not automatically forfeited.",
+      "Settlement for completed work or authorized expenses must be documented and comply with the law. Amounts for services not provided and legally required refunds are handled under applicable rights, without blanket no-refund clauses.",
+      "Where the withdrawal right under article 40 of Law 7472 applies, it can be exercised within eight days of contract formation through the stated channels. These terms do not exclude statutory warranties or remedies for breach. Requirements and any exceptions depend on the contracting method and applicable law; requesting a quote does not waive them.",
     ],
   },
   {
@@ -82,8 +90,7 @@ export const termsEn2: LegalSection[] = [
     id: "legislacion",
     heading: "Governing law",
     paragraphs: [
-      "The interpretation and compliance of these Terms and Conditions are governed by the laws of the Republic of Costa Rica. Both parties agree to submit their disputes to the Costa Rican courts, waiving any other jurisdiction that might apply to them because of their present or future addresses.",
-      "The business relationship between Possible and the client is also governed by the Costa Rican rules on the protection of personal data and by the applicable legislation on intellectual property and electronic commerce.",
+      "Costa Rican law applies, including consumer protection, electronic commerce and personal data rules. Clients retain applicable administrative and judicial remedies and rights; no waiver is required.",
     ],
   },
   {
