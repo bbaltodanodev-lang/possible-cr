@@ -181,18 +181,26 @@ export function Footer() {
 
         <div aria-hidden="true" className="mt-12 h-px w-full bg-brand-gradient opacity-45" />
 
-        <div className="mt-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <p className="text-xs text-faint">
+        <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl text-xs leading-relaxed text-faint">
             © {new Date().getFullYear()} {siteConfig.legalName}. {t.footer.rights}
           </p>
-          <nav aria-label={t.footer.legalHeading}>
-            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
-              <li><button type="button" className="text-xs text-slate-300 hover:underline" onClick={() => window.dispatchEvent(new Event("possible:privacy-settings"))}>{privacyUi[lang].settings}</button></li>
+          <nav aria-label={t.footer.legalHeading} className="w-full sm:w-auto">
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:justify-end">
+              <li>
+                <button
+                  type="button"
+                  className="min-h-11 rounded px-1 text-left text-xs text-slate-300 underline-offset-4 hover:text-brand-200 hover:underline focus-visible:outline-2 focus-visible:outline-brand-300"
+                  onClick={() => window.dispatchEvent(new Event("possible:privacy-settings"))}
+                >
+                  {privacyUi[lang].settings}
+                </button>
+              </li>
               {legalItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="rounded text-xs text-slate-300 underline-offset-4 transition-colors hover:text-brand-200 hover:underline"
+                    className="inline-flex min-h-11 items-center rounded px-1 text-xs text-slate-300 underline-offset-4 transition-colors hover:text-brand-200 hover:underline focus-visible:outline-2 focus-visible:outline-brand-300"
                   >
                     {item.label}
                   </Link>
