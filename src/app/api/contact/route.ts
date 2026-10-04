@@ -1,11 +1,19 @@
 import { NextResponse } from "next/server";
 import { siteConfig } from "@/data/site";
 import { readContactRequest, ContactRequestError } from "@/lib/contact-request";
+import { checkContactRateLimit, getClientKey } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
   const headers = { "Cache-Control": "no-store", "X-Robots-Tag": "noindex" };
   try {
     const payload = await readContactRequest(request);
+    const limit = checkContactRateLimit(getClientKey(request));
+    if (!limit.allowed) {
+      return NextResponse.json(
+        { ok: false, error: "Demasiadas solicitudes. Intenta más tarde." },
+        { status: 429, headers: { ...headers, "Retry-After": String(limit.retryAfter) } },
+      );
+    }
     const response = await fetch(`https://formsubmit.co/ajax/${siteConfig.email}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },

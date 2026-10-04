@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readContactRequest } from "../src/lib/contact-request.ts";
+import { checkContactRateLimit } from "../src/lib/rate-limit.ts";
 
 const valid = { name: "Ana", email: "ana@example.com", message: "Consulta sobre una página web.", company: "", phone: "", service: "web", website: "", privacyConsent: true, privacyVersion: "2026-10-03" };
 function request(body, headers = {}) {
@@ -16,6 +17,17 @@ test("accepts a valid same-origin submission and trims fields", async () => {
   assert.equal(result.name, "Ana");
   assert.equal(result.message, valid.message);
   assert.equal("website" in result, false);
+});
+
+test("allows five requests and blocks the sixth within the window", () => {
+  const now = 1_700_000_000_000;
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    assert.equal(checkContactRateLimit(`test-${now}`, now).allowed, true);
+  }
+  const blocked = checkContactRateLimit(`test-${now}`, now);
+  assert.equal(blocked.allowed, false);
+  assert.ok(blocked.retryAfter > 0);
+  assert.equal(checkContactRateLimit(`test-${now}`, now + 15 * 60 * 1000 + 1).allowed, true);
 });
 
 for (const [label, body, headers, status] of [
