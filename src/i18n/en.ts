@@ -178,6 +178,7 @@ export const en: Messages = {
     privacy: "Privacy",
     terms: "Terms",
     backToTop: "Back to top",
+    related: "Also by Possible:",
   },
   whatsapp: {
     aria: "Contact Possible via WhatsApp",

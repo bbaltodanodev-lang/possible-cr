@@ -16,13 +16,13 @@ export const legalMeta: Record<
   privacy: {
     title: "Política de Privacidad",
     description:
-      "Cómo Possible recopila, utiliza, almacena y protege la información que compartes a través de este sitio web, los formularios de contacto y las solicitudes de cotización.",
+      "Cómo Possible recopila, usa, almacena y protege la información que compartes en este sitio, en los formularios de contacto y en las cotizaciones.",
     path: "/privacidad",
   },
   terms: {
     title: "Términos y Condiciones",
     description:
-      "Condiciones de uso de este sitio web y de los servicios de Possible: sistemas empresariales, páginas web, sistemas POS y soporte y mantenimiento web.",
+      "Condiciones de uso del sitio y de los servicios de Possible: sistemas empresariales, páginas web, sistemas POS y soporte y mantenimiento web.",
     path: "/terminos",
   },
 };

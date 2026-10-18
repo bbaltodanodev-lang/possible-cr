@@ -53,9 +53,9 @@ export function SolutionsSection() {
                   <span className="grid size-14 place-items-center rounded-2xl bg-brand-tint text-brand-300 transition-colors duration-300 group-hover:bg-brand-gradient group-hover:text-white">
                     <DynamicIcon name={item.icon} className="size-6" />
                   </span>
-                  <h3 className="mt-6 text-2xl font-bold tracking-tight text-white">
+                  <h2 className="mt-6 text-2xl font-bold tracking-tight text-white">
                     {item.title}
-                  </h3>
+                  </h2>
                   <p className="mt-3 text-sm leading-relaxed text-body">{item.description}</p>
                   <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-300 transition-colors duration-300 group-hover:text-brand-200">
                     {item.cta}

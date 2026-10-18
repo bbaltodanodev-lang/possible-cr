@@ -1,95 +1,148 @@
+import type { Metadata } from "next";
 import { siteConfig } from "@/data/site";
 import { servicePageSeo } from "@/data/seo";
+import { faqContent } from "@/data/faq";
+
+const organizationId = `${siteConfig.url}/#organization`;
+const websiteId = `${siteConfig.url}/#website`;
+const areaServed = siteConfig.areaServed.map((name) => ({ "@type": "Country", name }));
+
+/**
+ * Metadatos comunes de una página: canonical, Open Graph y Twitter.
+ * Las imágenes 1200x630 las aporta el archivo opengraph-image/twitter-image de cada ruta.
+ */
+export function pageMetadata({
+  title,
+  description,
+  path,
+  absoluteTitle = false,
+  type = "website",
+}: {
+  title: string;
+  description: string;
+  path: string;
+  absoluteTitle?: boolean;
+  type?: "website" | "article";
+}): Metadata {
+  const fullTitle = absoluteTitle ? title : `${title} | ${siteConfig.name}`;
+  return {
+    title: absoluteTitle ? { absolute: title } : title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type,
+      locale: "es_CR",
+      siteName: siteConfig.name,
+      url: path,
+      title: fullTitle,
+      description,
+    },
+    twitter: { card: "summary_large_image", title: fullTitle, description },
+  };
+}
 
 export function organizationSchema() {
-  const schema: Record<string, unknown> = {
+  const socials = Object.values(siteConfig.social).filter(Boolean);
+  return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": `${siteConfig.url}/#organization`,
+    "@id": organizationId,
     name: siteConfig.name,
-    alternateName: "Possible.cr",
+    alternateName: siteConfig.alternateName,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/brand/possible-icon-512.png`,
-    image: `${siteConfig.url}/opengraph-image.png`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteConfig.url}/brand/possible-icon-512.png`,
+      width: 512,
+      height: 512,
+    },
+    image: `${siteConfig.url}/brand/possible-logo.png`,
     description: siteConfig.tagline,
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    areaServed,
+    knowsAbout: [
+      "Diseño de páginas web",
+      "Desarrollo web",
+      "Sistemas web empresariales",
+      "Sistemas POS",
+      "Soporte y mantenimiento web",
+    ],
+    founder: { "@type": "Person", name: siteConfig.founder.name, url: siteConfig.founder.url },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
       telephone: siteConfig.phone,
       email: siteConfig.email,
       availableLanguage: ["Spanish", "English"],
-      areaServed: siteConfig.areaServed,
+      areaServed,
     },
+    sameAs: [
+      ...socials,
+      ...siteConfig.relatedSites.map((site) => site.url),
+      siteConfig.founder.url,
+    ],
   };
-
-  const socials = Object.values(siteConfig.social).filter(Boolean);
-  if (socials.length > 0) {
-    schema.sameAs = socials;
-  }
-
-  return schema;
 }
 
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": `${siteConfig.url}/#website`,
+    "@id": websiteId,
     inLanguage: "es-CR",
     name: siteConfig.name,
-    alternateName: "Possible.cr",
+    alternateName: siteConfig.alternateName,
     url: siteConfig.url,
     description: siteConfig.tagline,
-    publisher: { "@id": `${siteConfig.url}/#organization` },
+    publisher: { "@id": organizationId },
   };
 }
 
-export function professionalServiceSchema() {
+function serviceNode(path: keyof typeof servicePageSeo) {
+  const { title, description, serviceType } = servicePageSeo[path];
+  const url = `${siteConfig.url}/${path}`;
+  return {
+    "@type": "Service",
+    "@id": `${url}#service`,
+    url,
+    name: title,
+    serviceType,
+    description,
+    provider: { "@id": organizationId },
+    areaServed,
+  };
+}
+
+/** Portada: WebPage + un Service por servicio + FAQPage con las preguntas visibles. */
+export function homeSchema() {
+  const url = `${siteConfig.url}/`;
+  const services = (Object.keys(servicePageSeo) as (keyof typeof servicePageSeo)[]).map(serviceNode);
   return {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    image: `${siteConfig.url}/opengraph-image.png`,
-    description: siteConfig.tagline,
-    email: siteConfig.email,
-    areaServed: siteConfig.areaServed.map((area) => ({ "@type": "Country", name: area })),
-    knowsAbout: ["Diseño de páginas web", "Desarrollo web", "Sistemas web empresariales", "Presencia digital para negocios"],
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": url,
+        url,
+        name: siteConfig.name,
+        inLanguage: "es-CR",
+        isPartOf: { "@id": websiteId },
+        about: { "@id": organizationId },
+      },
+      ...services,
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#preguntas`,
+        inLanguage: "es-CR",
+        mainEntity: faqContent.es.items.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      },
+    ],
   };
-}
-
-export function servicesSchema() {
-  const base = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    provider: { "@id": `${siteConfig.url}/#organization` },
-    areaServed: siteConfig.areaServed.map((area) => ({ "@type": "Country", name: area })),
-  };
-
-  return [
-    {
-      ...base,
-      "@type": "Service",
-      name: "Sistemas web empresariales",
-      serviceType: "Sistemas web empresariales",
-      description:
-        "Desarrollo de sistemas web personalizados para gestionar ingresos, gastos, inventario, clientes y reportes de un negocio.",
-    },
-    {
-      ...base,
-      "@type": "Service",
-      name: "Páginas web profesionales",
-      serviceType: "Diseño y desarrollo web",
-      description:
-        "Diseño y desarrollo de páginas web profesionales enfocadas en presencia digital, visibilidad en Google y generación de clientes.",
-    },
-  ];
-}
-
-export function jsonLdScript(schema: Record<string, unknown>) {
-  return JSON.stringify(schema).replace(/</g, "\\u003c");
 }
 
 export function servicePageSchema(path: keyof typeof servicePageSeo) {
@@ -101,22 +154,22 @@ export function servicePageSchema(path: keyof typeof servicePageSeo) {
       {
         "@type": "WebPage", "@id": url, url, name: title, description,
         inLanguage: "es-CR",
-        isPartOf: { "@id": `${siteConfig.url}/#website` },
+        isPartOf: { "@id": websiteId },
         mainEntity: { "@id": `${url}#service` },
         breadcrumb: { "@id": `${url}#breadcrumb` },
       },
-      {
-        "@type": "Service", "@id": `${url}#service`, url, name: title, description,
-        provider: { "@id": `${siteConfig.url}/#organization` },
-        areaServed: siteConfig.areaServed.map((name) => ({ "@type": "Country", name })),
-      },
+      serviceNode(path),
       {
         "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: siteConfig.name, item: siteConfig.url },
+          { "@type": "ListItem", position: 1, name: siteConfig.name, item: `${siteConfig.url}/` },
           { "@type": "ListItem", position: 2, name: title, item: url },
         ],
       },
     ],
   };
+}
+
+export function jsonLdScript(schema: Record<string, unknown>) {
+  return JSON.stringify(schema).replace(/</g, "\\u003c");
 }

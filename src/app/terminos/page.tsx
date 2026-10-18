@@ -1,33 +1,16 @@
 import type { Metadata } from "next";
 import { LegalDocument } from "@/components/sections/LegalDocument";
 import { legalMeta } from "@/data/legal";
+import { pageMetadata } from "@/lib/seo";
 
 const meta = legalMeta.terms;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: meta.title,
   description: meta.description,
-  alternates: {
-    canonical: meta.path,
-  },
-  openGraph: {
-    type: "article",
-    url: meta.path,
-    title: meta.title,
-    description: meta.description,
-    images: ["/opengraph-image.png"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: meta.title,
-    description: meta.description,
-    images: ["/opengraph-image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+  path: meta.path,
+  type: "article",
+});
 
 export default function TerminosPage() {
   return <LegalDocument documentKey="terms" />;

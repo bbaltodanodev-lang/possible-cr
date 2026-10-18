@@ -8,8 +8,6 @@ import { DynamicIcon } from "@/components/ui/Icons";
 import { WebPricing } from "@/components/sections/WebPricing";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { jsonLdScript } from "@/lib/seo";
-import { siteConfig } from "@/data/site";
 
 export default function PaginasWebPage() {
   const { t } = useLanguage();
@@ -114,22 +112,6 @@ export default function PaginasWebPage() {
       <WebPricing />
       <FinalCta />
       <ContactSection />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: jsonLdScript({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Páginas web profesionales",
-            serviceType: "Diseño y desarrollo de sitios web",
-            provider: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
-            areaServed: "Costa Rica",
-            description:
-              "Páginas web con diseño profesional, responsive y optimizadas para que tus clientes te encuentren en Internet.",
-          }),
-        }}
-      />
     </>
   );
 }

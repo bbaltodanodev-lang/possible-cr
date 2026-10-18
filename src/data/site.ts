@@ -1,8 +1,16 @@
+/** URL pública de producción. Se puede sustituir con NEXT_PUBLIC_SITE_URL al compilar. */
+export const PRODUCTION_URL = "https://possible-cr.vercel.app";
+
 export const siteConfig = {
   name: "Possible",
   legalName: "Possible",
   tagline: "Tu propia web no debería ser difícil ni cara. En Possible, hacer crecer tu negocio sí es posible.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://possible-cr.vercel.app",
+  alternateName: "Possible.cr",
+  url: (process.env.NEXT_PUBLIC_SITE_URL || PRODUCTION_URL).replace(/\/$/, ""),
+  founder: {
+    name: "Bernal Baltodano",
+    url: "https://bbaltodano-portafolio.vercel.app/",
+  },
 
   // --- Contacto ------------------------------------------------------------
   email: "contact.possible.cr@gmail.com",
@@ -29,11 +37,16 @@ export const siteConfig = {
     linkedin: "",
     x: "",
   },
+
+  // --- Otras webs del dueño ----------------------------------------------------
+  relatedSites: [
+    { name: "Possible Voice", url: "https://possiblevoice-legal.vercel.app/" },
+  ],
 } as const;
 
 export const defaultMetadata = {
-  title: "Diseño web y sistemas en Costa Rica | Possible",
+  title: "Possible | Diseño web y sistemas en Costa Rica",
   description:
-    "Crea tu propia página web profesional sin complicaciones ni costos excesivos. En Possible diseñamos sitios web, tiendas y sistemas digitales para hacer crecer tu negocio en Costa Rica.",
+    "Possible diseña páginas web profesionales, sistemas empresariales y sistemas POS para negocios en Costa Rica. Rápidos, adaptados a móviles y a tu medida.",
   keywords: ["crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
 } as const;

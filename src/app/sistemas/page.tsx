@@ -11,8 +11,6 @@ import { Benefits } from "@/components/sections/Benefits";
 import { SystemsPricing } from "@/components/sections/SystemsPricing";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { jsonLdScript } from "@/lib/seo";
-import { siteConfig } from "@/data/site";
 
 export default function SistemasPage() {
   const { t } = useLanguage();
@@ -119,22 +117,6 @@ export default function SistemasPage() {
       <SystemsPricing />
       <FinalCta />
       <ContactSection />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: jsonLdScript({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Sistemas empresariales",
-            serviceType: "Desarrollo de software a la medida",
-            provider: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
-            areaServed: "Costa Rica",
-            description:
-              "Sistemas web a la medida para negocios: ingresos, gastos, ganancias, clientes, inventario y reportes.",
-          }),
-        }}
-      />
     </>
   );
 }

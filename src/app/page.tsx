@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
 import { WebSection } from "@/components/sections/WebSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { servicesSchema, jsonLdScript } from "@/lib/seo";
+import { defaultMetadata } from "@/data/site";
+import { homeSchema, jsonLdScript, pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: defaultMetadata.title,
+  description: defaultMetadata.description,
+  path: "/",
+  absoluteTitle: true,
+});
 
 export default function Home() {
   return (
@@ -10,15 +20,10 @@ export default function Home() {
       <SolutionsSection />
       <WebSection />
       <ProjectsSection />
+      <FaqSection />
       <ContactSection />
 
-      {servicesSchema().map((schema, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
-        />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdScript(homeSchema()) }} />
     </>
   );
 }

@@ -177,6 +177,7 @@ export const es = {
     privacy: "Privacidad",
     terms: "Términos",
     backToTop: "Volver arriba",
+    related: "También de Possible:",
   },
   whatsapp: {
     aria: "Contactar por WhatsApp con Possible",

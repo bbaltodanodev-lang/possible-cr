@@ -114,9 +114,9 @@ export function Footer() {
                     href={buildWhatsAppLink(siteConfig.whatsappNumber, t.whatsapp.message)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={t.whatsapp.aria}
                     className="group flex items-center gap-3 text-slate-300 transition-colors hover:text-brand-200"
                   >
+                    <span className="sr-only">WhatsApp: </span>
                     <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-emerald-500/15 text-emerald-300">
                       <IconWhatsApp className="size-4" />
                     </span>
@@ -182,9 +182,25 @@ export function Footer() {
         <div aria-hidden="true" className="mt-12 h-px w-full bg-brand-gradient opacity-45" />
 
         <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-xl text-xs leading-relaxed text-faint">
-            © {new Date().getFullYear()} {siteConfig.legalName}. {t.footer.rights}
-          </p>
+          <div className="max-w-xl space-y-1 text-xs leading-relaxed text-faint">
+            <p>
+              © {new Date().getFullYear()} {siteConfig.legalName}. {t.footer.rights}
+            </p>
+            <p>
+              {t.footer.related}{" "}
+              {siteConfig.relatedSites.map((site, index) => (
+                <span key={site.url}>
+                  {index > 0 ? ", " : null}
+                  <a
+                    href={site.url}
+                    className="inline-flex min-h-6 items-center text-slate-300 underline-offset-4 transition-colors hover:text-brand-200 hover:underline"
+                  >
+                    {site.name}
+                  </a>
+                </span>
+              ))}
+            </p>
+          </div>
           <nav aria-label={t.footer.legalHeading} className="w-full sm:w-auto">
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:justify-end">
               <li>

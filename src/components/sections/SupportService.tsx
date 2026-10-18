@@ -24,9 +24,9 @@ export function SupportService() {
       <span className="grid size-14 place-items-center rounded-2xl bg-brand-tint text-brand-300">
         <DynamicIcon name="shield" className="size-6" />
       </span>
-      <h3 id="soporte-title" className="mt-6 text-2xl font-bold tracking-tight text-white">
+      <h2 id="soporte-title" className="mt-6 text-2xl font-bold tracking-tight text-white">
         {content.title}
-      </h3>
+      </h2>
       <p className="mt-3 text-lg font-semibold text-strong">{content.tagline}</p>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-body">{content.description}</p>
 
@@ -37,7 +37,7 @@ export function SupportService() {
               <DynamicIcon name={item.icon} className="size-4.5" />
             </span>
             <div>
-              <h4 className="text-[15px] font-semibold text-strong">{item.title}</h4>
+              <h3 className="text-[15px] font-semibold text-strong">{item.title}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-faint">{item.description}</p>
             </div>
           </li>
@@ -51,7 +51,7 @@ export function SupportService() {
       </div>
 
       <div className="mt-10 border-t border-white/10 pt-8">
-        <h4 className="text-xl font-bold tracking-tight text-white">{content.plansTitle}</h4>
+        <h3 className="text-xl font-bold tracking-tight text-white">{content.plansTitle}</h3>
         <p className="mt-2 text-sm leading-relaxed text-body">{content.plansDescription}</p>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {content.plans.map((plan) => (
@@ -59,7 +59,7 @@ export function SupportService() {
               key={plan.id}
               className="rounded-2xl border border-line bg-card p-5 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-brand-400/40 hover:shadow-[0_0_30px_rgba(138,0,255,0.18)]"
             >
-              <h5 className="text-base font-semibold text-brand-300">{plan.name}</h5>
+              <h4 className="text-base font-semibold text-brand-300">{plan.name}</h4>
               <p className="mt-3 text-2xl font-bold text-white">
                 {plan.price}{plan.cadence ? <span className="text-sm font-medium text-faint"> {plan.cadence}</span> : null}
               </p>
@@ -76,7 +76,7 @@ export function SupportService() {
 
       <div className="mt-8 flex flex-col gap-6 rounded-2xl border border-line bg-card-strong p-6 sm:flex-row sm:items-center">
         <div className="flex-1">
-          <h4 className="text-lg font-semibold text-strong">{content.contactTitle}</h4>
+          <h3 className="text-lg font-semibold text-strong">{content.contactTitle}</h3>
           <p className="mt-2 text-sm leading-relaxed text-body">{content.contactDescription}</p>
         </div>
         <Button
