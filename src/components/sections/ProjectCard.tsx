@@ -40,13 +40,13 @@ export function ProjectCard({ projectId }: { projectId: string }) {
       {/* Glow border — solo visible en hover */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[5] rounded-[1.5rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 z-[5] rounded-[1.5rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:animate-[possible-border-spin_4s_ease-in-out_infinite]"
         style={{
           padding: "1.5px",
           background:
             "linear-gradient(135deg, #F5C64F, #4937CE, #C44577, #C44577, #E46D33, #F5C64F)",
           backgroundSize: "300% 300%",
-          animation: "possible-border-spin 4s ease-in-out infinite",
+          // La animación del borde solo corre en hover (ver className): oculto no repinta.
           WebkitMask:
             "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
           WebkitMaskComposite: "xor",

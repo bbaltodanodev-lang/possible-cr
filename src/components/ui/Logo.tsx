@@ -18,8 +18,9 @@ export function Logo({ className, compact = false, hero = false, priority = true
         alt="Possible"
         width={1089}
         height={248}
-        priority={priority}
-        unoptimized
+        preload={priority}
+        quality={100}
+        sizes={hero ? "100vw" : compact ? "36px" : "(min-width: 640px) 170px, 150px"}
         className={cn(
           "h-auto object-contain",
           hero ? "w-full" : compact ? "w-9" : "w-[150px] sm:w-[170px]",

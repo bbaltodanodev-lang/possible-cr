@@ -100,8 +100,7 @@ export function ProjectVisual({ project, altText }: { project: Project; altText?
         fill
         sizes="(min-width: 1280px) 406px, (min-width: 1024px) 35vw, (min-width: 640px) 52vw, 89vw"
         className={project.imageFit === "contain" ? "object-contain" : "object-cover"}
-        quality={100}
-        unoptimized
+        quality={85}
         draggable={false}
         loading="lazy"
       />
