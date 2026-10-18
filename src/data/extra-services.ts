@@ -144,7 +144,7 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
     es: {
       eyebrow: "Apps móviles de servicios",
       title: "Tu servicio en el teléfono de tus clientes.",
-      description: "Diseñamos y desarrollamos apps móviles para negocios de servicios: reservas, pedidos, seguimiento y notificaciones para que tus clientes te encuentren y te contacten desde su teléfono.",
+      description: "¿Necesitas una app para impulsar tu negocio o quieres lanzar tu propia idea? La diseñamos, la desarrollamos y te ayudamos a lanzarla, con las funciones que tu proyecto necesita.",
       cta: "Cotizar mi app",
       benefitsTitle: "Lo que tu app puede incluir",
       benefits: [
@@ -172,7 +172,7 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
     en: {
       eyebrow: "Mobile service apps",
       title: "Your service on your customers' phones.",
-      description: "We design and build mobile apps for service businesses: bookings, orders, tracking and notifications so customers can find and contact you from their phone.",
+      description: "Need an app to grow your business or want to launch your own idea? We design it, build it and help you launch it, with the features your project needs.",
       cta: "Get my app quote",
       benefitsTitle: "What your app can include",
       benefits: [

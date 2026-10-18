@@ -598,7 +598,7 @@ export const en: Messages = {
         icon: "devices",
         title: "Mobile apps",
         description:
-          "Apps for service businesses: bookings, orders and notifications so customers can reach you from their phone.",
+          "Need an app to grow your business or launch your own idea? We design it, build it and help you launch it.",
         cta: "View mobile apps",
       },
     ],

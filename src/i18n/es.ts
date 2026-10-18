@@ -602,7 +602,7 @@ eyebrow: "Elige dónde empezar",
         icon: "devices",
         title: "Apps móviles",
         description:
-          "Apps para negocios de servicios: reservas, pedidos y notificaciones para que tus clientes te contacten desde su teléfono.",
+          "¿Necesitas una app para impulsar tu negocio o lanzar tu propia idea? La diseñamos, la desarrollamos y te ayudamos a lanzarla.",
         cta: "Ver apps móviles",
       },
     ],
