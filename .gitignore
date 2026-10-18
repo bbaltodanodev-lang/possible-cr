@@ -40,3 +40,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Secretos: llaves de firma, configuraciones y claves de servicio de Firebase (nunca al repositorio)
+*.jks
+*.keystore
+key.properties
+google-services.json
+GoogleService-Info.plist
+*adminsdk*.json
+*-firebase-*.json
+*.p8
+*.p12
+*.pem
+.env.*
+!.env.example
