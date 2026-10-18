@@ -6,6 +6,9 @@ export const es = {
     systems: "Sistemas empresariales",
     web: "Páginas web",
     support: "Soporte y mantenimiento",
+    crm: "CRM",
+    whatsappAutomation: "Automatización de WhatsApp",
+    mobileApps: "Apps móviles",
     projects: "Proyectos",
     contact: "Contacto",
     cta: "Hablar con nosotros",
@@ -159,6 +162,9 @@ export const es = {
       serviceOptions: [
         { value: "sistema", label: "Sistema empresarial" },
         { value: "web", label: "Página web" },
+        { value: "crm", label: "CRM" },
+        { value: "whatsapp", label: "Automatización de WhatsApp" },
+        { value: "app", label: "App móvil" },
         { value: "otro", label: "Otro" },
       ],
     },
@@ -574,6 +580,30 @@ eyebrow: "Elige dónde empezar",
         description:
           "Controla ventas, inventario y caja desde un sistema POS hecho para tiendas, comercios y negocios que necesitan operar con rapidez.",
         cta: "Ver sistemas POS",
+      },
+      {
+        id: "crm",
+        icon: "users",
+        title: "CRM",
+        description:
+          "Organiza clientes, oportunidades y seguimientos de venta en un solo lugar, con reportes para saber cómo avanza tu negocio.",
+        cta: "Ver CRM",
+      },
+      {
+        id: "whatsapp",
+        icon: "whatsapp",
+        title: "Automatización de WhatsApp",
+        description:
+          "Respuestas automáticas, catálogo y avisos con permiso del cliente usando la API oficial de WhatsApp Business.",
+        cta: "Ver automatización",
+      },
+      {
+        id: "apps",
+        icon: "devices",
+        title: "Apps móviles",
+        description:
+          "Apps para negocios de servicios: reservas, pedidos y notificaciones para que tus clientes te contacten desde su teléfono.",
+        cta: "Ver apps móviles",
       },
     ],
   },

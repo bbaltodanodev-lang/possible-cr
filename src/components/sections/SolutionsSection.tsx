@@ -9,6 +9,9 @@ const links: Record<string, string> = {
   sistemas: "/sistemas",
   web: "/paginas-web",
   pos: "/pos",
+  crm: "/crm",
+  whatsapp: "/automatizacion-whatsapp",
+  apps: "/apps-moviles",
 };
 
 export function SolutionsSection() {

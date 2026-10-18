@@ -26,7 +26,7 @@ export const faqContent: Record<Locale, FaqContent> = {
       {
         question: "¿Qué hace Possible?",
         answer:
-          "Possible crea páginas web profesionales, sistemas web empresariales y sistemas POS para negocios en Costa Rica. También ofrece planes de soporte y mantenimiento web.",
+          "Possible crea páginas web profesionales, sistemas web empresariales, sistemas POS, CRM, automatización de WhatsApp y apps móviles para negocios en Costa Rica. También ofrece planes de soporte y mantenimiento web.",
       },
       {
         question: "¿Cuánto cuesta una página web con Possible?",
@@ -68,7 +68,7 @@ export const faqContent: Record<Locale, FaqContent> = {
       {
         question: "What does Possible do?",
         answer:
-          "Possible builds professional websites, business web systems and POS systems for businesses in Costa Rica. It also offers web support and maintenance plans.",
+          "Possible builds professional websites, business web systems, POS systems, CRMs, WhatsApp automation and mobile apps for businesses in Costa Rica. It also offers web support and maintenance plans.",
       },
       {
         question: "How much does a website with Possible cost?",

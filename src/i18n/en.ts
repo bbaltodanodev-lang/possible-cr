@@ -7,6 +7,9 @@ export const en: Messages = {
     pos: "POS systems",
     systems: "Business systems",
     web: "Websites",
+    crm: "CRM",
+    whatsappAutomation: "WhatsApp automation",
+    mobileApps: "Mobile apps",
     support: "Support and maintenance",
     projects: "Projects",
     contact: "Contact",
@@ -160,6 +163,9 @@ export const en: Messages = {
       serviceOptions: [
         { value: "sistema", label: "Business system" },
         { value: "web", label: "Website" },
+        { value: "crm", label: "CRM" },
+        { value: "whatsapp", label: "WhatsApp automation" },
+        { value: "app", label: "Mobile app" },
         { value: "otro", label: "Other" },
       ],
     },
@@ -570,6 +576,30 @@ export const en: Messages = {
         description:
           "Manage sales, inventory and cash from a POS system built for shops, retailers and businesses that need to move quickly.",
         cta: "See POS systems",
+      },
+      {
+        id: "crm",
+        icon: "users",
+        title: "CRM",
+        description:
+          "Organize customers, opportunities and sales follow-ups in one place, with reports to see how your business is doing.",
+        cta: "View CRM",
+      },
+      {
+        id: "whatsapp",
+        icon: "whatsapp",
+        title: "WhatsApp automation",
+        description:
+          "Automatic replies, catalog and opt-in notifications using the official WhatsApp Business API.",
+        cta: "View automation",
+      },
+      {
+        id: "apps",
+        icon: "devices",
+        title: "Mobile apps",
+        description:
+          "Apps for service businesses: bookings, orders and notifications so customers can reach you from their phone.",
+        cta: "View mobile apps",
       },
     ],
   },

@@ -33,6 +33,9 @@ export function Footer() {
     { label: t.nav.systems, href: "/sistemas" },
     { label: t.nav.web, href: "/paginas-web" },
     { label: t.nav.pos, href: "/pos" },
+    { label: t.nav.crm, href: "/crm" },
+    { label: t.nav.whatsappAutomation, href: "/automatizacion-whatsapp" },
+    { label: t.nav.mobileApps, href: "/apps-moviles" },
     { label: t.nav.support, href: "/soporte" },
   ];
 

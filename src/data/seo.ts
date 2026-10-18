@@ -23,6 +23,21 @@ export const servicePageSeo = {
     "serviceType": "Soporte y mantenimiento web",
     "title": "Soporte y mantenimiento web en Costa Rica",
     "description": "Soporte técnico y mantenimiento de sitios y sistemas web en Costa Rica. Mantén tu negocio actualizado y estable con el acompañamiento de Possible."
+  },
+  "crm": {
+    "serviceType": "Desarrollo de CRM a la medida",
+    "title": "CRM a la medida para negocios en Costa Rica",
+    "description": "CRM a la medida para negocios en Costa Rica: clientes, embudo de ventas, seguimiento y reportes en un solo lugar. Ordena tus ventas con Possible."
+  },
+  "automatizacion-whatsapp": {
+    "serviceType": "Automatización de WhatsApp Business",
+    "title": "Automatización de WhatsApp Business en Costa Rica",
+    "description": "Automatiza la atención por WhatsApp con la API oficial de WhatsApp Business: respuestas automáticas, catálogo y avisos con permiso. Possible, Costa Rica."
+  },
+  "apps-moviles": {
+    "serviceType": "Desarrollo de apps móviles",
+    "title": "Apps móviles de servicios en Costa Rica",
+    "description": "Diseño y desarrollo de apps móviles para negocios de servicios en Costa Rica: reservas, pedidos y notificaciones para tus clientes. Cotiza con Possible."
   }
 } as const;
 
@@ -36,6 +51,9 @@ export const pageLastModified = {
   "/sistemas": "2026-10-03",
   "/pos": "2026-10-03",
   "/soporte": "2026-10-03",
+  "/crm": "2026-10-18",
+  "/automatizacion-whatsapp": "2026-10-18",
+  "/apps-moviles": "2026-10-18",
 } as const;
 
 /** Clave pública de IndexNow; el mismo valor está en public/<clave>.txt. */

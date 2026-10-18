@@ -84,15 +84,21 @@ export function Navbar() {
   else if (pathname === "/paginas-web") activeKey = "web";
   else if (pathname === "/soporte") activeKey = "soporte";
   else if (pathname === "/pos") activeKey = "pos";
+  else if (pathname === "/crm") activeKey = "crm";
+  else if (pathname === "/automatizacion-whatsapp") activeKey = "whatsapp";
+  else if (pathname === "/apps-moviles") activeKey = "apps";
   else if (pathname === "/") activeKey = spy;
   else activeKey = "home";
 
-  const servicesActive = activeKey === "sistemas" || activeKey === "web" || activeKey === "soporte" || activeKey === "pos";
+  const servicesActive = ["sistemas", "web", "soporte", "pos", "crm", "whatsapp", "apps"].includes(activeKey);
 
   const servicesMenu = [
     { key: "sistemas", label: t.nav.systems, href: "/sistemas" },
     { key: "web", label: t.nav.web, href: "/paginas-web" },
     { key: "pos", label: t.nav.pos, href: "/pos" },
+    { key: "crm", label: t.nav.crm, href: "/crm" },
+    { key: "whatsapp", label: t.nav.whatsappAutomation, href: "/automatizacion-whatsapp" },
+    { key: "apps", label: t.nav.mobileApps, href: "/apps-moviles" },
     { key: "soporte", label: t.nav.support, href: "/soporte" },
   ];
 
