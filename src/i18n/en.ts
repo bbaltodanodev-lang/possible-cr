@@ -543,7 +543,6 @@ export const en: Messages = {
   },
   solutions: {
     eyebrow: "Choose where to start",
-    titleTop: "Web design and business systems in Costa Rica",
     titleBottom: "Your business online. Your processes under control.",
     description: "At Possible, we build professional websites and custom systems to showcase your services, help customers contact you and organize your business.",
     items: [
