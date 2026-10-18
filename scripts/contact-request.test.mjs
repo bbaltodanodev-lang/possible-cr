@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readContactRequest } from "../src/lib/contact-request.ts";
 import { checkContactRateLimit } from "../src/lib/rate-limit.ts";
 
-const valid = { name: "Ana", email: "ana@example.com", message: "Consulta sobre una página web.", company: "", phone: "", service: "web", website: "", privacyConsent: true, privacyVersion: "2026-10-03" };
+const valid = { name: "Ana", email: "ana@example.com", message: "Consulta sobre una página web.", company: "", phone: "", service: "web", website: "", privacyConsent: true, privacyVersion: "2026-10-03", fillMs: 8000 };
 function request(body, headers = {}) {
   return new Request("https://possible.cr/api/contact", {
     method: "POST",
@@ -31,6 +31,9 @@ test("allows five requests and blocks the sixth within the window", () => {
 });
 
 for (const [label, body, headers, status] of [
+  ["submitted too fast", { ...valid, fillMs: 300 }, {}, 400],
+  ["missing fill time", { ...valid, fillMs: undefined }, {}, 400],
+  ["non-numeric fill time", { ...valid, fillMs: "9000" }, {}, 400],
   ["missing consent", { ...valid, privacyConsent: undefined }, {}, 400],
   ["refused consent", { ...valid, privacyConsent: false }, {}, 400],
   ["old privacy version", { ...valid, privacyVersion: "2026-09-27" }, {}, 400],

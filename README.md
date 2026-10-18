@@ -8,7 +8,7 @@ Cada página de servicios tiene título, descripción, URL canónica y metadatos
 
 El contacto local limita el cuerpo a 24 KB, valida todos los campos, comprueba el origen del navegador y limita la espera del proveedor a 10 segundos. Pruebas: `node --test scripts/contact-request.test.mjs` (Node 22.18 o superior). La comprobación de origen y el honeypot no sustituyen un límite de solicitudes distribuido; para frenar spam automatizado hay que configurar protección en el hosting.
 
-La CSP permite scripts inline necesarios para el renderizado estático de Next.js, pero bloquea manejadores inline y eval en producción. Un endpoint externo configurado se permite solo por su origen HTTPS. Los controles de `/api/contact` solo se aplican al endpoint local.
+El formulario envía el tiempo que tardó en completarse y el endpoint rechaza envíos de menos de 2,5 s (además del honeypot y del límite de 5 solicitudes cada 15 minutos por IP). Cabeceras: HSTS con preload, COOP same-origin, Permissions-Policy restrictiva, X-Frame-Options DENY y CSP con frame-ancestors 'none'. La CSP permite scripts inline necesarios para el renderizado estático de Next.js, pero bloquea manejadores inline y eval en producción. Un endpoint externo configurado se permite solo por su origen HTTPS. Los controles de `/api/contact` solo se aplican al endpoint local.
 
 Sitio web empresarial de **Possible**: una empresa de tecnología que desarrolla **sistemas web empresariales** y **páginas web profesionales** para pequeños y medianos negocios.
 

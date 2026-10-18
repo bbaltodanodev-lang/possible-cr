@@ -1,4 +1,7 @@
 const MAX_BODY_BYTES = 24_000;
+/** Tiempo mínimo que una persona tarda en completar el formulario (anti-spam). */
+export const MIN_FILL_MS = 2_500;
+const MAX_FILL_MS = 7 * 24 * 60 * 60 * 1000;
 
 export class ContactRequestError extends Error {
   status: number;
@@ -51,6 +54,10 @@ export async function readContactRequest(request: Request) {
   const fields = body as Record<string, unknown>;
   if (fields.privacyConsent !== true || fields.privacyVersion !== "2026-10-03") throw new ContactRequestError(400, "Consentimiento de privacidad requerido");
   if (fields.website) throw new ContactRequestError(400, "Datos inválidos");
+  const fillMs = fields.fillMs;
+  if (typeof fillMs !== "number" || !Number.isFinite(fillMs) || fillMs < MIN_FILL_MS || fillMs > MAX_FILL_MS) {
+    throw new ContactRequestError(400, "Datos inválidos");
+  }
   function field(key: string, max: number, required = false) {
     const value = fields[key];
     if (value === undefined && !required) return "";

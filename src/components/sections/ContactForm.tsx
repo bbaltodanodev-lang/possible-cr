@@ -1,7 +1,7 @@
 "use client";
 
 import { privacyUi, privacyVersion } from "@/data/privacy-controls";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/i18n/provider";
 import { siteConfig } from "@/data/site";
 import { buildWhatsAppLink } from "@/lib/utils";
@@ -50,6 +50,11 @@ export function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<Status>("idle");
+  // Momento en que el formulario quedó disponible: el servidor rechaza envíos instantáneos (bots).
+  const readyAtRef = useRef(0);
+  useEffect(() => {
+    readyAtRef.current = Date.now();
+  }, []);
 
   const endpoint =
     "/api/contact";
@@ -101,6 +106,7 @@ export function ContactForm() {
       website: form.website,
       privacyConsent: consent,
       privacyVersion,
+      fillMs: Date.now() - readyAtRef.current,
     };
 
     try {
