@@ -543,8 +543,9 @@ export const en: Messages = {
   },
   solutions: {
     eyebrow: "Choose where to start",
-    titleBottom: "Your business online. Your processes under control.",
-    description: "At Possible, we build professional websites and custom systems to showcase your services, help customers contact you and organize your business.",
+    titleTop: "Tired of keeping track of everything by hand?",
+    titleBottom: "Or your business not well positioned online?",
+    description: "Choose the best option for your business and your needs.",
     items: [
       {
         id: "sistemas",

@@ -21,9 +21,12 @@ export function SolutionsSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gradient">
             {t.solutions.eyebrow}
           </p>
-          <h1 className="mt-3 text-pretty text-3xl font-bold tracking-tight text-slate-300 sm:text-4xl lg:whitespace-nowrap">
-            <span className="tracking-wide">{t.solutions.titleBottom}</span>
+          <h1 className="mt-3 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            {t.solutions.titleTop}
           </h1>
+          <p className="mt-2 text-pretty text-3xl font-bold tracking-tight text-slate-300 sm:text-4xl lg:whitespace-nowrap">
+            <span className="tracking-wide">{t.solutions.titleBottom}</span>
+          </p>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-slate-300 sm:text-lg">
             {t.solutions.description}
           </p>
