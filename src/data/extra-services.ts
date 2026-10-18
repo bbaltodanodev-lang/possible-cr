@@ -11,7 +11,7 @@ export interface ExtraServiceContent {
   /** [icono, título, descripción] */
   benefits: readonly (readonly [string, string, string])[];
   scopeTitle: string;
-  /** [nombre, precio, descripción, funciones] — precios a convenir hasta que el dueño los defina. */
+  /** [nombre, precio en USD, descripción, funciones] */
   scopes: readonly (readonly [string, string, string, readonly string[]])[];
   deliveryLabel: string;
   delivery: string;
@@ -20,8 +20,6 @@ export interface ExtraServiceContent {
   customCta: string;
 }
 
-const quoteEs = "A convenir";
-const quoteEn = "To be agreed";
 
 export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraServiceContent>> = {
   crm: {
@@ -43,9 +41,9 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
       ],
       scopeTitle: "Elige el alcance de tu CRM",
       scopes: [
-        ["Inicio", quoteEs, "Lo esencial para ordenar tus clientes y oportunidades.", ["Base de datos de clientes", "Embudo de ventas", "Tareas y recordatorios", "Acceso seguro desde navegador"]],
-        ["Crecimiento", quoteEs, "Más control para equipos de venta en crecimiento.", ["Todo lo del plan Inicio", "Reportes de ventas", "Usuarios y permisos por rol", "Historial de comunicación", "Importación de clientes existentes"]],
-        ["A la medida", quoteEs, "Un CRM diseñado alrededor de los procesos de tu negocio.", ["Módulos personalizados", "Integraciones con otros sistemas", "Automatización de procesos", "Integración con WhatsApp Business", "Soporte prioritario"]],
+        ["Inicio", "$199", "Lo esencial para ordenar tus clientes y oportunidades.", ["Base de datos de clientes", "Embudo de ventas", "Tareas y recordatorios", "Acceso seguro desde navegador"]],
+        ["Crecimiento", "$499", "Más control para equipos de venta en crecimiento.", ["Todo lo del plan Inicio", "Reportes de ventas", "Usuarios y permisos por rol", "Historial de comunicación", "Importación de clientes existentes"]],
+        ["A la medida", "$799", "Un CRM diseñado alrededor de los procesos de tu negocio.", ["Todo lo del plan Crecimiento", "Módulos personalizados", "Integraciones con otros sistemas", "Automatización de procesos", "Integración con WhatsApp Business", "Soporte prioritario"]],
       ],
       deliveryLabel: "Implementación: ",
       delivery: "Según alcance",
@@ -71,9 +69,9 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
       ],
       scopeTitle: "Choose your CRM scope",
       scopes: [
-        ["Starter", quoteEn, "The essentials to organize customers and opportunities.", ["Customer database", "Sales pipeline", "Tasks and reminders", "Secure browser access"]],
-        ["Growth", quoteEn, "More control for growing sales teams.", ["Everything in Starter", "Sales reports", "Role-based users and permissions", "Communication history", "Import existing customers"]],
-        ["Custom", quoteEn, "A CRM designed around your business processes.", ["Custom modules", "Integrations with other systems", "Process automation", "WhatsApp Business integration", "Priority support"]],
+        ["Starter", "$199", "The essentials to organize customers and opportunities.", ["Customer database", "Sales pipeline", "Tasks and reminders", "Secure browser access"]],
+        ["Growth", "$499", "More control for growing sales teams.", ["Everything in Starter", "Sales reports", "Role-based users and permissions", "Communication history", "Import existing customers"]],
+        ["Custom", "$799", "A CRM designed around your business processes.", ["Everything in Growth", "Custom modules", "Integrations with other systems", "Process automation", "WhatsApp Business integration", "Priority support"]],
       ],
       deliveryLabel: "Delivery: ",
       delivery: "Based on scope",
@@ -101,9 +99,9 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
       ],
       scopeTitle: "Elige el alcance de tu automatización",
       scopes: [
-        ["Inicio", quoteEs, "Respuestas automáticas para empezar a atender mejor.", ["Configuración de WhatsApp Business", "Mensaje de bienvenida y fuera de horario", "Respuestas a preguntas frecuentes", "Menú de atención básico"]],
-        ["Crecimiento", quoteEs, "Más canales de atención y avisos para tus clientes.", ["Todo lo del plan Inicio", "API oficial de WhatsApp Business", "Catálogo de productos", "Avisos con consentimiento del cliente", "Paso de la conversación a tu equipo"]],
-        ["A la medida", quoteEs, "Una automatización conectada con los procesos de tu negocio.", ["Integración con CRM o sistemas", "Flujos personalizados", "Reservas o pedidos", "Reportes de conversaciones", "Soporte prioritario"]],
+        ["Inicio", "$199", "Respuestas automáticas para empezar a atender mejor.", ["Configuración de WhatsApp Business", "Mensaje de bienvenida y fuera de horario", "Respuestas a preguntas frecuentes", "Menú de atención básico"]],
+        ["Crecimiento", "$499", "Más canales de atención y avisos para tus clientes.", ["Todo lo del plan Inicio", "API oficial de WhatsApp Business", "Catálogo de productos", "Avisos con consentimiento del cliente", "Paso de la conversación a tu equipo"]],
+        ["A la medida", "$799", "Una automatización conectada con los procesos de tu negocio.", ["Todo lo del plan Crecimiento", "Integración con CRM o sistemas", "Flujos personalizados", "Reservas o pedidos", "Reportes de conversaciones", "Soporte prioritario"]],
       ],
       deliveryLabel: "Implementación: ",
       delivery: "Según alcance",
@@ -129,9 +127,9 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
       ],
       scopeTitle: "Choose your automation scope",
       scopes: [
-        ["Starter", quoteEn, "Automatic replies to start serving customers better.", ["WhatsApp Business setup", "Welcome and after-hours messages", "Answers to frequent questions", "Basic service menu"]],
-        ["Growth", quoteEn, "More service options and notifications for your customers.", ["Everything in Starter", "Official WhatsApp Business API", "Product catalog", "Opt-in customer notifications", "Hand-off to your team"]],
-        ["Custom", quoteEn, "Automation connected to your business processes.", ["CRM or system integration", "Custom flows", "Bookings or orders", "Conversation reports", "Priority support"]],
+        ["Starter", "$199", "Automatic replies to start serving customers better.", ["WhatsApp Business setup", "Welcome and after-hours messages", "Answers to frequent questions", "Basic service menu"]],
+        ["Growth", "$499", "More service options and notifications for your customers.", ["Everything in Starter", "Official WhatsApp Business API", "Product catalog", "Opt-in customer notifications", "Hand-off to your team"]],
+        ["Custom", "$799", "Automation connected to your business processes.", ["Everything in Growth", "CRM or system integration", "Custom flows", "Bookings or orders", "Conversation reports", "Priority support"]],
       ],
       deliveryLabel: "Delivery: ",
       delivery: "Based on scope",
@@ -159,9 +157,9 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
       ],
       scopeTitle: "Elige el alcance de tu app",
       scopes: [
-        ["Inicio", quoteEs, "Una app esencial para presentar tu servicio y recibir contactos.", ["Diseño personalizado", "Información de servicios", "Contacto y WhatsApp", "Notificaciones básicas"]],
-        ["Crecimiento", quoteEs, "Más funciones para atender y fidelizar clientes.", ["Todo lo del plan Inicio", "Reservas o pedidos", "Cuentas de usuario", "Panel de administración", "Publicación en tiendas"]],
-        ["A la medida", quoteEs, "Una app diseñada alrededor de tu servicio.", ["Funciones personalizadas", "Integraciones con tus sistemas", "Pagos o facturación", "Analíticas", "Soporte prioritario"]],
+        ["Inicio", "$299", "Una app esencial para presentar tu servicio y recibir contactos.", ["Diseño personalizado", "Información de servicios", "Contacto y WhatsApp", "Notificaciones básicas"]],
+        ["Crecimiento", "$599", "Más funciones para atender y fidelizar clientes.", ["Todo lo del plan Inicio", "Reservas o pedidos", "Cuentas de usuario", "Panel de administración", "Publicación en tiendas"]],
+        ["A la medida", "$999", "Una app diseñada alrededor de tu servicio.", ["Todo lo del plan Crecimiento", "Funciones personalizadas", "Integraciones con tus sistemas", "Pagos o facturación", "Analíticas", "Soporte prioritario"]],
       ],
       deliveryLabel: "Implementación: ",
       delivery: "Según alcance",
@@ -187,9 +185,9 @@ export const extraServices: Record<ExtraServiceSlug, Record<Locale, ExtraService
       ],
       scopeTitle: "Choose your app scope",
       scopes: [
-        ["Starter", quoteEn, "An essential app to present your service and get contacts.", ["Custom design", "Service information", "Contact and WhatsApp", "Basic notifications"]],
-        ["Growth", quoteEn, "More features to serve and retain customers.", ["Everything in Starter", "Bookings or orders", "User accounts", "Admin panel", "Store publishing"]],
-        ["Custom", quoteEn, "An app designed around your service.", ["Custom features", "Integrations with your systems", "Payments or invoicing", "Analytics", "Priority support"]],
+        ["Starter", "$299", "An essential app to present your service and get contacts.", ["Custom design", "Service information", "Contact and WhatsApp", "Basic notifications"]],
+        ["Growth", "$599", "More features to serve and retain customers.", ["Everything in Starter", "Bookings or orders", "User accounts", "Admin panel", "Store publishing"]],
+        ["Custom", "$999", "An app designed around your service.", ["Everything in Growth", "Custom features", "Integrations with your systems", "Payments or invoicing", "Analytics", "Priority support"]],
       ],
       deliveryLabel: "Delivery: ",
       delivery: "Based on scope",

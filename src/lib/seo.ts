@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/data/site";
 import { servicePageSeo } from "@/data/seo";
-import { faqContent } from "@/data/faq";
+import { extraServices } from "@/data/extra-services";
 
 const organizationId = `${siteConfig.url}/#organization`;
 const websiteId = `${siteConfig.url}/#website`;
@@ -102,7 +102,15 @@ export function websiteSchema() {
 function serviceNode(path: keyof typeof servicePageSeo) {
   const { title, description, serviceType } = servicePageSeo[path];
   const url = `${siteConfig.url}/${path}`;
+  const scopes = path in extraServices ? extraServices[path as keyof typeof extraServices].es.scopes : [];
+  const offers = scopes.map(([name, price]) => ({
+    "@type": "Offer",
+    name,
+    price: price.replace(/[^0-9.]/g, ""),
+    priceCurrency: "USD",
+  }));
   return {
+    ...(offers.length > 0 ? { offers } : {}),
     "@type": "Service",
     "@id": `${url}#service`,
     url,
@@ -114,7 +122,7 @@ function serviceNode(path: keyof typeof servicePageSeo) {
   };
 }
 
-/** Portada: WebPage + un Service por servicio + FAQPage con las preguntas visibles. */
+/** Portada: WebPage + un Service por servicio. */
 export function homeSchema() {
   const url = `${siteConfig.url}/`;
   const services = (Object.keys(servicePageSeo) as (keyof typeof servicePageSeo)[]).map(serviceNode);
@@ -131,16 +139,6 @@ export function homeSchema() {
         about: { "@id": organizationId },
       },
       ...services,
-      {
-        "@type": "FAQPage",
-        "@id": `${url}#preguntas`,
-        inLanguage: "es-CR",
-        mainEntity: faqContent.es.items.map((item) => ({
-          "@type": "Question",
-          name: item.question,
-          acceptedAnswer: { "@type": "Answer", text: item.answer },
-        })),
-      },
     ],
   };
 }
