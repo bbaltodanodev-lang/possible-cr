@@ -80,11 +80,7 @@ export function organizationSchema() {
       availableLanguage: ["Spanish", "English"],
       areaServed,
     },
-    sameAs: [
-      ...socials,
-      ...siteConfig.relatedSites.map((site) => site.url),
-      siteConfig.founder.url,
-    ],
+    sameAs: [...socials],
   };
 }
 

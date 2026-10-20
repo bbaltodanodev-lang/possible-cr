@@ -5,7 +5,7 @@ export const siteConfig = {
   name: "Possible",
   legalName: "Possible",
   tagline: "Tu propia web no debería ser difícil ni cara. En Possible, hacer crecer tu negocio sí es posible.",
-  alternateName: "Possible.cr",
+  alternateName: ["possible.cr", "Possible CR", "Possible Studio", "Possible Costa Rica"],
   url: (process.env.NEXT_PUBLIC_SITE_URL || PRODUCTION_URL).replace(/\/$/, ""),
   founder: {
     name: "Bernal Baltodano",
@@ -40,13 +40,13 @@ export const siteConfig = {
 
   // --- Otras webs del dueño ----------------------------------------------------
   relatedSites: [
-    { name: "Possible Voice", url: "https://possiblevoice-legal.vercel.app/" },
+    { name: "Possible Voice", url: "https://possiblevoice-app.vercel.app/" },
   ],
 } as const;
 
 export const defaultMetadata = {
-  title: "Possible Costa Rica | Páginas web, apps y sistemas a la medida",
+  title: "Possible (possible.cr) | Páginas web, apps y sistemas en Costa Rica",
   description:
-    "Possible (Possible CR) crea páginas web profesionales, apps móviles, sistemas, CRM, POS y automatización de WhatsApp para negocios en Costa Rica.",
-  keywords: ["Possible", "Possible Costa Rica", "Possible CR", "páginas web Costa Rica", "apps móviles Costa Rica", "CRM Costa Rica", "sistema POS Costa Rica", "automatización WhatsApp Costa Rica", "crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
+    "possible.cr es el estudio de software de Costa Rica que crea páginas web profesionales, apps móviles como Possible Voice, sistemas, CRM, POS y automatización de WhatsApp para negocios.",
+  keywords: ["possible.cr", "Possible", "Possible Studio", "Possible Voice", "Possible Costa Rica", "Possible CR", "páginas web Costa Rica", "apps móviles Costa Rica", "CRM Costa Rica", "sistema POS Costa Rica", "automatización WhatsApp Costa Rica", "crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
 } as const;
