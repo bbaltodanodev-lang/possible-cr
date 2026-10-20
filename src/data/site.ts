@@ -45,8 +45,8 @@ export const siteConfig = {
 } as const;
 
 export const defaultMetadata = {
-  title: "Possible | Diseño web y sistemas en Costa Rica",
+  title: "Possible Costa Rica | Páginas web, apps y sistemas a la medida",
   description:
-    "Possible diseña páginas web profesionales, sistemas empresariales y sistemas POS para negocios en Costa Rica. Rápidos, adaptados a móviles y a tu medida.",
-  keywords: ["crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
+    "Possible (Possible CR) crea páginas web profesionales, apps móviles, sistemas, CRM, POS y automatización de WhatsApp para negocios en Costa Rica.",
+  keywords: ["Possible", "Possible Costa Rica", "Possible CR", "páginas web Costa Rica", "apps móviles Costa Rica", "CRM Costa Rica", "sistema POS Costa Rica", "automatización WhatsApp Costa Rica", "crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
 } as const;

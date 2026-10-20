@@ -45,7 +45,7 @@ export function organizationSchema() {
   const socials = Object.values(siteConfig.social).filter(Boolean);
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "ProfessionalService"],
     "@id": organizationId,
     name: siteConfig.name,
     alternateName: siteConfig.alternateName,
@@ -66,9 +66,12 @@ export function organizationSchema() {
       "Desarrollo web",
       "Sistemas web empresariales",
       "Sistemas POS",
+      "CRM a la medida",
+      "Automatización de WhatsApp Business",
+      "Desarrollo de apps móviles",
       "Soporte y mantenimiento web",
     ],
-    founder: { "@type": "Person", name: siteConfig.founder.name, url: siteConfig.founder.url },
+    founder: { "@type": "Person", name: siteConfig.founder.name, url: siteConfig.founder.url, sameAs: [siteConfig.founder.url] },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",

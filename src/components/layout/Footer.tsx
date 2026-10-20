@@ -190,6 +190,16 @@ export function Footer() {
               © {new Date().getFullYear()} {siteConfig.legalName}. {t.footer.rights}
             </p>
             <p>
+              {t.footer.founder}{" "}
+              <a
+                href={siteConfig.founder.url}
+                rel="author"
+                className="inline-flex min-h-6 items-center text-slate-300 underline-offset-4 transition-colors hover:text-brand-200 hover:underline"
+              >
+                {siteConfig.founder.name}
+              </a>
+            </p>
+            <p>
               {t.footer.related}{" "}
               {siteConfig.relatedSites.map((site, index) => (
                 <span key={site.url}>

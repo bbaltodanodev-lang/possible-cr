@@ -21,11 +21,13 @@ export function SolutionsSection() {
     <section id="soluciones" className="relative bg-black py-20 sm:py-24">
       <Container>
         <div className="mx-auto max-w-5xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gradient">
-            {t.solutions.eyebrow}
-          </p>
-          <h1 className="mt-3 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            {t.solutions.titleTop}
+          <h1>
+            <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-brand-gradient">
+              {t.solutions.eyebrow}
+            </span>
+            <span className="mt-3 block text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              {t.solutions.titleTop}
+            </span>
           </h1>
           <p className="mt-2 text-pretty text-3xl font-bold tracking-tight text-slate-300 sm:text-4xl lg:whitespace-nowrap">
             <span className="tracking-wide">{t.solutions.titleBottom}</span>

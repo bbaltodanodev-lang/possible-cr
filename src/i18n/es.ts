@@ -184,6 +184,7 @@ export const es = {
     terms: "Términos",
     backToTop: "Volver arriba",
     related: "También de Possible:",
+    founder: "Fundado por",
   },
   whatsapp: {
     aria: "Contactar por WhatsApp con Possible",
@@ -552,7 +553,7 @@ export const es = {
     ],
   },
   solutions: {
-eyebrow: "Elige dónde empezar",
+eyebrow: "Possible · Páginas web, apps y sistemas en Costa Rica",
     titleTop: "¿Cansado de controlar todo a mano?",
     titleBottom: "¿O no tener bien ubicado tu negocio en internet?",
     description: "Elige la mejor opción para tu negocio y tus necesidades.",
