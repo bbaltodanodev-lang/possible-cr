@@ -549,7 +549,7 @@ export const en: Messages = {
     ],
   },
   solutions: {
-    eyebrow: "Possible · Websites, apps and systems in Costa Rica",
+    eyebrow: "Possible Studio · Websites, apps and systems in Costa Rica",
     titleTop: "Tired of keeping track of everything by hand?",
     titleBottom: "Or your business not well positioned online?",
     description: "Choose the best option for your business and your needs.",

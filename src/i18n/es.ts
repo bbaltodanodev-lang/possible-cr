@@ -553,7 +553,7 @@ export const es = {
     ],
   },
   solutions: {
-eyebrow: "Possible · Páginas web, apps y sistemas en Costa Rica",
+eyebrow: "Possible Studio · Páginas web, apps y sistemas en Costa Rica",
     titleTop: "¿Cansado de controlar todo a mano?",
     titleBottom: "¿O no tener bien ubicado tu negocio en internet?",
     description: "Elige la mejor opción para tu negocio y tus necesidades.",

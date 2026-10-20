@@ -3,7 +3,7 @@ import { legalMeta } from "@/data/legal";
 
 const title = legalMeta.privacy.title;
 
-export const alt = `Possible | ${title}`;
+export const alt = `Possible Studio | ${title}`;
 export const size = ogSize;
 export const contentType = ogContentType;
 

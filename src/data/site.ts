@@ -2,10 +2,10 @@
 export const PRODUCTION_URL = "https://possible-cr.vercel.app";
 
 export const siteConfig = {
-  name: "Possible",
-  legalName: "Possible",
+  name: "Possible Studio",
+  legalName: "Possible Studio",
   tagline: "Tu propia web no debería ser difícil ni cara. En Possible, hacer crecer tu negocio sí es posible.",
-  alternateName: ["possible.cr", "Possible CR", "Possible Studio", "Possible Costa Rica"],
+  alternateName: ["Possible Studio CR", "possible.cr", "Possible CR", "Possible Costa Rica"],
   url: (process.env.NEXT_PUBLIC_SITE_URL || PRODUCTION_URL).replace(/\/$/, ""),
   founder: {
     name: "Bernal Baltodano",
@@ -45,8 +45,8 @@ export const siteConfig = {
 } as const;
 
 export const defaultMetadata = {
-  title: "Possible (possible.cr) | Páginas web, apps y sistemas en Costa Rica",
+  title: "Possible Studio CR | Páginas web, apps y sistemas en Costa Rica",
   description:
-    "possible.cr es el estudio de software de Costa Rica que crea páginas web profesionales, apps móviles como Possible Voice, sistemas, CRM, POS y automatización de WhatsApp para negocios.",
-  keywords: ["possible.cr", "Possible", "Possible Studio", "Possible Voice", "Possible Costa Rica", "Possible CR", "páginas web Costa Rica", "apps móviles Costa Rica", "CRM Costa Rica", "sistema POS Costa Rica", "automatización WhatsApp Costa Rica", "crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
+    "Possible Studio (possible.cr) es el estudio de software de Costa Rica que crea páginas web profesionales, apps móviles como Possible Voice, sistemas, CRM, POS y automatización de WhatsApp para negocios.",
+  keywords: ["Possible Studio", "Possible Studio CR", "possible.cr", "Possible", "Possible Voice", "Possible Costa Rica", "Possible CR", "páginas web Costa Rica", "apps móviles Costa Rica", "CRM Costa Rica", "sistema POS Costa Rica", "automatización WhatsApp Costa Rica", "crear página web", "página web profesional", "diseño web Costa Rica", "desarrollo web para negocios", "comprar página web", "sitio web para empresas", "sistemas web empresariales"],
 } as const;

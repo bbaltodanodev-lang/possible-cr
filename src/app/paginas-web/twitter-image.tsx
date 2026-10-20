@@ -3,7 +3,7 @@ import { servicePageSeo } from "@/data/seo";
 
 const title = servicePageSeo["paginas-web"].title;
 
-export const alt = `Possible | ${title}`;
+export const alt = `Possible Studio | ${title}`;
 export const size = ogSize;
 export const contentType = ogContentType;
 
