@@ -3,9 +3,14 @@ import * as THREE from "three";
 const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // ---------- escena 3D del hero ----------
+// calidad segun el equipo: en celulares y compus lentas se baja para que vaya fluido
+const movil = window.matchMedia("(max-width: 980px)").matches;
+const lento = (navigator.hardwareConcurrency || 4) <= 4 || (navigator.deviceMemory || 8) <= 4;
+const detalle = movil || lento ? 32 : 56;
+
 const canvas = document.getElementById("escena");
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: !movil, alpha: true, powerPreference: "high-performance" });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, movil ? 1.5 : 2));
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
 camera.position.set(0, 0, 7);
@@ -56,7 +61,7 @@ const blobMat = new THREE.ShaderMaterial({
       gl_FragColor = vec4(col, 1.0);
     }`,
 });
-const blob = new THREE.Mesh(new THREE.IcosahedronGeometry(1.75, 64), blobMat);
+const blob = new THREE.Mesh(new THREE.IcosahedronGeometry(1.75, detalle), blobMat);
 scene.add(blob);
 
 // anillos alrededor
@@ -73,7 +78,7 @@ const anillos = new THREE.Group();
 scene.add(anillos);
 
 // particulas de fondo
-const N = 900;
+const N = movil ? 450 : 900;
 const pos = new Float32Array(N * 3);
 const cols = new Float32Array(N * 3);
 const tonos = [new THREE.Color(0xF5C64F), new THREE.Color(0xE46D33), new THREE.Color(0xC44577), new THREE.Color(0x8924B2), new THREE.Color(0x4937CE)];
@@ -119,9 +124,16 @@ window.addEventListener("pointermove", (e) => {
 
 const reloj = new THREE.Clock();
 let visible = true;
+let enPantalla = !document.hidden;
 new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(canvas);
+// si cambian de pestaña no se gasta bateria dibujando
+document.addEventListener("visibilitychange", () => {
+  enPantalla = !document.hidden;
+  if (enPantalla && !quieto) { reloj.start(); requestAnimationFrame(frame); }
+});
 
 function frame() {
+  if (!enPantalla) return;
   const t = reloj.getElapsedTime();
   if (visible) {
     blobMat.uniforms.uTime.value = t;
@@ -138,6 +150,9 @@ function frame() {
   if (!quieto) requestAnimationFrame(frame);
 }
 frame();
+// el 3D aparece suave cuando ya esta dibujado
+// (con setTimeout y no requestAnimationFrame para que aparezca aunque la pestaña cargue en segundo plano)
+setTimeout(() => canvas.classList.add("listo"), 60);
 
 // ---------- interfaz ----------
 const nav = document.getElementById("nav");

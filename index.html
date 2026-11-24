@@ -18,8 +18,15 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="preload" href="/assets/possible-logo-72.webp" as="image" type="image/webp">
+  <!-- el importmap tiene que ir antes de cualquier modulo o precarga -->
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +52,7 @@
   <header class="nav" id="nav">
     <div class="wrap nav__inner">
       <a class="nav__brand" href="#inicio" aria-label="Possible, inicio">
-        <img src="/assets/possible-logo.png" alt="Possible" width="1086" height="244">
+        <img src="/assets/possible-logo-72.webp" alt="Possible" width="316" height="72" decoding="async">
       </a>
       <nav aria-label="Principal">
         <ul class="nav__links">
@@ -215,7 +222,7 @@
       <div class="wrap">
         <div class="cta__box">
           <div class="cta__orb" aria-hidden="true"></div>
-          <img class="cta__icon" src="/assets/possible-icon-192.png" alt="" width="96" height="96">
+          <img class="cta__icon" src="/assets/possible-icon-168.webp" alt="" width="84" height="84" loading="lazy" decoding="async">
           <h2 class="h2">Tu próximo proyecto <span class="grad">es posible</span>.</h2>
           <p class="lead">Cuéntanos qué necesitas y te respondemos con una propuesta clara, con precio y tiempos definidos.</p>
           <div class="hero__actions">
@@ -230,7 +237,7 @@
   <footer class="footer">
     <div class="wrap footer__grid">
       <div class="footer__brand">
-        <img src="/assets/possible-logo.png" alt="Possible" width="1086" height="244">
+        <img src="/assets/possible-logo-72.webp" alt="Possible" width="316" height="72" decoding="async">
         <p>Software de alto rendimiento, al alcance de todos. Hecho en Costa Rica para el mundo.</p>
       </div>
       <div>
@@ -264,9 +271,6 @@
     </div>
   </footer>
 
-  <script type="importmap">
-    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
-  </script>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="/main.js?v=4"></script>
 </body>
 </html>
