@@ -86,9 +86,7 @@ p { margin: 0; }
     linear-gradient(0deg, #000 0%, transparent 25%);
 }
 .hero__content { position: relative; z-index: 2; }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: var(--body); padding: 7px 14px; border: 1px solid var(--line-2); border-radius: 999px; background: rgba(255,255,255,.03); backdrop-filter: blur(8px); }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--grad); box-shadow: 0 0 12px var(--amber); }
-.hero__title { font-size: clamp(42px, 7vw, 88px); font-weight: 900; margin: 22px 0 22px; max-width: 13ch; }
+.hero__title { font-size: clamp(42px, 7vw, 88px); font-weight: 900; margin: 0 0 22px; max-width: 13ch; }
 .hero__lead { font-size: clamp(17px, 1.6vw, 20px); max-width: 56ch; color: var(--body); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 .hero__stats { display: flex; flex-wrap: wrap; gap: 38px; list-style: none; padding: 0; margin: 54px 0 0; }
@@ -98,12 +96,6 @@ p { margin: 0; }
 .hero__scroll { position: absolute; z-index: 2; bottom: 26px; left: 50%; transform: translateX(-50%); width: 26px; height: 42px; border: 1.5px solid var(--line-2); border-radius: 20px; }
 .hero__scroll span { position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--amber); animation: scroll 1.8s ease-in-out infinite; }
 @keyframes scroll { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
-
-/* cinta */
-.marquee { border-block: 1px solid var(--line); overflow: hidden; background: #050507; }
-.marquee__track { display: flex; gap: 34px; width: max-content; padding: 18px 0; animation: marquee 38s linear infinite; font-weight: 600; font-size: 15px; letter-spacing: .02em; color: var(--body); text-transform: uppercase; }
-.marquee__track i { font-style: normal; color: var(--amber); }
-@keyframes marquee { to { transform: translateX(-50%); } }
 
 /* secciones */
 .section { padding: clamp(80px, 11vw, 140px) 0; position: relative; }
